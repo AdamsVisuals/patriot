@@ -1480,3 +1480,210 @@ body {
     height: 350px;
   }
 }
+
+.patriot-horizontal-packages {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: #f9f6ef;
+  position: relative;
+}
+
+.patriot-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.patriot-section-title {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-align: left;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.patriot-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 1px;
+  background-color: #c38a0d;
+}
+
+.patriot-section-subtitle {
+  font-size: 2.5rem;
+  font-weight: 200;
+  font-family: 'dancing script', cursive;
+  text-align: left;
+  margin-bottom: 0;
+  color: #333;
+}
+
+.patriot-section-subtitle strong {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: 'poppins', sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  color: #094c12;
+}
+
+.patriot-pagination-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.patriot-pagination-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.patriot-pagination-btn:hover {
+  background-color: #c38a0d;
+  border-color: #c38a0d;
+  color: white;
+}
+
+.patriot-pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.patriot-horizontal-cards {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.patriot-horizontal-cards {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+  width: max-content;
+}
+
+.patriot-horizontal-card {
+  position: relative;
+  display: block;
+  height: 400px;
+  width: 280px;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+  border-radius: 0px;
+  flex-shrink: 0;
+}
+
+.patriot-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.patriot-horizontal-card:hover .patriot-card-image {
+  transform: scale(1.05);
+}
+
+.patriot-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 1;
+}
+
+.patriot-card-price,
+.patriot-card-duration {
+  font-size: 1rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.patriot-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 2;
+}
+
+.patriot-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.patriot-card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #c38a0d;
+}
+
+.patriot-card-desc {
+  font-size: 0.9rem;
+  margin: 20px 0 0 0;
+  line-height: 1.4;
+}
+
+/* Pagination dots styling */
+.patriot-pagination-dots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .patriot-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .patriot-pagination-controls {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .patriot-section-subtitle {
+    font-size: 2rem;
+  }
+  
+  .patriot-horizontal-card {
+    width: 260px;
+    height: 350px;
+  }
+}

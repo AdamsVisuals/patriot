@@ -796,3 +796,87 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// Enhanced version with auto-advance
+class PatriotHorizontalPackagesEnhanced extends PatriotHorizontalPackages {
+    constructor(autoAdvance = true, interval = 5000) {
+        super();
+        this.autoAdvance = autoAdvance;
+        this.interval = interval;
+        this.autoAdvanceInterval = null;
+        
+        if (this.autoAdvance) {
+            this.startAutoAdvance();
+        }
+        
+        // Pause auto-advance on hover
+        this.container.addEventListener('mouseenter', () => this.stopAutoAdvance());
+        this.container.addEventListener('mouseleave', () => {
+            if (this.autoAdvance) {
+                this.startAutoAdvance();
+            }
+        });
+        
+        // Pause auto-advance on focus
+        this.container.addEventListener('focusin', () => this.stopAutoAdvance());
+        this.container.addEventListener('focusout', () => {
+            if (this.autoAdvance) {
+                this.startAutoAdvance();
+            }
+        });
+    }
+    
+    startAutoAdvance() {
+        this.stopAutoAdvance(); // Clear any existing interval
+        this.autoAdvanceInterval = setInterval(() => {
+            if (this.currentSlide === this.totalSlides) {
+                this.goToSlide(0); // Loop back to start
+            } else {
+                this.nextSlide();
+            }
+        }, this.interval);
+    }
+    
+    stopAutoAdvance() {
+        if (this.autoAdvanceInterval) {
+            clearInterval(this.autoAdvanceInterval);
+            this.autoAdvanceInterval = null;
+        }
+    }
+    
+    // Override methods to handle auto-advance
+    prevSlide() {
+        this.stopAutoAdvance();
+        super.prevSlide();
+        if (this.autoAdvance) {
+            this.startAutoAdvance();
+        }
+    }
+    
+    nextSlide() {
+        this.stopAutoAdvance();
+        super.nextSlide();
+        if (this.autoAdvance) {
+            this.startAutoAdvance();
+        }
+    }
+    
+    goToSlide(slideIndex) {
+        this.stopAutoAdvance();
+        super.goToSlide(slideIndex);
+        if (this.autoAdvance) {
+            this.startAutoAdvance();
+        }
+    }
+}
+
+// Initialize enhanced version (optional)
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('.patriot-horizontal-packages')) {
+        // Use basic version
+        new PatriotHorizontalPackages();
+        
+        // Or use enhanced version with auto-advance
+        // new PatriotHorizontalPackagesEnhanced(true, 5000);
+    }
+});
