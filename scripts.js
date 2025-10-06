@@ -555,7 +555,7 @@ class PatriotFloatingButton {
   
   async sendFormData(formData) {
     // Replace with your actual endpoint
-    const response = await fetch('/process_booking.php', {
+    const response = await fetch('process_booking.php', {
       method: 'POST',
       body: formData
     });
