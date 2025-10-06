@@ -796,3 +796,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// JavaScript for Auto Year Updater
+document.addEventListener('DOMContentLoaded', function() {
+  // Auto update copyright year
+  const yearElement = document.getElementById('current-year');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+  
+  // Add smooth scrolling for footer links
+  const footerLinks = document.querySelectorAll('.footer-link');
+  footerLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+});
