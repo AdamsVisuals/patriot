@@ -1262,7 +1262,7 @@ body {
   }
   
   .patriot-btn-text {
-    display: flex;
+    display: none;
   }
   
   .patriot-floating-btn.mobile-icon-only {
