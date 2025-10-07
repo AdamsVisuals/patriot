@@ -823,3 +823,102 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// JavaScript for Luxury Back to Top Button
+document.addEventListener('DOMContentLoaded', function() {
+  const backToTopButton = document.querySelector('.luxury-back-to-top');
+  let lastScrollTop = 0;
+  let isScrollingDown = true;
+  let scrollTimeout;
+
+  function updateBackToTopButton() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100;
+    
+    // Determine scroll direction
+    isScrollingDown = scrollTop > lastScrollTop;
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    
+    // Show/hide button based on scroll position
+    if (scrollTop > 300) {
+      backToTopButton.classList.add('visible');
+      
+      // Update fill percentage based on scroll progress
+      const fillClass = `scroll-${Math.min(100, Math.floor(scrollPercentage / 10) * 10)}`;
+      
+      // Remove all scroll percentage classes
+      backToTopButton.classList.remove(
+        'scroll-10', 'scroll-20', 'scroll-30', 'scroll-40', 'scroll-50',
+        'scroll-60', 'scroll-70', 'scroll-80', 'scroll-90', 'scroll-100'
+      );
+      
+      // Add current scroll percentage class
+      backToTopButton.classList.add(fillClass);
+      
+      // Add scrolling direction class
+      if (isScrollingDown) {
+        backToTopButton.classList.remove('scrolling-up');
+      } else {
+        backToTopButton.classList.add('scrolling-up');
+        
+        // Reset fill when scrolling up
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          if (backToTopButton.classList.contains('scrolling-up')) {
+            backToTopButton.classList.remove(
+              'scroll-10', 'scroll-20', 'scroll-30', 'scroll-40', 'scroll-50',
+              'scroll-60', 'scroll-70', 'scroll-80', 'scroll-90', 'scroll-100'
+            );
+          }
+        }, 100);
+      }
+    } else {
+      backToTopButton.classList.remove('visible');
+      backToTopButton.classList.remove(
+        'scroll-10', 'scroll-20', 'scroll-30', 'scroll-40', 'scroll-50',
+        'scroll-60', 'scroll-70', 'scroll-80', 'scroll-90', 'scroll-100',
+        'scrolling-up'
+      );
+    }
+  }
+
+  // Throttled scroll event
+  function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+      const args = arguments;
+      const context = this;
+      if (!inThrottle) {
+        func.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
+    }
+  }
+
+  // Scroll to top function
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    
+    // Reset button state immediately
+    backToTopButton.classList.remove(
+      'scroll-10', 'scroll-20', 'scroll-30', 'scroll-40', 'scroll-50',
+      'scroll-60', 'scroll-70', 'scroll-80', 'scroll-90', 'scroll-100',
+      'scrolling-up'
+    );
+  }
+
+  // Event listeners
+  if (backToTopButton) {
+    window.addEventListener('scroll', throttle(updateBackToTopButton, 50));
+    backToTopButton.addEventListener('click', scrollToTop);
+    
+    // Initialize button state
+    updateBackToTopButton();
+  }
+});
