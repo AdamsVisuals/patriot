@@ -74,20 +74,27 @@
     </button>
     <ul class="patriot-nav-list">
       <li class="patriot-nav-item">
-        <a href="#destinations">Destinations</a>
+        <a href="#">Destinations</a>
         <ul class="patriot-dropdown">
-          <li><a href="#tanzania">Tanzania</a></li>
-          <li><a href="#kenya">Kenya</a></li>
-          <li><a href="#rwanda">Rwanda</a></li>
-          <li><a href="#uganda">Uganda</a></li>
-          <li><a href="#madagascar">Madagascar</a></li>
+          <li><a href="destinations/tanzania">Tanzania</a></li>
+          <li><a href="/destinations/kenya">Kenya</a></li>
+          <li><a href="/destinations/rwanda">Rwanda</a></li>
+          <li><a href="/destinations/uganda">Uganda</a></li>
+          <li><a href="/destinations/madagascar">Madagascar</a></li>
         </ul>
       </li>
-      <li><a href="#tours">Tours</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="/itineraries">Itineraries</a></li>
+      <li class="patriot-nav-item">
+        <a href="#">Safari Collections</a>
+        <ul class="patriot-dropdown">
+          <li><a href="collections/family-safaris">Family Safaris</a></li>
+          <li><a href="collections/honeymoon">HoneyMoon</a></li>
+          <li><a href="collections/private-safaris">Private safari camps & lodges</a></li>
+          <li><a href="collections/solo">Solo Safaris</a></li>
+        </ul>
+      </li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -100,6 +107,7 @@
         <h1 class="patriot-slide-title">TANZANIA</h1>
         <div class="patriot-title-divider"></div>
         <p class="patriot-slide-description">Experience the majestic Serengeti and witness the Great Migration in one of Africa's most iconic safari destinations.</p>
+        <a href="destinations/tanzania" class="patriot-slide-cta">Explore Tanzania</a>
       </div>
     </div>
     
@@ -109,6 +117,7 @@
         <h1 class="patriot-slide-title">KENYA</h1>
         <div class="patriot-title-divider"></div>
         <p class="patriot-slide-description">From the Maasai Mara to the white sandy beaches of the coast, Kenya offers diverse and unforgettable experiences.</p>
+        <a href="destinations/kenya" class="patriot-slide-cta">Explore Kenya</a>
       </div>
     </div>
     
@@ -118,6 +127,7 @@
         <h1 class="patriot-slide-title">RWANDA</h1>
         <div class="patriot-title-divider"></div>
         <p class="patriot-slide-description">Trek through misty forests to encounter majestic mountain gorillas in their natural habitat.</p>
+        <a href="destinations/rwanda" class="patriot-slide-cta">Explore Rwanda</a>
       </div>
     </div>
     
@@ -127,6 +137,7 @@
         <h1 class="patriot-slide-title">UGANDA</h1>
         <div class="patriot-title-divider"></div>
         <p class="patriot-slide-description">Discover the Pearl of Africa with its diverse wildlife, lush landscapes, and the source of the Nile.</p>
+        <a href="destinations/uganda" class="patriot-slide-cta">Explore Uganda</a>
       </div>
     </div>
     
@@ -136,6 +147,7 @@
         <h1 class="patriot-slide-title">MADAGASCAR</h1>
         <div class="patriot-title-divider"></div>
         <p class="patriot-slide-description">Explore the unique biodiversity and extraordinary landscapes of the world's fourth largest island.</p>
+        <a href="destinations/madagascar" class="patriot-slide-cta">Explore Madagascar</a>
       </div>
     </div>
   </div>
@@ -187,11 +199,11 @@
       <div class="patriot-gallery">
         <div class="patriot-gallery-track">
           <!-- Package Card 1 -->
-          <div class="patriot-package-card" onclick="handlePackageClick('safari-adventure')">
+          <a href="/tours/serengeti-safari" class="patriot-package-card" data-package="safari-adventure">
             <div class="package-badge">Most Popular</div>
             <div class="package-image">
               <img src="images/gabriel-schumacher-WwQynDqwE14-unsplash.jpg" alt="Serengeti Safari Package" class="patriot-image">
-              <div class="image-overlay"></div>
+              <div class="patriot-image-overlay"></div>
             </div>
             <div class="package-content">
               <div class="package-meta">
@@ -212,14 +224,14 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
           
           <!-- Package Card 2 -->
-          <div class="patriot-package-card" onclick="handlePackageClick('madagascar-expedition')">
+          <a href="/tours/madagascar-expedition" class="patriot-package-card" data-package="madagascar-expedition">
             <div class="package-badge">Limited Availability</div>
             <div class="package-image">
               <img src="images/madagascar-bg.jpg" alt="Madagascar Expedition Package" class="patriot-image">
-              <div class="image-overlay"></div>
+              <div class="patriot-image-overlay"></div>
             </div>
             <div class="package-content">
               <div class="package-meta">
@@ -240,13 +252,13 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
           
           <!-- Package Card 3 -->
-          <div class="patriot-package-card" onclick="handlePackageClick('wildlife-photography')">
+          <a href="/tours/wildlife-photography" class="patriot-package-card" data-package="wildlife-photography">
             <div class="package-image">
               <img src="images/simone-dinoia-1RfPRTx_yUM-unsplash.jpg" alt="Wildlife Photography Package" class="patriot-image">
-              <div class="image-overlay"></div>
+              <div class="patriot-image-overlay"></div>
             </div>
             <div class="package-content">
               <div class="package-meta">
@@ -267,14 +279,14 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
           
           <!-- Package Card 4 -->
-          <div class="patriot-package-card" onclick="handlePackageClick('sunset-safari')">
+          <a href="/tours/sunset-safari" class="patriot-package-card" data-package="sunset-safari">
             <div class="package-badge">Romantic</div>
             <div class="package-image">
               <img src="images/arson-haja-ACHUpG7G2Es-unsplash.jpg" alt="Sunset Safari Package" class="patriot-image">
-              <div class="image-overlay"></div>
+              <div class="patriot-image-overlay"></div>
             </div>
             <div class="package-content">
               <div class="package-meta">
@@ -295,13 +307,13 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
           
           <!-- Package Card 5 -->
-          <div class="patriot-package-card" onclick="handlePackageClick('adventure-safari')">
+          <a href="/tours/adventure-safari" class="patriot-package-card" data-package="adventure-safari">
             <div class="package-image">
               <img src="images/DSC_1625.JPG" alt="Adventure Safari Package" class="patriot-image">
-              <div class="image-overlay"></div>
+              <div class="patriot-image-overlay"></div>
             </div>
             <div class="package-content">
               <div class="package-meta">
@@ -322,14 +334,14 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
           
           <!-- Package Card 6 -->
-          <div class="patriot-package-card" onclick="handlePackageClick('luxury-lodge')">
+          <a href="/tours/luxury-lodge" class="patriot-package-card" data-package="luxury-lodge">
             <div class="package-badge">New</div>
             <div class="package-image">
               <img src="images/DSC_1735.JPG" alt="Luxury Lodge Package" class="patriot-image">
-              <div class="image-overlay"></div>
+              <div class="patriot-image-overlay"></div>
             </div>
             <div class="package-content">
               <div class="package-meta">
@@ -350,7 +362,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       
@@ -369,16 +381,6 @@
     </div>
   </div>
 </section>
-
-<script>
-function handlePackageClick(packageId) {
-  // Handle package click - redirect to package details page or show modal
-  console.log(`Premium package clicked: ${packageId}`);
-  // In a real implementation, you might redirect to:
-  // window.location.href = `/packages/${packageId}`;
-  // Or show a modal with package details
-}
-</script>
 
 <!-- Floating Book Now Button -->
 <button class="patriot-floating-btn" id="patriotBookNowBtn">
@@ -473,7 +475,7 @@ function handlePackageClick(packageId) {
   
   <div class="destinations-container">
     <div class="destinations-grid">
-      <a href="serengeti.html" class="destination-card">
+      <a href="/destinations/tanzania" class="destination-card">
         <div class="destination-image" style="background-image: url('images/DSC_1154.JPG')"></div>
         <div class="destination-overlay"></div>
         <div class="card-number">01</div>
@@ -484,7 +486,7 @@ function handlePackageClick(packageId) {
         </div>
       </a>
       
-      <a href="kilimanjaro.html" class="destination-card">
+      <a href="/destinations/kenya" class="destination-card">
         <div class="destination-image" style="background-image: url('images/stephan-bechert-1ZfMAnL4ubE-unsplash.jpg')"></div>
         <div class="destination-overlay"></div>
         <div class="card-number">02</div>
@@ -495,7 +497,7 @@ function handlePackageClick(packageId) {
         </div>
       </a>
       
-      <a href="tarangire.html" class="destination-card">
+      <a href="/destinations/uganda" class="destination-card">
         <div class="destination-image" style="background-image: url('images/uganda-chimpanzees.jpg')"></div>
         <div class="destination-overlay"></div>
         <div class="card-number">03</div>
@@ -506,7 +508,7 @@ function handlePackageClick(packageId) {
         </div>
       </a>
       
-      <a href="zanzibar.html" class="destination-card">
+      <a href="/destinations/rwanda" class="destination-card">
         <div class="destination-image" style="background-image: url('images/uganda-chimpanzees.webp')"></div>
         <div class="destination-overlay"></div>
         <div class="card-number">04</div>
@@ -517,7 +519,7 @@ function handlePackageClick(packageId) {
         </div>
       </a>
 
-      <a href="zanzibar.html" class="destination-card">
+      <a href="/destinations/madagascar" class="destination-card">
         <div class="destination-image" style="background-image: url('images/madagascar-bg.jpg')"></div>
         <div class="destination-overlay"></div>
         <div class="card-number">05</div>
@@ -547,7 +549,7 @@ function handlePackageClick(packageId) {
           From the majestic savannas to the vibrant cultures, experience Africa like never before.
         </p>
         <div class="parallax-actions">
-          <a href="/safari-packages" class="parallax-btn primary">Explore Destinations</a>
+          <a href="/destinations" class="parallax-btn primary">Explore Destinations</a>
           <a href="/contact" class="parallax-btn secondary">Customize Your Safari</a>
         </div>
       </div>
@@ -563,21 +565,21 @@ function handlePackageClick(packageId) {
         <span class="luxury-accent">EXCLUSIVE EXPERIENCES</span>
         <h2 class="section-title">Why Choose Patriot Tours & Safaris Ltd</h2>
         <p class="section-description">
-          With over 15 years of excellence in crafting unforgettable African experiences, 
+          With over 6 years of excellence in crafting unforgettable African experiences, 
           we pride ourselves on delivering authentic, sustainable, and personalized safari adventures. 
           Our deep local knowledge and commitment to conservation ensure every journey is extraordinary.
         </p>
-        <button class="read-reasons-btn">
+        <a href="/about" class="read-reasons-btn">
           <span>Read Reasons</span>
           <span class="material-symbols-outlined">arrow_forward</span>
-        </button>
+        </a>
         
         <div class="luxury-features">
           <div class="feature">
             <span class="material-symbols-outlined feature-icon">verified</span>
             <div class="feature-content">
               <h4>Expert Guides</h4>
-              <p>15+ years of local expertise</p>
+              <p>6+ years of local expertise</p>
             </div>
           </div>
           <div class="feature">
@@ -597,7 +599,7 @@ function handlePackageClick(packageId) {
             <div class="overlay-content">
               <span class="material-symbols-outlined overlay-icon">travel_explore</span>
               <h3>Unforgettable Journeys</h3>
-              <p>Since 2010</p>
+              <p>Since 2019</p>
             </div>
           </div>
         </div>
@@ -631,7 +633,7 @@ function handlePackageClick(packageId) {
           </div>
           <h3 class="card-title">The Ultimate Guide to Luxury Safari Experiences</h3>
           <p class="card-excerpt">Discover how to plan the perfect luxury safari with our expert tips on timing, locations, and exclusive experiences.</p>
-          <a href="#" class="read-more">
+          <a href="/blog/luxury-safari-guide" class="read-more">
             <span>Read Article</span>
             <span class="material-symbols-outlined">arrow_forward</span>
           </a>
@@ -653,7 +655,7 @@ function handlePackageClick(packageId) {
           </div>
           <h3 class="card-title">Top 5 Luxury Lodges in Serengeti National Park</h3>
           <p class="card-excerpt">Explore the most exclusive lodges offering unparalleled comfort and wildlife viewing opportunities in the heart of Africa.</p>
-          <a href="#" class="read-more">
+          <a href="/blog/serengeti-luxury-lodges" class="read-more">
             <span>Read Article</span>
             <span class="material-symbols-outlined">arrow_forward</span>
           </a>
@@ -675,7 +677,7 @@ function handlePackageClick(packageId) {
           </div>
           <h3 class="card-title">Capturing the Wild: Professional Safari Photography Tips</h3>
           <p class="card-excerpt">Learn from our expert photographers how to capture stunning wildlife moments during your luxury safari adventure.</p>
-          <a href="#" class="read-more">
+          <a href="/blog/safari-photography-tips" class="read-more">
             <span>Read Article</span>
             <span class="material-symbols-outlined">arrow_forward</span>
           </a>
@@ -684,7 +686,7 @@ function handlePackageClick(packageId) {
     </div>
     
     <div class="section-footer">
-      <a href="#" class="view-all-btn">
+      <a href="/blog" class="view-all-btn">
         <span>View All Articles</span>
         <span class="material-symbols-outlined">arrow_forward</span>
       </a>
@@ -753,16 +755,16 @@ function handlePackageClick(packageId) {
           <img src="images/p-logo-2.png" alt="Patriot Tours & Safaris Ltd" class="footer-logo">
         </div>
         <p class="brand-description">
-          Crafting extraordinary African safari experiences with unparalleled luxury and expertise since 2010.
+          Crafting extraordinary African safari experiences with unparalleled luxury and expertise since 2019.
         </p>
         <div class="social-links">
-          <a href="#" class="social-link" aria-label="Facebook">
+          <a href="https://facebook.com/patriotsafaris" class="social-link" aria-label="Facebook">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="#" class="social-link" aria-label="Instagram">
+          <a href="https://instagram.com/patriotsafaris" class="social-link" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="#" class="social-link" aria-label="Twitter">
+          <a href="https://tiktok.com/@patriotsafaris" class="social-link" aria-label="TikTok">
             <i class="fab fa-tiktok"></i>
           </a>
         </div>
@@ -772,30 +774,30 @@ function handlePackageClick(packageId) {
         <div class="link-group">
           <h4 class="link-group-title">Explore</h4>
           <ul class="link-list">
-            <li><a href="#" class="footer-link">Safari Experiences</a></li>
-            <li><a href="#" class="footer-link">Luxury Lodges</a></li>
-            <li><a href="#" class="footer-link">Group Tours</a></li>
-            <li><a href="#" class="footer-link">Private Journeys</a></li>
+            <li><a href="/tours" class="footer-link">Safari Experiences</a></li>
+            <li><a href="/accommodations" class="footer-link">Luxury Lodges</a></li>
+            <li><a href="/group-tours" class="footer-link">Group Tours</a></li>
+            <li><a href="/private-journeys" class="footer-link">Private Journeys</a></li>
           </ul>
         </div>
 
         <div class="link-group">
           <h4 class="link-group-title">Company</h4>
           <ul class="link-list">
-            <li><a href="#" class="footer-link">About Us</a></li>
-            <li><a href="#" class="footer-link">Sustainability</a></li>
-            <li><a href="#" class="footer-link">Contact</a></li>
-            <li><a href="#" class="footer-link">Careers</a></li>
+            <li><a href="/about" class="footer-link">About Us</a></li>
+            <li><a href="/sustainability" class="footer-link">Sustainability</a></li>
+            <li><a href="/contact" class="footer-link">Contact</a></li>
+            <li><a href="/careers" class="footer-link">Careers</a></li>
           </ul>
         </div>
 
         <div class="link-group">
           <h4 class="link-group-title">Support</h4>
           <ul class="link-list">
-            <li><a href="#" class="footer-link">FAQ</a></li>
-            <li><a href="#" class="footer-link">Booking Terms</a></li>
-            <li><a href="#" class="footer-link">Privacy Policy</a></li>
-            <li><a href="#" class="footer-link">Travel Insurance</a></li>
+            <li><a href="/faq" class="footer-link">FAQ</a></li>
+            <li><a href="/terms" class="footer-link">Booking Terms</a></li>
+            <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/insurance" class="footer-link">Travel Insurance</a></li>
           </ul>
         </div>
       </div>
@@ -804,16 +806,16 @@ function handlePackageClick(packageId) {
     <div class="footer-certifications">
       <div class="certification-badges">
         <div class="badge-item">
-          <img src="images/TripAdvisor_Logo.svg.png" alt="Certified Sustainable Tourism" class="badge-image">
+          <img src="images/TripAdvisor_Logo.svg.png" alt="TripAdvisor Excellence" class="badge-image">
         </div>
         <div class="badge-item">
-          <img src="images/pngfind.com-moutains-png-6933353.png" alt="Travel Excellence Award" class="badge-image">
+          <img src="images/pngfind.com-moutains-png-6933353.png" alt="Mountain Tourism" class="badge-image">
         </div>
         <div class="badge-item">
-          <img src="images/astalogonew_9.png" alt="Wildlife Conservation Partner" class="badge-image">
+          <img src="images/astalogonew_9.png" alt="ASTA Member" class="badge-image">
         </div>
         <div class="badge-item">
-          <img src="images/ATTA-Logo-with-Icon.png" alt="Luxury Travel Association" class="badge-image">
+          <img src="images/ATTA-Logo-with-Icon.png" alt="ATTA Member" class="badge-image">
         </div>
       </div>
     </div>

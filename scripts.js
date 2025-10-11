@@ -922,3 +922,150 @@ document.addEventListener('DOMContentLoaded', function() {
     updateBackToTopButton();
   }
 });
+
+// Leaflet Map Integration
+document.addEventListener('DOMContentLoaded', function() {
+    // Tanzania center coordinates
+    const tanzaniaCenter = [-6.3690, 34.8888];
+    
+    // Initialize map
+    const map = L.map('leafletMap', {
+        zoomControl: false,
+        attributionControl: false
+    }).setView(tanzaniaCenter, 6);
+
+    // Add OpenStreetMap tiles with custom styling
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Custom CSS for map controls
+    const customControl = L.control.attribution({position: 'bottomright'});
+    customControl.setPrefix('OpenStreetMap');
+    customControl.addTo(map);
+
+    // National Parks Data
+    const nationalParks = [
+        {
+            name: "Serengeti National Park",
+            position: [-2.3333, 34.8333],
+            region: "northern",
+            description: "Famous for the Great Migration and vast savannah plains. Home to the Big Five and UNESCO World Heritage Site.",
+            highlights: "Great Migration • Big Five • Balloon Safaris"
+        },
+        {
+            name: "Ngorongoro Conservation Area",
+            position: [-3.1945, 35.4890],
+            region: "northern",
+            description: "World's largest intact volcanic caldera with one of the densest populations of large mammals.",
+            highlights: "World Heritage Site • Big Five • Crater Floor"
+        },
+        {
+            name: "Tarangire National Park",
+            position: [-3.8333, 36.0000],
+            region: "northern",
+            description: "Known for large elephant herds, ancient baobab trees, and diverse bird species.",
+            highlights: "Elephant Herds • Baobab Trees • Bird Watching"
+        },
+        {
+            name: "Lake Manyara National Park",
+            position: [-3.5833, 35.7500],
+            region: "northern",
+            description: "Famous for tree-climbing lions, diverse ecosystems, and flamingo-filled lake.",
+            highlights: "Tree Lions • Diverse Habitats • Flamingos"
+        },
+        {
+            name: "Ruaha National Park",
+            position: [-7.6833, 34.9333],
+            region: "southern",
+            description: "Tanzania's largest national park with rugged wilderness and strong lion populations.",
+            highlights: "Largest Park • Walking Safaris • Lion Populations"
+        },
+        {
+            name: "Nyerere National Park",
+            position: [-8.0000, 38.0000],
+            region: "southern",
+            description: "Vast wilderness area with rivers, lakes, and excellent boating safari opportunities.",
+            highlights: "Boating Safaris • Remote Wilderness • River Systems"
+        },
+        {
+            name: "Katavi National Park",
+            position: [-6.8333, 31.2500],
+            region: "western",
+            description: "Remote park known for massive buffalo herds and dramatic predator-prey interactions.",
+            highlights: "Buffalo Herds • Remote • Predator Action"
+        },
+        {
+            name: "Mahale Mountains National Park",
+            position: [-6.1333, 29.7500],
+            region: "western",
+            description: "Home to wild chimpanzees on the shores of Lake Tanganyika in spectacular mountain scenery.",
+            highlights: "Chimpanzee Tracking • Lake Tanganyika • Mountains"
+        },
+        {
+            name: "Zanzibar Archipelago",
+            position: [-6.1333, 39.3167],
+            region: "coastal",
+            description: "Pristine beaches, historic Stone Town, and rich cultural heritage with turquoise waters.",
+            highlights: "Beaches • Stone Town • Cultural Heritage"
+        }
+    ];
+
+    // Region colors
+    const regionColors = {
+        northern: '#e74c3c',
+        southern: '#3498db',
+        western: '#9b59b6',
+        coastal: '#27ae60'
+    };
+
+    // Create custom icon function
+    function createCustomIcon(region) {
+        return L.divIcon({
+            className: 'custom-leaflet-marker',
+            html: `<div class="marker-pin ${region}" style="background-color: ${regionColors[region]}"></div>`,
+            iconSize: [30, 42],
+            iconAnchor: [15, 42]
+        });
+    }
+
+    // Create markers for each national park
+    nationalParks.forEach(park => {
+        const customIcon = createCustomIcon(park.region);
+        
+        const marker = L.marker(park.position, { icon: customIcon }).addTo(map);
+        
+        // Create popup content
+        const popupContent = `
+            <div class="leaflet-popup-content">
+                <h3>${park.name}</h3>
+                <p>${park.description}</p>
+                <p class="highlight">${park.highlights}</p>
+            </div>
+        `;
+        
+        marker.bindPopup(popupContent, {
+            className: 'custom-leaflet-popup',
+            maxWidth: 300
+        });
+    });
+
+    // Custom zoom controls
+    document.querySelector('.zoom-in').addEventListener('click', () => {
+        map.zoomIn();
+    });
+
+    document.querySelector('.zoom-out').addEventListener('click', () => {
+        map.zoomOut();
+    });
+
+    document.querySelector('.reset-view').addEventListener('click', () => {
+        map.setView(tanzaniaCenter, 6);
+    });
+
+    // Add scale control
+    L.control.scale({
+        imperial: false,
+        position: 'bottomleft'
+    }).addTo(map);
+});
