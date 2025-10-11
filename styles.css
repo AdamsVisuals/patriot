@@ -3415,3 +3415,23 @@ body {
     font-size: 0.8rem;
   }
 }
+
+/* Fix for CTA links - only active slide CTAs are clickable */
+.patriot-slide:not(.patriot-active) .patriot-slide-cta {
+  pointer-events: none;
+  cursor: default;
+}
+
+.patriot-slide.patriot-active .patriot-slide-cta {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Additional safety: ensure proper z-index stacking */
+.patriot-slide.patriot-active {
+  z-index: 2;
+}
+
+.patriot-slide:not(.patriot-active) {
+  z-index: 1;
+}

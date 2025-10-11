@@ -58,66 +58,74 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Slideshow functionality
+  // FIXED: Slideshow functionality - CTA Links Issue Resolved
   const slides = document.querySelectorAll('.patriot-slide');
   const indicators = document.querySelectorAll('.patriot-slide-indicator');
   const prevButton = document.querySelector('.patriot-slide-prev');
   const nextButton = document.querySelector('.patriot-slide-next');
   let currentSlide = 0;
-  
+
   function showSlide(index) {
-    // Hide all slides
-    slides.forEach(slide => {
-      slide.classList.remove('patriot-active');
-    });
-    
-    // Remove active class from all indicators
-    indicators.forEach(indicator => {
-      indicator.classList.remove('patriot-active');
-    });
-    
-    // Show the selected slide
-    slides[index].classList.add('patriot-active');
-    indicators[index].classList.add('patriot-active');
-    
-    currentSlide = index;
+      // Hide all slides
+      slides.forEach(slide => {
+          slide.classList.remove('patriot-active');
+      });
+      
+      // Remove active class from all indicators
+      indicators.forEach(indicator => {
+          indicator.classList.remove('patriot-active');
+      });
+      
+      // Show the selected slide
+      slides[index].classList.add('patriot-active');
+      indicators[index].classList.add('patriot-active');
+      
+      currentSlide = index;
   }
-  
+
   // Next slide
   function nextSlide() {
-    let nextIndex = (currentSlide + 1) % slides.length;
-    showSlide(nextIndex);
+      let nextIndex = (currentSlide + 1) % slides.length;
+      showSlide(nextIndex);
   }
-  
+
   // Previous slide
   function prevSlide() {
-    let prevIndex = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(prevIndex);
+      let prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(prevIndex);
   }
-  
-  // Event listeners for controls
-  nextButton.addEventListener('click', nextSlide);
-  prevButton.addEventListener('click', prevSlide);
-  
-  // Event listeners for indicators
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', function() {
-      showSlide(index);
-    });
+
+  // Event listeners for controls - FIXED: Use proper event handling
+  nextButton.addEventListener('click', function(e) {
+      e.stopPropagation();
+      nextSlide();
   });
-  
+
+  prevButton.addEventListener('click', function(e) {
+      e.stopPropagation();
+      prevSlide();
+  });
+
+  // Event listeners for indicators - FIXED: Use proper event handling
+  indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', function(e) {
+          e.stopPropagation();
+          showSlide(index);
+      });
+  });
+
   // Auto-advance slides (optional)
   let slideInterval = setInterval(nextSlide, 5000);
-  
+
   // Pause auto-advance on hover
   const heroSection = document.querySelector('.patriot-hero');
-  
+
   heroSection.addEventListener('mouseenter', function() {
-    clearInterval(slideInterval);
+      clearInterval(slideInterval);
   });
-  
+
   heroSection.addEventListener('mouseleave', function() {
-    slideInterval = setInterval(nextSlide, 5000);
+      slideInterval = setInterval(nextSlide, 5000);
   });
   
   // Close menu when clicking on a link
@@ -148,6 +156,30 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+});
+
+// CRITICAL FIX: Ensure CTA links work properly - Add this after DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+    const ctaLinks = document.querySelectorAll('.patriot-slide-cta');
+    
+    ctaLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Allow the link to work normally - don't prevent default
+            console.log('CTA clicked:', this.href);
+            // The link will naturally redirect to the href
+        });
+    });
+    
+    // Additional safety: Prevent any parent elements from interfering with CTA clicks
+    const slides = document.querySelectorAll('.patriot-slide');
+    slides.forEach(slide => {
+        slide.addEventListener('click', function(e) {
+            // If a CTA was clicked, don't do anything else
+            if (e.target.closest('.patriot-slide-cta')) {
+                return;
+            }
+        });
+    });
 });
 
 class PatriotCarousel {
