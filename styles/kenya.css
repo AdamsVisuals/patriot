@@ -726,6 +726,14 @@
     border-color: #000;
 }
 
+.itinerary-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .itineraries-grid {
