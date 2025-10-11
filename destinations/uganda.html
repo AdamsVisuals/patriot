@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Uganda - Patriot Tours & Safaris Ltd</title>
+    <meta name="description" content="Patriot Tours & Safaris Ltd is a leading tour operator specializing in customized tours and safaris. Explore our wide range of travel services and packages.">
+    <meta name="keywords" content="Tour Operator, Safaris, Customized Tours, Travel Services, Travel Packages, Patriot Tours & Safaris Ltd">
+    <meta name="author" content="Patriot Tours & Safaris Ltd">
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=clear_all" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/uganda.css">
+</head>
+<body>
+<header class="patriot-header">
+  <div class="patriot-header-container">
+    <button class="patriot-menu-toggle" id="patriot-menu-toggle">
+      <span class="material-symbols-outlined">sort</span>
+    </button>
+    
+    <div class="patriot-logo-container" onclick="window.location.href='/'" style="cursor:pointer;">
+      <img src="../images/p-logo-2.png" alt="Patriot Tours and Safaris" class="patriot-logo">
+    </div>
+    
+    <div class="patriot-header-actions">
+      <div class="patriot-search-toggle" id="patriot-search-toggle">
+        <span class="material-symbols-outlined">search</span>
+      </div>
+      <div class="patriot-language-switcher">
+        <span class="material-symbols-outlined">language</span>
+        <select class="patriot-language-select">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  <div class="patriot-search-expandable" id="patriot-search-expandable">
+    <input type="text" placeholder="Search destinations..." class="patriot-search-input">
+    <button class="patriot-search-close" id="patriot-search-close">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  
+  <nav class="patriot-navigation" id="patriot-navigation">
+    <button class="patriot-menu-close" id="patriot-menu-close">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <ul class="patriot-nav-list">
+      <li class="patriot-nav-item">
+        <a href="#">Destinations</a>
+        <ul class="patriot-dropdown">
+          <li><a href="./tanzania">Tanzania</a></li>
+          <li><a href="./kenya">Kenya</a></li>
+          <li><a href="./rwanda">Rwanda</a></li>
+          <li><a href="./uganda">Uganda</a></li>
+          <li><a href="./madagascar">Madagascar</a></li>
+        </ul>
+      </li>
+      <li><a href="/itineraries">Itineraries</a></li>
+      <li class="patriot-nav-item">
+        <a href="#">Safari Collections</a>
+        <ul class="patriot-dropdown">
+          <li><a href="collections/family-safaris">Family Safaris</a></li>
+          <li><a href="collections/honeymoon">HoneyMoon</a></li>
+          <li><a href="collections/private-safaris">Private safari camps & lodges</a></li>
+          <li><a href="collections/solo">Solo Safaris</a></li>
+        </ul>
+      </li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="tanzania-hero">
+    <div class="hero-content">
+        <nav class="breadcrumb">
+            <a href="/" class="breadcrumb-link">Home</a>
+            <span class="breadcrumb-divider">/</span>
+            <a href="/destinations" class="breadcrumb-link">Destinations</a>
+            <span class="breadcrumb-divider">/</span>
+            <span class="breadcrumb-current">Uganda</span>
+        </nav>
+        
+        <h1 class="hero-title">Uganda</h1>
+        <p class="hero-subtitle">Where gorillas meet the source of the Nile in Africa's pearl</p>
+        <div class="hero-cta">
+            <button class="cta-primary" onclick="document.querySelector('.itineraries-section').scrollIntoView({ behavior: 'smooth' });">Explore Safaris</button>
+        </div>
+    </div>
+    
+    <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<section class="tanzania-safari-overview">
+    <div class="safari-container">
+        <!-- Left Column -->
+        <div class="safari-content">
+            <h2 class="safari-title">Uganda Safaris</h2>
+            <p class="safari-intro">
+                In the heart of Africa, Uganda captivates with mountain gorilla encounters, 
+                chimpanzee tracking, and the mighty Nile – offering diverse wildlife experiences in one spectacular destination.
+            </p>
+            
+            <div class="safari-highlight">
+                <h3>Uganda</h3>
+                <p class="highlight-quote">
+                    "We were blown away by Uganda's incredible diversity," wrote a recent visitor. "One day we were trekking through misty forests to meet mountain gorillas, the next we were watching the Nile's thunderous rapids. The warmth of the Ugandan people and the sheer variety of experiences made this our favorite African adventure."
+                </p>
+            </div>
+
+            <div class="safari-text-columns">
+                <div class="text-column">
+                    <p>
+                        The same traveler described unforgettable primate encounters: "Looking into the eyes of a silverback gorilla in Bwindi's ancient forest was a life-changing moment. Uganda delivers raw, authentic wildlife experiences that connect you deeply with nature."
+                    </p>
+                    <p>
+                        Uganda consistently surprises visitors with its contrasts. "From the source of the Nile to the Rwenzori Mountains, from dense rainforests to vast savannahs – Uganda packs more diversity into one country than we ever imagined," wrote a first-time visitor.
+                    </p>
+                    <p>
+                        Uganda leaves a lasting impression with its friendly people, stunning landscapes, and incredible biodiversity, offering visitors both intimate wildlife encounters and grand adventures.
+                    </p>
+                </div>
+                
+                <div class="text-column">
+                    <p>
+                        A Ugandan safari takes you through breathtaking landscapes – from the impenetrable forests of Bwindi to the thunderous Murchison Falls, from the chimpanzee-filled jungles of Kibale to the tree-climbing lions of Ishasha.
+                    </p>
+                    <p>
+                        Trek through ancient forests to encounter endangered mountain gorillas, track chimpanzees through lush rainforests, cruise the Nile past hippos and crocodiles, and witness the incredible diversity of Africa's birds in their natural habitats.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="safari-sidebar">
+            <div class="sidebar-content">
+                <p>
+                    Uganda's dramatic landscapes are shaped by the Great Rift Valley, with snow-capped Rwenzori Mountains, vast lakes, and the mighty Nile River creating ecosystems that support incredible biodiversity.
+                </p>
+                
+                <p>
+                    Uganda's tropical climate and fertile soils create lush, green landscapes year-round, earning it the nickname "Pearl of Africa." From the shores of Lake Victoria to the remote Kidepo Valley, the country offers endless exploration opportunities.
+                </p>
+
+                <div class="testimonial">
+                    <p class="testimonial-quote">
+                        "Every day in Uganda brought new wonders," sighed a couple on their second visit. "The gorilla trekking was spiritual, the Nile boat cruise was thrilling, and the people were the warmest we've encountered anywhere in Africa. Uganda truly is the pearl it claims to be."
+                    </p>
+                </div>
+
+                <div class="cta-box">
+                    <p class="cta-text">
+                        Speak to one of our Experts to start planning your dream Uganda safari.
+                    </p>
+                    <button class="cta-button">Start Planning</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tanzania-destinations">
+    <div class="destinations-container">
+        <div class="destinations-content">
+            <h2 class="destinations-title">Uganda's top safari & holiday destinations</h2>
+            <p class="destinations-intro">
+                Uganda's diverse wildlife areas and natural wonders naturally group into four main regions.
+            </p>
+
+            <div class="destination-group">
+                <h3 class="group-title">Southwest Uganda - Gorilla Territory</h3>
+                <p class="group-description">
+                    Uganda's most famous destination encompasses the legendary 
+                    <a href="#bwindi" class="park-link">Bwindi Impenetrable National Park</a> and 
+                    <a href="#mgahinga" class="park-link">Mgahinga Gorilla National Park</a>, home to endangered mountain gorillas. This region also includes 
+                    <a href="#lake-bunyonyi" class="park-link">Lake Bunyonyi</a> and the scenic 
+                    <a href="#kisoro" class="park-link">Kisoro highlands</a>.
+                </p>
+            </div>
+
+            <div class="destination-group">
+                <h3 class="group-title">Western Uganda - Primates & Volcanoes</h3>
+                <p class="group-description">
+                    For incredible primate diversity and volcanic landscapes, Western Uganda offers 
+                    <a href="#kibale" class="park-link">Kibale Forest National Park</a> for chimpanzee tracking, 
+                    <a href="#queen-elizabeth" class="park-link">Queen Elizabeth National Park</a> with its tree-climbing lions, and the dramatic 
+                    <a href="#rwenzori" class="park-link">Rwenzori Mountains</a>.
+                </p>
+            </div>
+
+            <div class="destination-group">
+                <h3 class="group-title">Northern Uganda - Nile & Wildlife</h3>
+                <p class="group-description">
+                    The wild north features 
+                    <a href="#murchison" class="park-link">Murchison Falls National Park</a> where the Nile explodes through a narrow gorge, and the remote 
+                    <a href="#kidepo" class="park-link">Kidepo Valley National Park</a>, one of Africa's most pristine wilderness areas.
+                </p>
+            </div>
+
+            <div class="destination-group">
+                <h3 class="group-title">Central Uganda - Lakes & Culture</h3>
+                <p class="group-description">
+                    Uganda's heartland includes the vibrant capital 
+                    <a href="#kampala" class="park-link">Kampala</a>, the source of the Nile at 
+                    <a href="#jinja" class="park-link">Jinja</a>, and the beautiful 
+                    <a href="#lake-victoria" class="park-link">Lake Victoria</a> shores with their rich cultural heritage.
+                </p>
+            </div>
+        </div>
+
+        <div class="destinations-image">
+            <img src="../images/sam-balye-Xj-d3ZS84pY-unsplash.jpg" 
+                 alt="Uganda Gorilla Trekking Landscape" 
+                 class="sharp-image">
+        </div>
+    </div>
+</section>
+
+<section class="tanzania-itineraries">
+    <div class="itineraries-container">
+        <div class="itineraries-header">
+            <h2 class="itineraries-title">Our top ten Uganda safaris & holidays</h2>
+            <p class="itineraries-intro">
+                Each of our holidays is as distinct as the traveller undertaking it. The itineraries here are just examples of what is possible, with costs and details; <a href="#all-safaris" class="text-link">see all 22 Uganda safari ideas here</a>.
+            </p>
+            
+            <div class="safari-types">
+                <div class="type-item">
+                    <h3>On <a href="#guided-safaris" class="type-link">Guided Safaris</a>,</h3>
+                    <p>you'll travel in a private 4WD with the same <a href="#expert-guide" class="type-link">expert guide</a> throughout, offering flexibility and deep cultural insights across Uganda's diverse regions.</p>
+                </div>
+                
+                <div class="type-item">
+                    <h3>On <a href="#primate-trekking" class="type-link">Primate Trekking Safaris</a>,</h3>
+                    <p>you'll experience guided treks to see gorillas and chimpanzees, accompanied by experienced trackers and park rangers through Uganda's magnificent forests.</p>
+                </div>
+                
+                <div class="type-item">
+                    <h3>Our <a href="#adventure-tours" class="type-link">Adventure Tours</a></h3>
+                    <p>showcase Uganda's thrilling activities from white-water rafting on the Nile to mountain hiking and community cultural experiences.</p>
+                </div>
+            </div>
+            
+            <div class="call-to-action">
+                <p>
+                    <a href="tel:+1234567890" class="cta-link">Call us now</a> to speak to a <a href="#uganda-expert" class="cta-link">Uganda expert</a> who can address your questions and craft your perfect trip.
+                </p>
+            </div>
+        </div>
+
+        <div class="itineraries-section">
+            <div class="itineraries-grid" id="itineraries-grid">
+                <!-- Itinerary 1 -->
+                <a href="/classic-gorilla-trek-uganda" class="itinerary-card">
+                    <div class="itinerary-image">
+                        <img src="../images/uganda-chimpanzees.jpg" alt="Classic Gorilla Trekking Safari">
+                    </div>
+                    <div class="itinerary-content">
+                        <h3 class="itinerary-name">Classic Gorilla Trek</h3>
+                        <p class="itinerary-duration">5 Days / 4 Nights</p>
+                        <p class="itinerary-description">Experience the magic of Bwindi Impenetrable Forest with gorilla trekking and community visits in Uganda's southwest.</p>
+                        <div class="itinerary-highlights">
+                            <span class="highlight">Mountain Gorillas</span>
+                            <span class="highlight">Bwindi Forest</span>
+                            <span class="highlight">Community Visits</span>
+                        </div>
+                        <div class="itinerary-price">From $2,650 per person</div>
+                    </div>
+                </a>
+
+                <!-- Itinerary 2 -->
+                <a href="/uganda-primate-special" class="itinerary-card">
+                    <div class="itinerary-image">
+                        <img src="../images/jeremy-stewardson-Jg2OYq3nRwE-unsplash.jpg" alt="Primate Safari">
+                    </div>
+                    <div class="itinerary-content">
+                        <h3 class="itinerary-name">Primate Explorer</h3>
+                        <p class="itinerary-duration">7 Days / 6 Nights</p>
+                        <p class="itinerary-description">Track both gorillas in Bwindi and chimpanzees in Kibale Forest for the ultimate primate adventure.</p>
+                        <div class="itinerary-highlights">
+                            <span class="highlight">Gorillas</span>
+                            <span class="highlight">Chimpanzees</span>
+                            <span class="highlight">Kibale Forest</span>
+                        </div>
+                        <div class="itinerary-price">From $3,400 per person</div>
+                    </div>
+                </a>
+
+                <!-- Itinerary 3 -->
+                <a href="/uganda-complete" class="itinerary-card">
+                    <div class="itinerary-image">
+                        <img src="../images/murad-swaleh-ap1NG3MG9Ws-unsplash.jpg" alt="Complete Uganda Safari">
+                    </div>
+                    <div class="itinerary-content">
+                        <h3 class="itinerary-name">Complete Uganda Experience</h3>
+                        <p class="itinerary-duration">10 Days / 9 Nights</p>
+                        <p class="itinerary-description">Discover Uganda's diversity with gorilla trekking, chimpanzee tracking, and Nile adventures at Murchison Falls.</p>
+                        <div class="itinerary-highlights">
+                            <span class="highlight">Gorillas</span>
+                            <span class="highlight">Murchison Falls</span>
+                            <span class="highlight">Chimpanzees</span>
+                        </div>
+                        <div class="itinerary-price">From $4,200 per person</div>
+                    </div>
+                </a>
+
+                <!-- Itinerary 4 -->
+                <a href="/luxury-uganda" class="itinerary-card">
+                    <div class="itinerary-image">
+                        <img src="../images/jithu-jith-yvKXFksz0KE-unsplash.jpg" alt="Luxury Uganda Safari">
+                    </div>
+                    <div class="itinerary-content">
+                        <h3 class="itinerary-name">Luxury Primate Safari</h3>
+                        <p class="itinerary-duration">6 Days / 5 Nights</p>
+                        <p class="itinerary-description">Premium gorilla trekking experience with luxury accommodation, private guides, and exclusive forest access.</p>
+                        <div class="itinerary-highlights">
+                            <span class="highlight">Luxury Lodges</span>
+                            <span class="highlight">Private Trekking</span>
+                            <span class="highlight">Exclusive</span>
+                        </div>
+                        <div class="itinerary-price">From $4,800 per person</div>
+                    </div>
+                </a>
+
+                <!-- Itinerary 5 -->
+                <a href="/uganda-adventure" class="itinerary-card">
+                    <div class="itinerary-image">
+                        <img src="../images/harshil-gudka-uJp09239lcQ-unsplash.jpg" alt="Uganda Adventure Safari">
+                    </div>
+                    <div class="itinerary-content">
+                        <h3 class="itinerary-name">Adventure & Wildlife</h3>
+                        <p class="itinerary-duration">8 Days / 7 Nights</p>
+                        <p class="itinerary-description">Combine gorilla trekking with white-water rafting on the Nile and zip-lining adventures in Jinja.</p>
+                        <div class="itinerary-highlights">
+                            <span class="highlight">Gorilla Trekking</span>
+                            <span class="highlight">Nile Rafting</span>
+                            <span class="highlight">Adventure Sports</span>
+                        </div>
+                        <div class="itinerary-price">From $3,800 per person</div>
+                    </div>
+                </a>
+
+                <!-- Itinerary 6 -->
+                <a href="/uganda-birding" class="itinerary-card">
+                    <div class="itinerary-image">
+                        <img src="../images/omoniyi-david-hspXjoVUsEk-unsplash.jpg" alt="Birding Uganda Safari">
+                    </div>
+                    <div class="itinerary-content">
+                        <h3 class="itinerary-name">Birding & Wildlife Safari</h3>
+                        <p class="itinerary-duration">9 Days / 8 Nights</p>
+                        <p class="itinerary-description">Explore Uganda's incredible birdlife with over 1,000 species while enjoying gorilla and chimpanzee encounters.</p>
+                        <div class="itinerary-highlights">
+                            <span class="highlight">Bird Watching</span>
+                            <span class="highlight">Gorillas</span>
+                            <span class="highlight">Queen Elizabeth NP</span>
+                        </div>
+                        <div class="itinerary-price">From $3,950 per person</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn active" data-page="1">1</button>
+                <button class="pagination-btn" data-page="2">2</button>
+                <button class="pagination-btn" data-page="3">3</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tanzania-map-section">
+    <div class="map-container">
+        <div class="map-header">
+            <h2 class="map-title">Uganda National Parks Map</h2>
+            <p class="map-subtitle">Explore Uganda's premier wildlife destinations and their unique characteristics</p>
+        </div>
+        
+        <div class="map-controls">
+            <button class="map-btn zoom-in">+</button>
+            <button class="map-btn zoom-out">-</button>
+            <button class="map-btn reset-view">Reset</button>
+            <div class="map-legend">
+                <div class="legend-item">
+                    <span class="legend-color northern"></span>
+                    <span class="legend-text">Southwest - Gorillas</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color southern"></span>
+                    <span class="legend-text">Western - Primates</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color western"></span>
+                    <span class="legend-text">Northern - Nile & Wildlife</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color coastal"></span>
+                    <span class="legend-text">Central - Lakes & Culture</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="map-wrapper">
+            <div id="leafletMap"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+    // Leaflet Map Integration
+document.addEventListener('DOMContentLoaded', function() {
+    // Uganda center coordinates
+    const ugandaCenter = [1.3733, 32.2903];
+    
+    // Initialize map
+    const map = L.map('leafletMap', {
+        zoomControl: false,
+        attributionControl: false
+    }).setView(ugandaCenter, 7);
+
+    // Add OpenStreetMap tiles with custom styling
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Custom CSS for map controls
+    const customControl = L.control.attribution({position: 'bottomright'});
+    customControl.setPrefix('OpenStreetMap');
+    customControl.addTo(map);
+
+    // National Parks Data - Updated for Uganda
+    const nationalParks = [
+        {
+            name: "Bwindi Impenetrable National Park",
+            position: [-1.0528, 29.7414],
+            region: "northern",
+            description: "UNESCO World Heritage Site home to nearly half of the world's mountain gorillas in ancient rainforest.",
+            highlights: "Mountain Gorillas • UNESCO Site • Forest Trekking"
+        },
+        {
+            name: "Mgahinga Gorilla National Park",
+            position: [-1.3667, 29.6500],
+            region: "northern",
+            description: "Volcanic national park with gorillas, golden monkeys, and dramatic Virunga Mountains scenery.",
+            highlights: "Gorillas • Golden Monkeys • Volcano Hikes"
+        },
+        {
+            name: "Kibale Forest National Park",
+            position: [0.4500, 30.3667],
+            region: "southern",
+            description: "Primate capital of the world with chimpanzees and 12 other primate species in tropical forest.",
+            highlights: "Chimpanzees • Primate Diversity • Forest Walks"
+        },
+        {
+            name: "Queen Elizabeth National Park",
+            position: [-0.1833, 30.0000],
+            region: "southern",
+            description: "Diverse ecosystems with tree-climbing lions, elephants, and the Kazinga Channel boat cruise.",
+            highlights: "Tree Lions • Boat Safaris • Wildlife Diversity"
+        },
+        {
+            name: "Murchison Falls National Park",
+            position: [2.1667, 31.6667],
+            region: "western",
+            description: "Uganda's largest park where the Nile explodes through a narrow gorge, with abundant wildlife.",
+            highlights: "Murchison Falls • Nile River • Big Game"
+        },
+        {
+            name: "Kidepo Valley National Park",
+            position: [3.9167, 33.8333],
+            region: "western",
+            description: "Remote wilderness with stunning landscapes and wildlife rarely seen in other East African parks.",
+            highlights: "Remote Wilderness • Unique Wildlife • Cultural Encounters"
+        },
+        {
+            name: "Lake Mburo National Park",
+            position: [-0.6333, 30.9667],
+            region: "coastal",
+            description: "Compact park with zebras, impalas, and boat trips on Lake Mburo near the capital.",
+            highlights: "Zebras • Boat Safaris • Walking Safaris"
+        },
+        {
+            name: "Rwenzori Mountains National Park",
+            position: [0.3667, 30.0000],
+            region: "southern",
+            description: "UNESCO site with Africa's third-highest peaks, glaciers, and unique montane ecosystems.",
+            highlights: "Mountain Climbing • Glaciers • UNESCO Site"
+        },
+        {
+            name: "Jinja - Source of the Nile",
+            position: [0.4244, 33.2042],
+            region: "coastal",
+            description: "Adventure capital with the source of the Nile, white-water rafting, and cultural sites.",
+            highlights: "Nile Source • Adventure Sports • Cultural Sites"
+        },
+        {
+            name: "Kampala City",
+            position: [0.3136, 32.5811],
+            region: "coastal",
+            description: "Vibrant capital city with markets, cultural sites, and Uganda Museum showcasing the country's heritage.",
+            highlights: "Cultural Sites • Markets • Urban Exploration"
+        }
+    ];
+
+    // Region colors - matching the CSS classes
+    const regionColors = {
+        northern: '#e74c3c',      // Red for Southwest - Gorillas
+        southern: '#3498db',      // Blue for Western - Primates
+        western: '#9b59b6',       // Purple for Northern - Nile & Wildlife
+        coastal: '#27ae60'        // Green for Central - Lakes & Culture
+    };
+
+    // Create custom icon function
+    function createCustomIcon(region) {
+        return L.divIcon({
+            className: 'custom-leaflet-marker',
+            html: `<div class="marker-pin ${region}" style="background-color: ${regionColors[region]}"></div>`,
+            iconSize: [30, 42],
+            iconAnchor: [15, 42]
+        });
+    }
+
+    // Create markers for each national park
+    nationalParks.forEach(park => {
+        const customIcon = createCustomIcon(park.region);
+        
+        const marker = L.marker(park.position, { icon: customIcon }).addTo(map);
+        
+        // Create popup content
+        const popupContent = `
+            <div class="leaflet-popup-content">
+                <h3>${park.name}</h3>
+                <p>${park.description}</p>
+                <p class="highlight">${park.highlights}</p>
+            </div>
+        `;
+        
+        marker.bindPopup(popupContent, {
+            className: 'custom-leaflet-popup',
+            maxWidth: 300
+        });
+    });
+
+    // Custom zoom controls
+    document.querySelector('.zoom-in').addEventListener('click', () => {
+        map.zoomIn();
+    });
+
+    document.querySelector('.zoom-out').addEventListener('click', () => {
+        map.zoomOut();
+    });
+
+    document.querySelector('.reset-view').addEventListener('click', () => {
+        map.setView(ugandaCenter, 7);
+    });
+
+    // Add scale control
+    L.control.scale({
+        imperial: false,
+        position: 'bottomleft'
+    }).addTo(map);
+
+    // Add click event to legend items to zoom to regions
+    document.querySelectorAll('.legend-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const region = this.querySelector('.legend-color').className.replace('legend-color ', '');
+            const regionParks = nationalParks.filter(park => park.region === region);
+            
+            if (regionParks.length > 0) {
+                const group = new L.featureGroup(regionParks.map(park => L.marker(park.position)));
+                map.fitBounds(group.getBounds().pad(0.1));
+            }
+        });
+    });
+
+    // Add hover effects to legend
+    document.querySelectorAll('.legend-item').forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            const region = this.querySelector('.legend-color').className.replace('legend-color ', '');
+            highlightRegion(region);
+        });
+
+        item.addEventListener('mouseleave', function() {
+            resetHighlight();
+        });
+    });
+
+    // Function to highlight markers of a specific region
+    function highlightRegion(region) {
+        map.eachLayer(layer => {
+            if (layer instanceof L.Marker) {
+                const markerRegion = layer.options.icon.options.className.includes(region);
+                if (markerRegion) {
+                    layer.getElement().style.transform = 'scale(1.2)';
+                    layer.getElement().style.zIndex = '1000';
+                } else {
+                    layer.getElement().style.opacity = '0.5';
+                }
+            }
+        });
+    }
+
+    // Function to reset all markers to normal
+    function resetHighlight() {
+        map.eachLayer(layer => {
+            if (layer instanceof L.Marker) {
+                layer.getElement().style.transform = 'scale(1)';
+                layer.getElement().style.opacity = '1';
+                layer.getElement().style.zIndex = '500';
+            }
+        });
+    }
+});
+</script>
+
+<section class="parallax-cta">
+    <div class="parallax-image"></div>
+    <div class="parallax-content">
+        <div class="cta-text-container">
+            <h2 class="cta-title">Looking for inspiration on where to travel next?</h2>
+            <p class="cta-text">Visit our trip chooser to explore your options and find inspiration for your perfect African adventure</p>
+            <button class="parallax-cta-button">Inspire me</button>
+        </div>
+    </div>
+</section>
+
+<section class="newsletter-section">
+    <div class="newsletter-container">
+        <div class="newsletter-content">
+            <h2 class="newsletter-title">Stay Inspired</h2>
+            <p class="newsletter-subtitle">Receive exclusive safari insights, travel tips, and special offers directly to your inbox</p>
+            
+            <form class="newsletter-form">
+                <div class="form-group">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="newsletter-button">Subscribe</button>
+                </div>
+                <p class="newsletter-disclaimer">By subscribing, you agree to our Privacy Policy and consent to receive safari inspiration from us.</p>
+            </form>
+        </div>
+        
+        <div class="newsletter-image">
+            <img src="../images/muthengi-mbuvi-wlCPjv4O_rc-unsplash.jpg" 
+                 alt="Uganda Safari Inspiration" 
+                 class="sharp-image">
+        </div>
+    </div>
+</section>
+
+<footer class="luxury-footer">
+  <div class="footer-container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="logo-container">
+          <img src="../images/p-logo-2.png" alt="Patriot Tours & Safaris Ltd" class="footer-logo">
+        </div>
+        <p class="brand-description">
+          Crafting extraordinary African safari experiences with unparalleled luxury and expertise since 2019.
+        </p>
+        <div class="social-links">
+          <a href="https://facebook.com/patriotsafaris" class="social-link" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/wildlife_safaris_?utm_source=ig_web_button_share_sheet&igsh=MTJ3cHRuZHBubzNkYw==" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com/@patriotsafaris" class="social-link" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="link-group">
+          <h4 class="link-group-title">Explore</h4>
+          <ul class="link-list">
+            <li><a href="./tanzania.html" class="footer-link">Tanzania</a></li>
+            <li><a href="./kenya" class="footer-link">Kenya</a></li>
+            <li><a href="./uganda" class="footer-link">Uganda</a></li>
+            <li><a href="./rwanda" class="footer-link">Rwanda</a></li>
+            <li><a href="./madagascar" class="footer-link">Madagascar</a></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h4 class="link-group-title">Company</h4>
+          <ul class="link-list">
+            <li><a href="/about" class="footer-link">About Us</a></li>
+            <li><a href="/contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h4 class="link-group-title">Support</h4>
+          <ul class="link-list">
+            <li><a href="/terms" class="footer-link">Terms & Conditions</a></li>
+            <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/insurance" class="footer-link">Travel Insurance</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-certifications">
+      <div class="certification-badges">
+        <div class="badge-item">
+          <img src="../images/TripAdvisor_Logo.svg.png" alt="TripAdvisor Excellence" class="badge-image">
+        </div>
+        <div class="badge-item">
+          <img src="../images/pngfind.com-moutains-png-6933353.png" alt="Mountain Tourism" class="badge-image">
+        </div>
+        <div class="badge-item">
+          <img src="../images/astalogonew_9.png" alt="ASTA Member" class="badge-image">
+        </div>
+        <div class="badge-item">
+          <img src="../images/ATTA-Logo-with-Icon.png" alt="ATTA Member" class="badge-image">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-credits">
+        <p class="copyright">
+          &copy; <span id="current-year"></span> Patriot Tours & Safaris Ltd. All rights reserved.
+        </p>
+        <p class="developer-credit">
+          Crafted with excellence by <a href="https://adamsplusx.com" target="_blank" class="developer-link">AdamsPlusX</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+<script src="../scripts.js"></script>
+</body>
+</html>

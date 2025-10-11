@@ -1,0 +1,1575 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap');
+
+.tanzania-hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), 
+                url('../images/2h-media-zynEHxCEM0M-unsplash.jpg') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    position: relative;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+.breadcrumb-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.breadcrumb-link:hover {
+    color: #D4AF37;
+}
+
+.breadcrumb-divider {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.breadcrumb-current {
+    color: #D4AF37;
+    font-weight: 400;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.cta-primary, .cta-secondary {
+    padding: 1.2rem 2.5rem;
+    border: 1px solid #D4AF37;
+    background: #D4AF37;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-primary::before, .cta-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.cta-primary:hover::before, .cta-secondary:hover::before {
+    left: 100%;
+}
+
+.cta-primary:hover {
+    background: #E6C158;
+    border-color: #E6C158;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.cta-secondary {
+    background: transparent;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #D4AF37;
+    color: #D4AF37;
+    transform: translateY(-2px);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, #D4AF37, transparent);
+    animation: scrollBounce 2s infinite;
+}
+
+@keyframes scrollBounce {
+    0%, 100% { 
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateY(15px);
+        opacity: 0.5;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .cta-primary, .cta-secondary {
+        width: 220px;
+        padding: 1rem 2rem;
+    }
+    
+    .breadcrumb {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .tanzania-hero {
+        padding: 0 1.5rem;
+    }
+}
+
+.tanzania-safari-overview {
+    padding: 80px 2rem;
+    background: #fff;
+}
+
+.safari-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 60px;
+    align-items: start;
+}
+
+.safari-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.safari-intro {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.3px;
+}
+
+.safari-highlight h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.highlight-quote {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+    border-left: 2px solid #D4AF37;
+    padding-left: 1.5rem;
+}
+
+.safari-text-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.text-column p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.2px;
+}
+
+.text-column p:last-child {
+    margin-bottom: 0;
+}
+
+/* Right Sidebar Styles */
+.safari-sidebar {
+    background: #fafafa;
+    padding: 2.5rem;
+}
+
+.sidebar-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.2px;
+}
+
+.testimonial {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: white;
+    border-left: 3px solid #D4AF37;
+}
+
+.testimonial-quote {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+    margin: 0;
+}
+
+.cta-box {
+    background: #000;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cta-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    background: #D4AF37;
+    color: #000;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #E6C158;
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .safari-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .safari-text-columns {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .safari-sidebar {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tanzania-safari-overview {
+        padding: 60px 1.5rem;
+    }
+    
+    .safari-title {
+        font-size: 1.8rem;
+    }
+    
+    .safari-sidebar {
+        padding: 1.5rem;
+    }
+    
+    .cta-box {
+        padding: 1.5rem;
+    }
+}
+
+.tanzania-destinations {
+    padding: 80px 2rem;
+    background: #fff;
+}
+
+.destinations-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.destinations-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.destinations-intro {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 3rem;
+    letter-spacing: 0.3px;
+}
+
+.destination-group {
+    margin-bottom: 2.5rem;
+}
+
+.destination-group:last-child {
+    margin-bottom: 0;
+}
+
+.group-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.3px;
+}
+
+.group-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #666;
+    letter-spacing: 0.2px;
+}
+
+.park-link {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.park-link:hover {
+    color: #000;
+    border-bottom-color: #D4AF37;
+}
+
+.destinations-image {
+    position: relative;
+}
+
+.sharp-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .destinations-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .destinations-image {
+        order: -1;
+    }
+    
+    .sharp-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tanzania-destinations {
+        padding: 60px 1.5rem;
+    }
+    
+    .destinations-title {
+        font-size: 1.8rem;
+    }
+    
+    .group-title {
+        font-size: 1.1rem;
+    }
+    
+    .sharp-image {
+        height: 300px;
+    }
+}
+
+.tanzania-itineraries {
+    padding: 80px 2rem;
+    background: #fff;
+}
+
+.itineraries-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.itineraries-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.itineraries-intro {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.2px;
+}
+
+.text-link {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.text-link:hover {
+    color: #000;
+}
+
+.safari-types {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.type-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.type-item p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #666;
+}
+
+.type-link {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.type-link:hover {
+    color: #000;
+}
+
+.call-to-action {
+    background: #000;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.call-to-action p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.cta-link {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.cta-link:hover {
+    color: white;
+}
+
+.itineraries-section {
+    margin-top: 3rem;
+}
+
+.itineraries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 0;
+    margin-bottom: 3rem;
+}
+
+.itinerary-card {
+    background: white;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.itinerary-card:hover {
+    background: #f8f8f8;
+}
+
+.itinerary-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.itinerary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+    transition: transform 0.3s ease;
+}
+
+.itinerary-card:hover .itinerary-image img {
+    transform: scale(1.05);
+}
+
+.itinerary-content {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.itinerary-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.itinerary-duration {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #D4AF37;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.itinerary-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.itinerary-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #000;
+    background: #f0f0f0;
+    padding: 0.3rem 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.itinerary-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #D4AF37;
+    margin-top: auto;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.pagination-btn {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 0;
+    width: 40px;
+    height: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn:hover {
+    background: #f8f8f8;
+    color: #000;
+}
+
+.pagination-btn.active {
+    background: #000;
+    color: white;
+    border-color: #000;
+}
+
+.itinerary-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .itineraries-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .itinerary-card {
+        border-right: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .tanzania-itineraries {
+        padding: 60px 1.5rem;
+    }
+    
+    .itineraries-title {
+        font-size: 1.8rem;
+    }
+    
+    .itinerary-content {
+        padding: 1.5rem;
+    }
+    
+    .itinerary-image {
+        height: 180px;
+    }
+}
+
+.tanzania-map-section {
+    padding: 80px 2rem;
+    background: #fff;
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.map-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.map-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #666;
+    letter-spacing: 0.3px;
+}
+
+.map-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+.map-btn {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 0;
+    width: 40px;
+    height: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-btn:hover {
+    background: #f8f8f8;
+    color: #000;
+    border-color: #D4AF37;
+}
+
+.map-wrapper {
+    position: relative;
+    height: 600px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.tanzania-map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+}
+
+.map-base {
+    width: 100%;
+    height: 100%;
+}
+
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+}
+
+/* Map Pins */
+.map-pin {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.pin-marker {
+    width: 20px;
+    height: 20px;
+    background: #D4AF37;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pin-marker::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 15px;
+    background: #D4AF37;
+}
+
+.map-pin:hover .pin-marker {
+    transform: scale(1.3);
+    background: #000;
+}
+
+.map-pin:hover .pin-marker::after {
+    background: #000;
+}
+
+.map-pin:hover .pin-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+/* Region-specific pin colors */
+.map-pin.northern .pin-marker {
+    background: #e74c3c;
+}
+
+.map-pin.northern .pin-marker::after {
+    background: #e74c3c;
+}
+
+.map-pin.southern .pin-marker {
+    background: #3498db;
+}
+
+.map-pin.southern .pin-marker::after {
+    background: #3498db;
+}
+
+.map-pin.western .pin-marker {
+    background: #9b59b6;
+}
+
+.map-pin.western .pin-marker::after {
+    background: #9b59b6;
+}
+
+.map-pin.coastal .pin-marker {
+    background: #27ae60;
+}
+
+.map-pin.coastal .pin-marker::after {
+    background: #27ae60;
+}
+
+/* Tooltips */
+.pin-tooltip {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid #eee;
+    padding: 1rem;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.pin-tooltip h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.pin-tooltip p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Legend */
+.map-legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.legend-color.northern {
+    background: #e74c3c;
+}
+
+.legend-color.southern {
+    background: #3498db;
+}
+
+.legend-color.western {
+    background: #9b59b6;
+}
+
+.legend-color.coastal {
+    background: #27ae60;
+}
+
+.legend-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .map-wrapper {
+        height: 400px;
+    }
+    
+    .map-legend {
+        gap: 1rem;
+    }
+    
+    .legend-item {
+        flex: 1;
+        justify-content: center;
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tanzania-map-section {
+        padding: 60px 1rem;
+    }
+    
+    .map-title {
+        font-size: 1.8rem;
+    }
+    
+    .map-wrapper {
+        height: 300px;
+    }
+    
+    .pin-tooltip {
+        min-width: 150px;
+        padding: 0.8rem;
+    }
+}
+
+.tanzania-map-section {
+    padding: 80px 2rem;
+    background: #fff;
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.map-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.map-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #666;
+    letter-spacing: 0.3px;
+}
+
+.map-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.map-btn {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 0;
+    width: 40px;
+    height: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-btn:hover {
+    background: #f8f8f8;
+    color: #000;
+    border-color: #D4AF37;
+}
+
+.map-legend {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.legend-color.northern {
+    background: #e74c3c;
+}
+
+.legend-color.southern {
+    background: #3498db;
+}
+
+.legend-color.western {
+    background: #9b59b6;
+}
+
+.legend-color.coastal {
+    background: #27ae60;
+}
+
+.legend-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.map-wrapper {
+    position: relative;
+    height: 600px;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+#leafletMap {
+    width: 100%;
+    height: 100%;
+}
+
+/* Custom Leaflet Marker Styles */
+.custom-leaflet-marker {
+    background: transparent !important;
+    border: none !important;
+}
+
+.marker-pin {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.marker-pin::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 15px;
+    background: inherit;
+}
+
+.custom-leaflet-marker:hover .marker-pin {
+    transform: scale(1.3);
+}
+
+/* Custom Leaflet Popup Styling */
+.custom-leaflet-popup .leaflet-popup-content-wrapper {
+    border-radius: 0;
+    border: 1px solid #eee;
+    box-shadow: none;
+    padding: 0;
+}
+
+.custom-leaflet-popup .leaflet-popup-content {
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+}
+
+.custom-leaflet-popup .leaflet-popup-tip {
+    background: white;
+    border: 1px solid #eee;
+}
+
+.leaflet-popup-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.leaflet-popup-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.leaflet-popup-content .highlight {
+    font-size: 0.8rem;
+    color: #D4AF37;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* Leaflet Control Styling */
+.leaflet-control-scale {
+    border: 1px solid #eee;
+    border-radius: 0;
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+}
+
+.leaflet-control-attribution {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid #eee !important;
+    border-radius: 0 !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 0.7rem !important;
+    padding: 2px 8px !important;
+}
+
+/* Leaflet Zoom Controls (if enabled) */
+.leaflet-control-zoom {
+    border: 1px solid #eee !important;
+    border-radius: 0 !important;
+}
+
+.leaflet-control-zoom a {
+    background: white !important;
+    border-bottom: 1px solid #eee !important;
+    color: #666 !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background: #f8f8f8 !important;
+    color: #000 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .map-wrapper {
+        height: 400px;
+    }
+    
+    .map-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .map-legend {
+        margin-left: 0;
+        gap: 1rem;
+    }
+    
+    .legend-item {
+        flex: 1;
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tanzania-map-section {
+        padding: 60px 1rem;
+    }
+    
+    .map-title {
+        font-size: 1.8rem;
+    }
+    
+    .map-wrapper {
+        height: 300px;
+    }
+    
+    .leaflet-popup-content {
+        max-width: 200px !important;
+    }
+}
+
+.parallax-cta {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.parallax-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+              url('../images/DSC_3118.JPG');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.parallax-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-text-container {
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  padding: 0 2rem;
+}
+
+.cta-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.cta-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+
+.parallax-cta-button {
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+  background: linear-gradient(135deg, #e0b845, #c9a227);
+}
+
+.newsletter-section {
+    padding: 80px 2rem;
+    background: #fff;
+}
+
+.newsletter-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.newsletter-content {
+    padding-right: 2rem;
+}
+
+.newsletter-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.newsletter-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+}
+
+.newsletter-form {
+    max-width: 500px;
+}
+
+.form-group {
+    display: flex;
+    gap: 0;
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.form-group:focus-within {
+    border-color: #D4AF37;
+}
+
+.newsletter-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 1.2rem 1.5rem;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    outline: none;
+}
+
+.newsletter-input::placeholder {
+    color: #999;
+}
+
+.newsletter-button {
+    background: #D4AF37;
+    color: #000;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.newsletter-button:hover {
+    background: #E6C158;
+}
+
+.newsletter-disclaimer {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #999;
+    line-height: 1.5;
+}
+
+.newsletter-image {
+    position: relative;
+}
+
+.sharp-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .newsletter-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .newsletter-content {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .newsletter-form {
+        margin: 0 auto;
+    }
+    
+    .sharp-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter-section {
+        padding: 60px 1.5rem;
+    }
+    
+    .newsletter-title {
+        font-size: 2rem;
+    }
+    
+    .newsletter-subtitle {
+        font-size: 1rem;
+    }
+    
+    .form-group {
+        flex-direction: column;
+        border: none;
+        gap: 1rem;
+    }
+    
+    .newsletter-input {
+        border: 1px solid #eee;
+        padding: 1rem 1.2rem;
+    }
+    
+    .newsletter-input:focus {
+        border-color: #D4AF37;
+    }
+    
+    .newsletter-button {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .newsletter-section {
+        padding: 50px 1rem;
+    }
+    
+    .newsletter-title {
+        font-size: 1.8rem;
+    }
+    
+    .newsletter-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .sharp-image {
+        height: 250px;
+    }
+}
