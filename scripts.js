@@ -1200,3 +1200,106 @@ document.addEventListener('DOMContentLoaded', function() {
         return null;
     }
 });
+
+// Newsletter Banner Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const newsletterBanner = document.getElementById('newsletterBanner');
+    const closeBanner = document.getElementById('closeBanner');
+    const newsletterForm = document.getElementById('newsletterForm');
+    const newsletterContent = document.querySelector('.newsletter-content');
+    
+    // Check if user has seen the banner recently
+    function shouldShowBanner() {
+        const lastSeen = localStorage.getItem('newsletterBannerLastSeen');
+        if (!lastSeen) return true;
+        
+        const lastSeenDate = new Date(lastSeen);
+        const now = new Date();
+        const daysSinceLastSeen = Math.floor((now - lastSeenDate) / (1000 * 60 * 60 * 24));
+        
+        // Show banner if it's been more than 7 days since last seen
+        return daysSinceLastSeen >= 7;
+    }
+    
+    // Show banner with delay
+    function showBanner() {
+        setTimeout(() => {
+            newsletterBanner.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }, 2000); // Show after 2 seconds
+    }
+    
+    // Hide banner
+    function hideBanner() {
+        newsletterBanner.classList.remove('show');
+        document.body.style.overflow = ''; // Restore scrolling
+        localStorage.setItem('newsletterBannerLastSeen', new Date().toISOString());
+    }
+    
+    // Handle form submission
+    newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailInput = this.querySelector('input[type="email"]');
+        const email = emailInput.value.trim();
+        
+        if (email) {
+            // Here you would typically send the email to your backend
+            console.log('Subscribed email:', email);
+            
+            // Show success state
+            showSuccessState();
+            
+            // Store subscription in localStorage
+            localStorage.setItem('newsletterSubscribed', 'true');
+            localStorage.setItem('subscribedEmail', email);
+        }
+    });
+    
+    // Show success state
+    function showSuccessState() {
+        const successHTML = `
+            <div class="newsletter-success">
+                <div class="success-icon">✓</div>
+                <h3 class="success-title">Welcome to Our Safari Community!</h3>
+                <p class="success-message">
+                    Thank you for subscribing. You'll receive your first safari inspiration soon.
+                </p>
+                <button class="submit-btn" onclick="hideBanner()" style="margin-top: 2rem;">
+                    Continue Exploring
+                </button>
+            </div>
+        `;
+        
+        newsletterContent.innerHTML = successHTML;
+    }
+    
+    // Close banner when clicking outside
+    newsletterBanner.addEventListener('click', function(e) {
+        if (e.target === newsletterBanner) {
+            hideBanner();
+        }
+    });
+    
+    // Close banner button
+    closeBanner.addEventListener('click', hideBanner);
+    
+    // Escape key to close
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && newsletterBanner.classList.contains('show')) {
+            hideBanner();
+        }
+    });
+    
+    // Initialize banner
+    if (shouldShowBanner() && !localStorage.getItem('newsletterSubscribed')) {
+        showBanner();
+    }
+});
+
+// Make hideBanner available globally for the success button
+window.hideBanner = function() {
+    const newsletterBanner = document.getElementById('newsletterBanner');
+    newsletterBanner.classList.remove('show');
+    document.body.style.overflow = '';
+    localStorage.setItem('newsletterBannerLastSeen', new Date().toISOString());
+};
