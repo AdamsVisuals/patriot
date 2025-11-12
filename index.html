@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Operator in Africa - Patriot Tours & Safaris Ltd</title>
+    <meta name="description" content="Patriot Tours & Safaris Ltd is a leading tour operator specializing in customized tours and safaris. Explore our wide range of travel services and packages.">
+    <meta name="keywords" content="Tour Operator, Safaris, Customized Tours, Travel Services, Travel Packages, Patriot Tours & Safaris Ltd">
+    <meta name="author" content="Patriot Tours & Safaris Ltd">
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=clear_all" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="patriot-header">
+  <div class="patriot-header-container">
+    <button class="patriot-menu-toggle" id="patriot-menu-toggle">
+      <span class="material-symbols-outlined">sort</span>
+    </button>
+    
+    <div class="patriot-logo-container" onclick="window.location.href='/'" style="cursor:pointer;">
+      <img src="images/p-logo-2.png" alt="Patriot Tours and Safaris" class="patriot-logo">
+    </div>
+    
+    <div class="patriot-header-actions">
+      <div class="patriot-search-toggle" id="patriot-search-toggle">
+        <span class="material-symbols-outlined">search</span>
+      </div>
+      <div class="patriot-language-switcher">
+        <span class="material-symbols-outlined">language</span>
+        <select class="patriot-language-select">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  <div class="patriot-search-expandable" id="patriot-search-expandable">
+    <input type="text" placeholder="Search destinations..." class="patriot-search-input">
+    <button class="patriot-search-close" id="patriot-search-close">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  
+  <nav class="patriot-navigation" id="patriot-navigation">
+    <button class="patriot-menu-close" id="patriot-menu-close">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <ul class="patriot-nav-list">
+      <li class="patriot-nav-item">
+        <a href="#">Destinations</a>
+        <ul class="patriot-dropdown">
+          <li><a href="destinations/tanzania">Tanzania</a></li>
+          <li><a href="destinations/kenya">Kenya</a></li>
+          <li><a href="destinations/rwanda">Rwanda</a></li>
+          <li><a href="destinations/uganda">Uganda</a></li>
+          <li><a href="destinations/madagascar">Madagascar</a></li>
+        </ul>
+      </li>
+      <li><a href="itineraries.html">Itineraries</a></li>
+      <li class="patriot-nav-item">
+        <a href="#">Safari Collections</a>
+        <ul class="patriot-dropdown">
+          <li><a href="collections/family-safaris">Family Safaris</a></li>
+          <li><a href="collections/honeymoon">HoneyMoon</a></li>
+          <li><a href="collections/treks.html">Treks</a></li>
+          <li><a href="collections/beach.html">Beach Safaris</a></li>
+          <li><a href="collections/cultural.html">Cultural Safaris</a></li>
+        </ul>
+      </li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="patriot-hero">
+  <div class="patriot-slideshow">
+    <div class="patriot-slide patriot-active" style="background-image: url('images/northern-serengeti.jpg');">
+      <div class="patriot-slide-overlay"></div>
+      <div class="patriot-slide-content">
+        <h1 class="patriot-slide-title">TANZANIA</h1>
+        <div class="patriot-title-divider"></div>
+        <p class="patriot-slide-description">Experience the majestic Serengeti and witness the Great Migration in one of Africa's most iconic safari destinations.</p>
+        <a href="destinations/tanzania" class="patriot-slide-cta">Explore Tanzania</a>
+      </div>
+    </div>
+    
+    <div class="patriot-slide" style="background-image: url('images/sergey-pesterev-DWXR-nAbxCk-unsplash.jpg');">
+      <div class="patriot-slide-overlay"></div>
+      <div class="patriot-slide-content">
+        <h1 class="patriot-slide-title">KENYA</h1>
+        <div class="patriot-title-divider"></div>
+        <p class="patriot-slide-description">From the Maasai Mara to the white sandy beaches of the coast, Kenya offers diverse and unforgettable experiences.</p>
+        <a href="destinations/kenya" class="patriot-slide-cta">Explore Kenya</a>
+      </div>
+    </div>
+    
+    <div class="patriot-slide" style="background-image: url('images/gabriel-schumacher-WwQynDqwE14-unsplash.jpg');">
+      <div class="patriot-slide-overlay"></div>
+      <div class="patriot-slide-content">
+        <h1 class="patriot-slide-title">RWANDA</h1>
+        <div class="patriot-title-divider"></div>
+        <p class="patriot-slide-description">Trek through misty forests to encounter majestic mountain gorillas in their natural habitat.</p>
+        <a href="destinations/rwanda" class="patriot-slide-cta">Explore Rwanda</a>
+      </div>
+    </div>
+    
+    <div class="patriot-slide" style="background-image: url('images/uganda-chimpanzees.webp');">
+      <div class="patriot-slide-overlay"></div>
+      <div class="patriot-slide-content">
+        <h1 class="patriot-slide-title">UGANDA</h1>
+        <div class="patriot-title-divider"></div>
+        <p class="patriot-slide-description">Discover the Pearl of Africa with its diverse wildlife, lush landscapes, and the source of the Nile.</p>
+        <a href="destinations/uganda" class="patriot-slide-cta">Explore Uganda</a>
+      </div>
+    </div>
+    
+    <div class="patriot-slide" style="background-image: url('images/nicolas-jehly-eVKXmfoT_jE-unsplash.jpg');">
+      <div class="patriot-slide-overlay"></div>
+      <div class="patriot-slide-content">
+        <h1 class="patriot-slide-title">MADAGASCAR</h1>
+        <div class="patriot-title-divider"></div>
+        <p class="patriot-slide-description">Explore the unique biodiversity and extraordinary landscapes of the world's fourth largest island.</p>
+        <a href="destinations/madagascar" class="patriot-slide-cta">Explore Madagascar</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="patriot-slide-controls">
+    <button class="patriot-slide-prev">
+      <span class="material-symbols-outlined">chevron_left</span>
+    </button>
+    <div class="patriot-slide-indicators">
+      <span class="patriot-slide-indicator patriot-active" data-slide="0"></span>
+      <span class="patriot-slide-indicator" data-slide="1"></span>
+      <span class="patriot-slide-indicator" data-slide="2"></span>
+      <span class="patriot-slide-indicator" data-slide="3"></span>
+      <span class="patriot-slide-indicator" data-slide="4"></span>
+    </div>
+    <button class="patriot-slide-next">
+      <span class="material-symbols-outlined">chevron_right</span>
+    </button>
+  </div>
+</section>
+
+<section class="patriot-section">
+  <div class="patriot-container">
+    <div class="patriot-heading">
+      <div class="title-decoration">
+        <div class="decoration-line"></div>
+        <div class="decoration-icon">
+          <i class="fas fa-compass"></i>
+        </div>
+        <div class="decoration-line"></div>
+      </div>
+      <h1 class="patriot-main-title">
+        <span class="patriot-title-line">Curated Journeys</span>
+        <span class="patriot-title-line patriot-handwritten">Crafted Exclusively</span>
+      </h1>
+      <p class="title-subtext">Where extraordinary experiences begin</p>
+    </div>
+    
+    <div class="patriot-description">
+      <p>Our bespoke travel experiences are meticulously crafted by destination specialists. Each itinerary is a unique masterpiece, blending luxury accommodations, exclusive access, and authentic cultural immersion.</p>
+    </div>
+    
+    <div class="patriot-gallery-container">
+      <div class="gallery-decoration">
+        <div class="decoration-element"></div>
+        <div class="decoration-element"></div>
+      </div>
+      
+      <div class="patriot-gallery">
+        <div class="patriot-gallery-track">
+          <!-- Package Card 1 -->
+          <a href="/tours/serengeti-safari" class="patriot-package-card" data-package="safari-adventure">
+            <div class="package-badge">Most Popular</div>
+            <div class="package-image">
+              <img src="images/gabriel-schumacher-WwQynDqwE14-unsplash.jpg" alt="Serengeti Safari Package" class="patriot-image">
+              <div class="patriot-image-overlay"></div>
+            </div>
+            <div class="package-content">
+              <div class="package-meta">
+                <span class="package-duration"><i class="far fa-clock"></i> 7 Days</span>
+                <span class="package-difficulty">Moderate</span>
+              </div>
+              <h3 class="package-title">Serengeti Signature Safari</h3>
+              <p class="package-description">Immerse yourself in the great migration with private guides and luxury tented camps.</p>
+              <div class="package-footer">
+                <div class="package-price">
+                  <span class="price-from">From</span>
+                  <span class="price-amount">$4,299</span>
+                  <span class="price-person">per person</span>
+                </div>
+                <div class="package-cta">
+                  <span class="cta-text">Explore Journey</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Package Card 2 -->
+          <a href="/tours/madagascar-expedition" class="patriot-package-card" data-package="madagascar-expedition">
+            <div class="package-badge">Limited Availability</div>
+            <div class="package-image">
+              <img src="images/madagascar-bg.jpg" alt="Madagascar Expedition Package" class="patriot-image">
+              <div class="patriot-image-overlay"></div>
+            </div>
+            <div class="package-content">
+              <div class="package-meta">
+                <span class="package-duration"><i class="far fa-clock"></i> 10 Days</span>
+                <span class="package-difficulty">Adventurous</span>
+              </div>
+              <h3 class="package-title">Madagascar Wilderness</h3>
+              <p class="package-description">Discover unique biodiversity and pristine landscapes with expert naturalist guides.</p>
+              <div class="package-footer">
+                <div class="package-price">
+                  <span class="price-from">From</span>
+                  <span class="price-amount">$5,199</span>
+                  <span class="price-person">per person</span>
+                </div>
+                <div class="package-cta">
+                  <span class="cta-text">Explore Journey</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Package Card 3 -->
+          <a href="/tours/wildlife-photography" class="patriot-package-card" data-package="wildlife-photography">
+            <div class="package-image">
+              <img src="images/simone-dinoia-1RfPRTx_yUM-unsplash.jpg" alt="Wildlife Photography Package" class="patriot-image">
+              <div class="patriot-image-overlay"></div>
+            </div>
+            <div class="package-content">
+              <div class="package-meta">
+                <span class="package-duration"><i class="far fa-clock"></i> 5 Days</span>
+                <span class="package-difficulty">Leisurely</span>
+              </div>
+              <h3 class="package-title">Photographer's Paradise</h3>
+              <p class="package-description">Capture breathtaking moments with professional photography guidance and exclusive access.</p>
+              <div class="package-footer">
+                <div class="package-price">
+                  <span class="price-from">From</span>
+                  <span class="price-amount">$3,499</span>
+                  <span class="price-person">per person</span>
+                </div>
+                <div class="package-cta">
+                  <span class="cta-text">Explore Journey</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Package Card 4 -->
+          <a href="/tours/sunset-safari" class="patriot-package-card" data-package="sunset-safari">
+            <div class="package-badge">Romantic</div>
+            <div class="package-image">
+              <img src="images/arson-haja-ACHUpG7G2Es-unsplash.jpg" alt="Sunset Safari Package" class="patriot-image">
+              <div class="patriot-image-overlay"></div>
+            </div>
+            <div class="package-content">
+              <div class="package-meta">
+                <span class="package-duration"><i class="far fa-clock"></i> 3 Days</span>
+                <span class="package-difficulty">Luxury</span>
+              </div>
+              <h3 class="package-title">Golden Hour Retreat</h3>
+              <p class="package-description">Intimate safari experience with private sundowners and luxury accommodations.</p>
+              <div class="package-footer">
+                <div class="package-price">
+                  <span class="price-from">From</span>
+                  <span class="price-amount">$2,199</span>
+                  <span class="price-person">per person</span>
+                </div>
+                <div class="package-cta">
+                  <span class="cta-text">Explore Journey</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Package Card 5 -->
+          <a href="/tours/adventure-safari" class="patriot-package-card" data-package="adventure-safari">
+            <div class="package-image">
+              <img src="images/DSC_1625.JPG" alt="Adventure Safari Package" class="patriot-image">
+              <div class="patriot-image-overlay"></div>
+            </div>
+            <div class="package-content">
+              <div class="package-meta">
+                <span class="package-duration"><i class="far fa-clock"></i> 6 Days</span>
+                <span class="package-difficulty">Active</span>
+              </div>
+              <h3 class="package-title">Explorer's Expedition</h3>
+              <p class="package-description">Off-the-beaten-path adventure with expert trackers and authentic bush experiences.</p>
+              <div class="package-footer">
+                <div class="package-price">
+                  <span class="price-from">From</span>
+                  <span class="price-amount">$3,899</span>
+                  <span class="price-person">per person</span>
+                </div>
+                <div class="package-cta">
+                  <span class="cta-text">Explore Journey</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Package Card 6 -->
+          <a href="/tours/luxury-lodge" class="patriot-package-card" data-package="luxury-lodge">
+            <div class="package-badge">New</div>
+            <div class="package-image">
+              <img src="images/DSC_1735.JPG" alt="Luxury Lodge Package" class="patriot-image">
+              <div class="patriot-image-overlay"></div>
+            </div>
+            <div class="package-content">
+              <div class="package-meta">
+                <span class="package-duration"><i class="far fa-clock"></i> 4 Days</span>
+                <span class="package-difficulty">Premium</span>
+              </div>
+              <h3 class="package-title">Sanctuary Retreat</h3>
+              <p class="package-description">Ultimate luxury with private plunge pools, spa treatments, and gourmet dining.</p>
+              <div class="package-footer">
+                <div class="package-price">
+                  <span class="price-from">From</span>
+                  <span class="price-amount">$3,299</span>
+                  <span class="price-person">per person</span>
+                </div>
+                <div class="package-cta">
+                  <span class="cta-text">Explore Journey</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <button class="patriot-nav-btn patriot-prev-btn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="patriot-nav-btn patriot-next-btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      
+      <div class="gallery-indicators">
+        <div class="indicator active"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Book Now Button -->
+<button class="patriot-floating-btn" id="patriotBookNowBtn">
+  <span class="patriot-btn-icon">
+    <span class="material-symbols-outlined">luggage</span>
+  </span>
+  <span class="patriot-btn-text">Plan Your Trip</span>
+</button>
+
+<!-- Optional: Booking Modal (basic structure) -->
+<div class="patriot-booking-modal" id="patriotBookingModal">
+  <div class="patriot-modal-content">
+    <span class="patriot-close-modal">&times;</span>
+    <div class="patriot-modal-container">
+      <!-- Left Side - Image with Overlay -->
+      <div class="patriot-modal-left">
+        <div class="patriot-modal-image">
+          <img src="images/DSC_2231.JPG" alt="Adventure Destination">
+          <div class="patriot-image-overlay">
+            <h4>Your Journey Awaits</h4>
+            <p>Discover unforgettable experiences with Patriot Tours & Safaris</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Side - Booking Form -->
+      <div class="patriot-modal-right">
+        <h3>Start Your Adventure</h3>
+        <form class="patriot-booking-form" id="patriotBookingForm">
+          <div class="patriot-form-group">
+            <input type="text" id="patriotName" name="name" required>
+            <label for="patriotName">Full Name</label>
+          </div>
+          
+          <div class="patriot-form-group">
+            <input type="email" id="patriotEmail" name="email" required>
+            <label for="patriotEmail">Email Address</label>
+          </div>
+          
+          <div class="patriot-form-group patriot-phone-group">
+            <div class="patriot-phone-input">
+              <input type="tel" id="patriotPhone" name="phone" required>
+              <label for="patriotPhone">Phone Number</label>
+            </div>
+          </div>
+          
+          <div class="patriot-form-row">
+            <div class="patriot-form-group">
+              <input type="text" id="patriotStartDate" name="start_date" required readonly>
+              <label for="patriotStartDate">Start Date</label>
+            </div>
+            <div class="patriot-form-group">
+              <input type="text" id="patriotEndDate" name="end_date" required readonly>
+              <label for="patriotEndDate">End Date</label>
+            </div>
+          </div>
+          
+          <div class="patriot-form-group">
+            <textarea id="patriotMessage" name="message" rows="3"></textarea>
+            <label for="patriotMessage">Special Requirements</label>
+          </div>
+          
+          <button type="submit" class="patriot-submit-btn">
+            <span class="patriot-btn-text">Book Adventure</span>
+            <span class="patriot-btn-loading" style="display: none;">
+              <svg class="patriot-spinner" viewBox="0 0 50 50">
+                <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="5"></circle>
+              </svg>
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Success/Error Message Container -->
+<div id="patriotMessageContainer" style="display: none;"></div>
+
+<section class="destinations-section">
+  <div class="destinations-header">
+    <div>
+      <h2 class="destinations-title">Our Destinations</h2>
+      <p class="destinations-subtitle">Explore the beauty of <strong>Africa</strong></p>
+    </div>
+    <div class="destinations-navigation">
+<button class="nav-button prev-button" aria-label="Previous destinations">
+  <span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="nav-button next-button" aria-label="Next destinations">
+  <span class="material-symbols-outlined">chevron_right</span>
+</button>
+    </div>
+  </div>
+  
+  <div class="destinations-container">
+    <div class="destinations-grid">
+      <a href="destinations/tanzania" class="destination-card">
+        <div class="destination-image" style="background-image: url('images/DSC_1154.JPG')"></div>
+        <div class="destination-overlay"></div>
+        <div class="card-number">01</div>
+        <div class="destination-content">
+          <h3 class="destination-name">TANZANIA</h3>
+          <div class="destination-button">
+          </div>
+        </div>
+      </a>
+      
+      <a href="destinations/kenya" class="destination-card">
+        <div class="destination-image" style="background-image: url('images/stephan-bechert-1ZfMAnL4ubE-unsplash.jpg')"></div>
+        <div class="destination-overlay"></div>
+        <div class="card-number">02</div>
+        <div class="destination-content">
+          <h3 class="destination-name">KENYA</h3>
+          <div class="destination-button">
+          </div>
+        </div>
+      </a>
+      
+      <a href="destinations/uganda" class="destination-card">
+        <div class="destination-image" style="background-image: url('images/uganda-chimpanzees.jpg')"></div>
+        <div class="destination-overlay"></div>
+        <div class="card-number">03</div>
+        <div class="destination-content">
+          <h3 class="destination-name">UGANDA</h3>
+          <div class="destination-button">
+          </div>
+        </div>
+      </a>
+      
+      <a href="destinations/rwanda" class="destination-card">
+        <div class="destination-image" style="background-image: url('images/uganda-chimpanzees.webp')"></div>
+        <div class="destination-overlay"></div>
+        <div class="card-number">04</div>
+        <div class="destination-content">
+          <h3 class="destination-name">RWANDA</h3>
+          <div class="destination-button">
+          </div>
+        </div>
+      </a>
+
+      <a href="destinations/madagascar" class="destination-card">
+        <div class="destination-image" style="background-image: url('images/madagascar-bg.jpg')"></div>
+        <div class="destination-overlay"></div>
+        <div class="card-number">05</div>
+        <div class="destination-content">
+          <h3 class="destination-name">MADAGASCAR</h3>
+          <div class="destination-button">
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Parallax Section -->
+<section class="parallax-section">
+  <div class="parallax-container">
+    <div class="parallax-image">
+      <img src="images/DSC_3144.JPG" alt="Safari Adventure" class="parallax-img">
+      <div class="parallax-overlay"></div>
+    </div>
+    <div class="parallax-content">
+      <div class="parallax-text">
+        <span class="parallax-subtitle">Unforgettable Experiences</span>
+        <h2 class="parallax-title">Discover the Wild Beauty of Africa</h2>
+        <p class="parallax-description">
+          Embark on a journey through untamed landscapes where nature's wonders unfold before your eyes. 
+          From the majestic savannas to the vibrant cultures, experience Africa like never before.
+        </p>
+        <div class="parallax-actions">
+          <a href="/destinations" class="parallax-btn primary">Explore Destinations</a>
+          <a href="/contact" class="parallax-btn secondary">Customize Your Safari</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HTML Section Snippet -->
+<section class="why-choose-section">
+  <div class="container">
+    <div class="content-wrapper">
+      <div class="text-content">
+        <span class="luxury-accent">EXCLUSIVE EXPERIENCES</span>
+        <h2 class="section-title">Why Choose Patriot Tours & Safaris Ltd</h2>
+        <p class="section-description">
+          With over 6 years of excellence in crafting unforgettable African experiences, 
+          we pride ourselves on delivering authentic, sustainable, and personalized safari adventures. 
+          Our deep local knowledge and commitment to conservation ensure every journey is extraordinary.
+        </p>
+        <a href="/about" class="read-reasons-btn">
+          <span>Read Reasons</span>
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+        
+        <div class="luxury-features">
+          <div class="feature">
+            <span class="material-symbols-outlined feature-icon">verified</span>
+            <div class="feature-content">
+              <h4>Expert Guides</h4>
+              <p>6+ years of local expertise</p>
+            </div>
+          </div>
+          <div class="feature">
+            <span class="material-symbols-outlined feature-icon">diamond</span>
+            <div class="feature-content">
+              <h4>Luxury Accommodations</h4>
+              <p>5-star lodges and camps</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="image-content">
+        <div class="main-image">
+          <img src="images/DSC_2850.JPG" alt="Luxury Safari Experience">
+          <div class="image-overlay">
+            <div class="overlay-content">
+              <span class="material-symbols-outlined overlay-icon">travel_explore</span>
+              <h3>Unforgettable Journeys</h3>
+              <p>Since 2019</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HTML Section Snippet -->
+<section class="luxury-blog-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-accent">INSIGHTS & STORIES</span>
+      <h2 class="section-title">The Patriot Journal</h2>
+      <p class="section-subtitle">Discover expert travel insights, safari stories, and luxury adventure guides</p>
+    </div>
+    
+    <div class="blog-grid">
+      <article class="blog-card">
+        <div class="card-image">
+          <img src="images/DSC_1735.JPG" alt="Safari Sunrise">
+          <div class="card-badge">
+            <span class="material-symbols-outlined">explore</span>
+            Safari Guide
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="date">March 15, 2025</span>
+            <span class="read-time">5 min read</span>
+          </div>
+          <h3 class="card-title">The Ultimate Guide to Luxury Safari Experiences</h3>
+          <p class="card-excerpt">Discover how to plan the perfect luxury safari with our expert tips on timing, locations, and exclusive experiences.</p>
+          <a href="/blog/luxury-safari-guide" class="read-more">
+            <span>Read Article</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+      </article>
+      
+      <article class="blog-card">
+        <div class="card-image">
+          <img src="images/melia-serengeti-lodge.jpg" alt="Luxury Lodge">
+          <div class="card-badge">
+            <span class="material-symbols-outlined">villa</span>
+            Accommodation
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="date">August 12, 2025</span>
+            <span class="read-time">4 min read</span>
+          </div>
+          <h3 class="card-title">Top 5 Luxury Lodges in Serengeti National Park</h3>
+          <p class="card-excerpt">Explore the most exclusive lodges offering unparalleled comfort and wildlife viewing opportunities in the heart of Africa.</p>
+          <a href="/blog/serengeti-luxury-lodges" class="read-more">
+            <span>Read Article</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+      </article>
+      
+      <article class="blog-card">
+        <div class="card-image">
+          <img src="images/DSC_1163.JPG" alt="Wildlife Photography">
+          <div class="card-badge">
+            <span class="material-symbols-outlined">photo_camera</span>
+            Photography
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="date">September 8, 2025</span>
+            <span class="read-time">6 min read</span>
+          </div>
+          <h3 class="card-title">Capturing the Wild: Professional Safari Photography Tips</h3>
+          <p class="card-excerpt">Learn from our expert photographers how to capture stunning wildlife moments during your luxury safari adventure.</p>
+          <a href="/blog/safari-photography-tips" class="read-more">
+            <span>Read Article</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+      </article>
+    </div>
+    
+    <div class="section-footer">
+      <a href="/blog" class="view-all-btn">
+        <span>View All Articles</span>
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- HTML Section Snippet -->
+<section class="elite-newsletter">
+  <div class="elite-container">
+    <div class="newsletter-wrapper">
+      <div class="newsletter-text">
+        <span class="prestige-badge">EXCLUSIVE UPDATES</span>
+        <h2 class="prestige-heading">Unlock World of Luxury Travel</h2>
+        <p class="prestige-description">
+          Be the first to receive curated safari experiences, insider travel tips, 
+          and exclusive offers from Patriot Tours & Safaris. Elevate your journey with our expert insights.
+        </p>
+        
+        <form class="subscription-form">
+          <div class="form-group">
+            <div class="input-container">
+              <span class="material-symbols-outlined form-icon">mail</span>
+              <input type="email" placeholder="Your email address" class="email-input" required>
+            </div>
+            <button type="submit" class="elite-submit-btn">
+              <span>Join the List</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </div>
+        </form>
+        
+        <div class="assurance-note">
+          <span class="material-symbols-outlined">verified</span>
+          <p>Your privacy is valued. Unsubscribe at any time.</p>
+        </div>
+      </div>
+      
+      <div class="newsletter-visual">
+        <div class="visual-container">
+          <img src="images/DSC_1195.JPG" alt="Luxury Travel Inspiration" class="prestige-image">
+          <div class="image-overlay-content">
+            <span class="material-symbols-outlined overlay-icon">auto_awesome</span>
+            <h3>Curated Excellence</h3>
+            <p>Monthly inspirations delivered</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-container">
+        <div class="cookie-content">
+            <h3 class="cookie-title">Privacy & Cookies</h3>
+            <p class="cookie-text">
+                We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
+                By clicking "Accept All", you consent to our use of cookies. You can manage your preferences in settings.
+            </p>
+            <div class="cookie-buttons">
+                <button class="cookie-btn settings" id="cookieSettings">Cookie Settings</button>
+                <button class="cookie-btn accept" id="acceptAll">Accept All</button>
+            </div>
+        </div>
+        
+        <!-- Cookie Settings Modal -->
+        <div class="cookie-modal" id="cookieModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Cookie Preferences</h3>
+                    <button class="modal-close" id="modalClose">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="cookie-option">
+                        <div class="option-header">
+                            <h4>Essential Cookies</h4>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked disabled>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <p>Required for the website to function properly. Cannot be disabled.</p>
+                    </div>
+                    
+                    <div class="cookie-option">
+                        <div class="option-header">
+                            <h4>Analytics Cookies</h4>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="analyticsCookies" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <p>Help us understand how visitors interact with our website.</p>
+                    </div>
+                    
+                    <div class="cookie-option">
+                        <div class="option-header">
+                            <h4>Marketing Cookies</h4>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="marketingCookies">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <p>Used to track visitors across websites for marketing purposes.</p>
+                    </div>
+                    
+                    <div class="cookie-option">
+                        <div class="option-header">
+                            <h4>Preferences Cookies</h4>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="preferencesCookies" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <p>Remember your settings and preferences for a better experience.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-btn secondary" id="savePreferences">Save Preferences</button>
+                    <button class="modal-btn primary" id="acceptSelected">Accept Selected</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="luxury-back-to-top" aria-label="Back to top">
+  <div class="button-fill"></div>
+  <span class="button-icon">
+    <i class="fas fa-chevron-up"></i>
+  </span>
+</button>
+
+<!-- HTML Footer Snippet -->
+<footer class="luxury-footer">
+  <div class="footer-container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="logo-container">
+          <img src="images/p-logo-2.png" alt="Patriot Tours & Safaris Ltd" class="footer-logo">
+        </div>
+        <p class="brand-description">
+          Crafting extraordinary African safari experiences with unparalleled luxury and expertise since 2019.
+        </p>
+        <div class="social-links">
+          <a href="https://facebook.com/patriotsafaris" class="social-link" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/wildlife_safaris_?utm_source=ig_web_button_share_sheet&igsh=MTJ3cHRuZHBubzNkYw==" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com/@patriotsafaris" class="social-link" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="link-group">
+          <h4 class="link-group-title">Explore</h4>
+          <ul class="link-list">
+            <li><a href="destinations/tanzania" class="footer-link">Tanzania</a></li>
+            <li><a href="destinations/kenya" class="footer-link">Kenya</a></li>
+            <li><a href="destinations/uganda" class="footer-link">Uganda</a></li>
+            <li><a href="destinations/rwanda" class="footer-link">Rwanda</a></li>
+            <li><a href="destinations/madagascar" class="footer-link">Madagascar</a></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h4 class="link-group-title">Company</h4>
+          <ul class="link-list">
+            <li><a href="./about" class="footer-link">About Us</a></li>
+            <li><a href="./contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h4 class="link-group-title">Support</h4>
+          <ul class="link-list">
+            <li><a href="/terms" class="footer-link">Terms & Conditions</a></li>
+            <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/insurance" class="footer-link">Travel Insurance</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-certifications">
+      <div class="certification-badges">
+        <div class="badge-item">
+          <img src="images/TripAdvisor_Logo.svg.png" alt="TripAdvisor Excellence" class="badge-image">
+        </div>
+        <div class="badge-item">
+          <img src="images/pngfind.com-moutains-png-6933353.png" alt="Mountain Tourism" class="badge-image">
+        </div>
+        <div class="badge-item">
+          <img src="images/astalogonew_9.png" alt="ASTA Member" class="badge-image">
+        </div>
+        <div class="badge-item">
+          <img src="images/ATTA-Logo-with-Icon.png" alt="ATTA Member" class="badge-image">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-credits">
+        <p class="copyright">
+          &copy; <span id="current-year"></span> Patriot Tours & Safaris Ltd. All rights reserved.
+        </p>
+        <p class="developer-credit">
+          Crafted with excellence by <a href="https://adamsplusx.com" target="_blank" class="developer-link">AdamsPlusX</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
