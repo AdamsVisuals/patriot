@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Tanzania - Patriot Tours & Safaris Ltd</title>
+    <meta name="description" content="Patriot Tours & Safaris Ltd is a leading tour operator specializing in customized tours and safaris. Explore our wide range of travel services and packages.">
+    <meta name="keywords" content="Tour Operator, Safaris, Customized Tours, Travel Services, Travel Packages, Patriot Tours & Safaris Ltd">
+    <meta name="author" content="Patriot Tours & Safaris Ltd">
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=clear_all" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/family-safaris.css">
+</head>
+<body>
+<header class="patriot-header">
+  <div class="patriot-header-container">
+    <button class="patriot-menu-toggle" id="patriot-menu-toggle">
+      <span class="material-symbols-outlined">sort</span>
+    </button>
+    
+    <div class="patriot-logo-container" onclick="window.location.href='/'" style="cursor:pointer;">
+      <img src="../images/p-logo-2.png" alt="Patriot Tours and Safaris" class="patriot-logo">
+    </div>
+    
+    <div class="patriot-header-actions">
+      <div class="patriot-search-toggle" id="patriot-search-toggle">
+        <span class="material-symbols-outlined">search</span>
+      </div>
+      <div class="patriot-language-switcher">
+        <span class="material-symbols-outlined">language</span>
+        <select class="patriot-language-select">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  <div class="patriot-search-expandable" id="patriot-search-expandable">
+    <input type="text" placeholder="Search destinations..." class="patriot-search-input">
+    <button class="patriot-search-close" id="patriot-search-close">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  
+  <nav class="patriot-navigation" id="patriot-navigation">
+    <button class="patriot-menu-close" id="patriot-menu-close">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <ul class="patriot-nav-list">
+      <li class="patriot-nav-item">
+        <a href="#">Destinations</a>
+        <ul class="patriot-dropdown">
+          <li><a href="./tanzania">Tanzania</a></li>
+          <li><a href="./kenya">Kenya</a></li>
+          <li><a href="./rwanda">Rwanda</a></li>
+          <li><a href="./uganda">Uganda</a></li>
+          <li><a href="./madagascar">Madagascar</a></li>
+        </ul>
+      </li>
+      <li><a href="../itineraries.html">Itineraries</a></li>
+      <li class="patriot-nav-item">
+        <a href="#">Safari Collections</a>
+        <ul class="patriot-dropdown">
+          <li><a href="collections/family-safaris">Family Safaris</a></li>
+          <li><a href="collections/honeymoon">HoneyMoon</a></li>
+          <li><a href="collections/treks.html">Treks</a></li>
+          <li><a href="collections/beach.html">Beach Safaris</a></li>
+          <li><a href="collections/cultural.html">Cultural Safaris</a></li>
+        </ul>
+      </li>
+      <li><a href="../about">About Us</a></li>
+      <li><a href="../contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="luxury-tour-hero">
+    <div class="luxury-hero-content">
+        <nav class="luxury-breadcrumb">
+            <a href="#" class="luxury-crumb">Home</a>
+            <span class="luxury-divider">/</span>
+            <a href="#" class="luxury-crumb">Collections</a>
+            <span class="luxury-divider">/</span>
+            <a href="#" class="luxury-crumb luxury-crumb-active">Family Safaris</a>
+        </nav>
+        
+        <h1 class="luxury-tour-title">Family Safaris</h1>
+        <p class="luxury-tour-description">Experience the perfect blend of adventure designed for all Ages</p>
+        
+        <div class="luxury-action-buttons">
+            <button class="luxury-btn luxury-btn-primary">View Packages</button>
+            <button class="luxury-btn luxury-btn-secondary">Book Your Trip</button>
+        </div>
+    </div>
+</section>
+
+<section class="luxury-overview-section">
+    <div class="luxury-overview-container">
+        <div class="luxury-overview-content">
+            <div class="luxury-tag-pill">Family Safari</div>
+            <h2 class="luxury-overview-title">Overview of Family Safaris in East Africa</h2>
+            <p class="luxury-overview-description">
+                Discover the ultimate family adventure with our carefully curated East African safaris. 
+                Designed with families in mind, these journeys combine wildlife excitement with child-friendly 
+                accommodations and activities. Experience the Great Migration, meet Maasai warriors, and 
+                create lifelong memories together in the heart of Africa's most spectacular landscapes.
+            </p>
+            <p class="luxury-overview-description">
+                Our family safaris include private guides, kid-friendly game drives, and cultural interactions 
+                that educate and inspire young minds while ensuring comfort and safety throughout your journey.
+            </p>
+        </div>
+        
+        <div class="luxury-overview-image">
+            <img src="../images/family_safari.jpg" 
+                 alt="Family on safari in East Africa" 
+                 class="luxury-image">
+            <div class="luxury-image-overlay">
+                <span class="luxury-overlay-text">Creating Family Memories Since 2019</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="luxury-why-choose">
+    <div class="luxury-why-choose-container">
+        <h2 class="luxury-why-choose-title">Why Choose Family Safaris</h2>
+        <div class="luxury-features-grid">
+            <div class="luxury-feature">
+                <span class="luxury-feature-icon">family_restroom</span>
+                <h3 class="luxury-feature-title">Family-Focused Itineraries</h3>
+                <p class="luxury-feature-description">Carefully crafted schedules with child-friendly activities and flexible timing to accommodate young travelers.</p>
+            </div>
+            
+            <div class="luxury-feature">
+                <span class="luxury-feature-icon">security</span>
+                <h3 class="luxury-feature-title">Safety & Comfort</h3>
+                <p class="luxury-feature-description">Premium accommodations and experienced guides ensuring the highest safety standards for your family.</p>
+            </div>
+            
+            <div class="luxury-feature">
+                <span class="luxury-feature-icon">school</span>
+                <h3 class="luxury-feature-title">Educational Experiences</h3>
+                <p class="luxury-feature-description">Interactive learning about wildlife, conservation, and local cultures that inspire young minds.</p>
+            </div>
+            
+            <div class="luxury-feature">
+                <span class="luxury-feature-icon">diversity_3</span>
+                <h3 class="luxury-feature-title">Expert Family Guides</h3>
+                <p class="luxury-feature-description">Specialized guides trained in engaging children and creating memorable family moments.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="luxury-packages-section">
+    <div class="luxury-packages-container">
+        <h2 class="luxury-packages-title">Featured Family Safari Packages</h2>
+        <p class="luxury-packages-description">Curated family adventures designed for unforgettable moments and lifelong memories in East Africa's most spectacular destinations.</p>
+        
+        <div class="luxury-packages-grid">
+            <!-- Package 1 -->
+            <div class="luxury-package-card">
+                <div class="luxury-package-image">
+                    <img src="../images/serengeti-balloon.jpg" 
+                         alt="Serengeti Family Adventure" 
+                         class="luxury-card-image">
+                    <div class="luxury-card-overlay">
+                        <h3 class="luxury-package-name">Serengeti Family Adventure</h3>
+                        <p class="luxury-package-summary">7-day wildlife journey with kid-friendly lodges</p>
+                        <div class="luxury-package-price">From $4,200</div>
+                    </div>
+                    <button class="luxury-view-package-btn">
+                        <span class="luxury-btn-icon">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="luxury-package-card">
+                <div class="luxury-package-image">
+                    <img src="../images/mara-river-banks.jpg" 
+                         alt="Maasai Mara Discovery" 
+                         class="luxury-card-image">
+                    <div class="luxury-card-overlay">
+                        <h3 class="luxury-package-name">Maasai Mara Discovery</h3>
+                        <p class="luxury-package-summary">5-day cultural & wildlife experience</p>
+                        <div class="luxury-package-price">From $3,500</div>
+                    </div>
+                    <button class="luxury-view-package-btn">
+                        <span class="luxury-btn-icon">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="luxury-package-card">
+                <div class="luxury-package-image">
+                    <img src="../images/family-safari.jpg" 
+                         alt="Kenya Family Explorer" 
+                         class="luxury-card-image">
+                    <div class="luxury-card-overlay">
+                        <h3 class="luxury-package-name">Kenya Family Explorer</h3>
+                        <p class="luxury-package-summary">10-day comprehensive safari adventure</p>
+                        <div class="luxury-package-price">From $5,800</div>
+                    </div>
+                    <button class="luxury-view-package-btn">
+                        <span class="luxury-btn-icon">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Package 4 -->
+            <div class="luxury-package-card">
+                <div class="luxury-package-image">
+                    <img src="../images/tanzania-family-safari.jpg" 
+                         alt="Tanzania Wilderness" 
+                         class="luxury-card-image">
+                    <div class="luxury-card-overlay">
+                        <h3 class="luxury-package-name">Tanzania Wilderness</h3>
+                        <p class="luxury-package-summary">8-day luxury camping experience</p>
+                        <div class="luxury-package-price">From $4,900</div>
+                    </div>
+                    <button class="luxury-view-package-btn">
+                        <span class="luxury-btn-icon">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="luxury-expect-grid-section">
+    <div class="luxury-expect-grid-container">
+        <h2 class="luxury-expect-grid-title">What to Expect</h2>
+        <p class="luxury-expect-grid-description">Engaging activities and unforgettable experiences tailored for families on safari.</p>
+        
+        <div class="luxury-expect-grid">
+            <!-- Card 1 -->
+            <div class="luxury-expect-item">
+                <div class="luxury-expect-visual">
+                    <img src="../images/family-drives.jpg" 
+                         alt="Wildlife Game Drives" 
+                         class="luxury-expect-picture">
+                </div>
+                <div class="luxury-expect-details">
+                    <h3 class="luxury-expect-heading">Wildlife Game Drives</h3>
+                    <p class="luxury-expect-text">
+                        Morning and evening game drives in custom-built safari vehicles with pop-up roofs 
+                        for optimal wildlife viewing. Spot the Big Five and witness incredible animal 
+                        behaviors in their natural habitat with our expert guides.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="luxury-expect-item">
+                <div class="luxury-expect-visual">
+                    <img src="../images/cultural-family.webp" 
+                         alt="Cultural Interactions" 
+                         class="luxury-expect-picture">
+                </div>
+                <div class="luxury-expect-details">
+                    <h3 class="luxury-expect-heading">Cultural Interactions</h3>
+                    <p class="luxury-expect-text">
+                        Authentic visits to Maasai villages where families can learn about traditional 
+                        customs, participate in craft workshops, and hear stories from local elders. 
+                        Meaningful cultural exchanges that educate and inspire.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="luxury-expect-item">
+                <div class="luxury-expect-visual">
+                    <img src="../images/family-accomodations.webp" 
+                         alt="Luxury Accommodations" 
+                         class="luxury-expect-picture">
+                </div>
+                <div class="luxury-expect-details">
+                    <h3 class="luxury-expect-heading">Luxury Accommodations</h3>
+                    <p class="luxury-expect-text">
+                        Family-friendly lodges and tented camps featuring spacious suites, swimming pools, 
+                        and dedicated children's areas. Premium amenities combined with authentic safari 
+                        atmosphere for comfortable family stays.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="luxury-expect-item">
+                <div class="luxury-expect-visual">
+                    <img src="../images/family-education.jpg" 
+                         alt="Educational Activities" 
+                         class="luxury-expect-picture">
+                </div>
+                <div class="luxury-expect-details">
+                    <h3 class="luxury-expect-heading">Educational Activities</h3>
+                    <p class="luxury-expect-text">
+                        Interactive learning experiences including wildlife tracking, conservation talks, 
+                        and star-gazing sessions. Specially designed programs that engage children while 
+                        teaching them about African ecosystems and conservation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="luxury-faq-section">
+    <div class="luxury-faq-container">
+        <!-- Left Content -->
+        <div class="luxury-faq-content">
+            <div class="luxury-faq-tag">FAQ</div>
+            <h2 class="luxury-faq-title">Frequently Asked Questions</h2>
+            <p class="luxury-faq-description">
+                Get answers to the most common questions about our family safari experiences. 
+                We're here to ensure you have all the information needed for your perfect adventure.
+            </p>
+            <button class="luxury-faq-cta-btn" id="showQuestionModal">
+                Have More Questions?
+                <span class="luxury-btn-arrow">arrow_forward</span>
+            </button>
+        </div>
+
+        <!-- Right FAQ List -->
+        <div class="luxury-faq-list">
+            <!-- FAQ 1 -->
+            <div class="luxury-faq-item">
+                <div class="luxury-faq-question">
+                    <h3 class="luxury-faq-question-text">What is the best age for children on a family safari?</h3>
+                    <span class="luxury-faq-icon">add</span>
+                </div>
+                <div class="luxury-faq-answer">
+                    <p class="luxury-faq-answer-text">
+                        We recommend children be at least 6 years old for optimal enjoyment and safety. 
+                        However, we offer customized itineraries for families with younger children.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="luxury-faq-item">
+                <div class="luxury-faq-question">
+                    <h3 class="luxury-faq-question-text">What safety measures are in place for families?</h3>
+                    <span class="luxury-faq-icon">add</span>
+                </div>
+                <div class="luxury-faq-answer">
+                    <p class="luxury-faq-answer-text">
+                        All our vehicles are equipped with first aid kits, communication devices, 
+                        and experienced guides trained in family safety.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="luxury-faq-item">
+                <div class="luxury-faq-question">
+                    <h3 class="luxury-faq-question-text">What should we pack for our family safari?</h3>
+                    <span class="luxury-faq-icon">add</span>
+                </div>
+                <div class="luxury-faq-answer">
+                    <p class="luxury-faq-answer-text">
+                        We provide a detailed packing list including neutral-colored clothing, 
+                        comfortable walking shoes, sun protection, and cameras.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="luxury-faq-item">
+                <div class="luxury-faq-question">
+                    <h3 class="luxury-faq-question-text">Are there medical facilities available?</h3>
+                    <span class="luxury-faq-icon">add</span>
+                </div>
+                <div class="luxury-faq-answer">
+                    <p class="luxury-faq-answer-text">
+                        All major lodges have access to medical professionals and clinics. 
+                        We also carry comprehensive first aid supplies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Question Submission Modal -->
+<div class="luxury-question-modal" id="questionModal">
+    <div class="luxury-question-modal-content">
+        <div class="luxury-question-modal-header">
+            <h3 class="luxury-question-modal-title">Ask Your Question</h3>
+            <button class="luxury-question-close-btn" id="closeQuestionModal">
+                <span class="luxury-close-icon">close</span>
+            </button>
+        </div>
+        
+        <form class="luxury-question-form">
+            <div class="luxury-form-group">
+                <label for="userName" class="luxury-form-label">Full Name</label>
+                <input type="text" id="userName" class="luxury-form-input" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="luxury-form-group">
+                <label for="userEmail" class="luxury-form-label">Email Address</label>
+                <input type="email" id="userEmail" class="luxury-form-input" placeholder="Enter your email address" required>
+            </div>
+            
+            <div class="luxury-form-group">
+                <label for="userQuestion" class="luxury-form-label">Your Question</label>
+                <textarea id="userQuestion" class="luxury-form-textarea" placeholder="Type your question here..." rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="luxury-form-submit-btn">
+                Send Question
+                <span class="luxury-btn-arrow">send</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<section class="luxury-cta-section">
+    <div class="luxury-cta-container">
+        <!-- Left Content -->
+        <div class="luxury-cta-content">
+            <h2 class="luxury-cta-title">Ready to Start Your Family Adventure?</h2>
+            <p class="luxury-cta-description">
+                Let our safari experts help you create unforgettable memories. 
+                We'll guide you through every step to ensure your family's dream safari becomes reality.
+            </p>
+            <button class="luxury-cta-btn" id="showExpertModal">
+                Talk to a Safari Expert
+                <span class="luxury-cta-icon">phone</span>
+            </button>
+        </div>
+
+        <!-- Right Image -->
+        <div class="luxury-cta-visual">
+            <img src="../images/family-drives.jpg" 
+                 alt="Happy family on safari adventure" 
+                 class="luxury-cta-image">
+        </div>
+    </div>
+</section>
+
+<!-- Expert Contact Modal -->
+<div class="luxury-expert-modal" id="expertModal">
+    <div class="luxury-expert-modal-content">
+        <div class="luxury-expert-modal-header">
+            <h3 class="luxury-expert-modal-title">Talk to a Safari Expert</h3>
+            <button class="luxury-expert-close-btn" id="closeExpertModal">
+                <span class="luxury-close-icon">close</span>
+            </button>
+        </div>
+        
+        <form class="luxury-expert-form">
+            <div class="luxury-form-row">
+                <div class="luxury-form-group">
+                    <label for="expertName" class="luxury-form-label">Full Name</label>
+                    <input type="text" id="expertName" class="luxury-form-input" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="luxury-form-group">
+                    <label for="expertEmail" class="luxury-form-label">Email Address</label>
+                    <input type="email" id="expertEmail" class="luxury-form-input" placeholder="Enter your email address" required>
+                </div>
+            </div>
+            
+            <div class="luxury-form-row">
+                <div class="luxury-form-group">
+                    <label for="expertPhone" class="luxury-form-label">Phone Number</label>
+                    <input type="tel" id="expertPhone" class="luxury-form-input" placeholder="Enter your phone number" required>
+                </div>
+                
+                <div class="luxury-form-group">
+                    <label for="expertDate" class="luxury-form-label">Preferred Travel Date</label>
+                    <input type="text" id="expertDate" class="luxury-form-input datepicker" placeholder="Select travel date" readonly required>
+                </div>
+            </div>
+            
+            <div class="luxury-form-group">
+                <label for="expertFamily" class="luxury-form-label">Family Details</label>
+                <select id="expertFamily" class="luxury-form-select" required>
+                    <option value="">Select family composition</option>
+                    <option value="couple">Couple</option>
+                    <option value="1child">1 Child</option>
+                    <option value="2children">2 Children</option>
+                    <option value="3children">3+ Children</option>
+                    <option value="multigen">Multi-generational</option>
+                </select>
+            </div>
+            
+            <div class="luxury-form-group">
+                <label for="expertMessage" class="luxury-form-label">Your Safari Interests</label>
+                <textarea id="expertMessage" class="luxury-form-textarea" placeholder="Tell us about your dream safari, any specific interests, or questions..." rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="luxury-form-submit-btn">
+                Connect with Expert
+                <span class="luxury-btn-arrow">send</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- Include Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<button class="luxury-back-to-top" aria-label="Back to top">
+  <div class="button-fill"></div>
+  <span class="button-icon">
+    <i class="fas fa-chevron-up"></i>
+  </span>
+</button>
+
+<footer class="luxury-footer">
+  <div class="footer-container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="logo-container">
+          <img src="../images/p-logo-2.png" alt="Patriot Tours & Safaris Ltd" class="footer-logo">
+        </div>
+        <p class="brand-description">
+          Crafting extraordinary African safari experiences with unparalleled luxury and expertise since 2019.
+        </p>
+        <div class="social-links">
+          <a href="https://facebook.com/patriotsafaris" class="social-link" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/wildlife_safaris_?utm_source=ig_web_button_share_sheet&igsh=MTJ3cHRuZHBubzNkYw==" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com/@patriotsafaris" class="social-link" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="link-group">
+          <h4 class="link-group-title">Explore</h4>
+          <ul class="link-list">
+            <li><a href="./tanzania.html" class="footer-link">Tanzania</a></li>
+            <li><a href="./kenya" class="footer-link">Kenya</a></li>
+            <li><a href="./uganda" class="footer-link">Uganda</a></li>
+            <li><a href="./rwanda" class="footer-link">Rwanda</a></li>
+            <li><a href="./madagascar" class="footer-link">Madagascar</a></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h4 class="link-group-title">Company</h4>
+          <ul class="link-list">
+            <li><a href="../about" class="footer-link">About Us</a></li>
+            <li><a href="../contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h4 class="link-group-title">Support</h4>
+          <ul class="link-list">
+            <li><a href="../terms" class="footer-link">Terms & Conditions</a></li>
+            <li><a href="../privacy" class="footer-link">Privacy Policy</a></li>
+            <li><a href="../insurance" class="footer-link">Travel Insurance</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-certifications">
+      <div class="certification-badges">
+        <div class="badge-item">
+          <img src="../images/TripAdvisor_Logo.svg.png" alt="TripAdvisor Excellence" class="badge-image">
+        </div>
+        <div class="badge-item">
+          <img src="../images/pngfind.com-moutains-png-6933353.png" alt="Mountain Tourism" class="badge-image">
+        </div>
+        <div class="badge-item">
+          <img src="../images/astalogonew_9.png" alt="ASTA Member" class="badge-image">
+        </div>
+        <div class="badge-item">
+          <img src="../images/ATTA-Logo-with-Icon.png" alt="ATTA Member" class="badge-image">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-credits">
+        <p class="copyright">
+          &copy; <span id="current-year"></span> Patriot Tours & Safaris Ltd. All rights reserved.
+        </p>
+        <p class="developer-credit">
+          Crafted with excellence by <a href="https://adamsplusx.com" target="_blank" class="developer-link">AdamsPlusX</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+<script src="collections.js"></script>
+<script src="../scripts.js"></script>
+</body>
+</html>
