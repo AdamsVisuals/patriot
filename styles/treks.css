@@ -1,0 +1,1454 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.luxury-tour-hero {
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 100%), 
+                url('../images/trek-1.webp') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Hero Content Styles */
+.luxury-hero-content {
+    max-width: 800px;
+    margin-top: 40px
+}
+
+/* Breadcrumb Styles */
+.luxury-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.luxury-crumb {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.luxury-crumb:hover {
+    color: #D4AF37;
+}
+
+.luxury-crumb-active {
+    color: #D4AF37;
+    font-weight: 500;
+}
+
+.luxury-divider {
+    margin: 0 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.luxury-tour-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.luxury-tour-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+/* Button Styles */
+.luxury-action-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.luxury-btn {
+    padding: 16px 32px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.luxury-btn-primary {
+    background-color: #D4AF37;
+    color: white;
+}
+
+.luxury-btn-primary:hover {
+    background-color: #B8941F;
+    transform: translateY(-1px);
+}
+
+.luxury-btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.luxury-btn-secondary:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .luxury-breadcrumb {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+    
+    .luxury-tour-title {
+        font-size: 3rem;
+    }
+    
+    .luxury-tour-description {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .luxury-action-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .luxury-btn {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .luxury-tour-title {
+        font-size: 2.5rem;
+    }
+    
+    .luxury-breadcrumb {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .luxury-divider {
+        margin: 0 8px;
+    }
+}
+
+.luxury-overview-section {
+    padding: 100px 40px;
+    background-color: #ffffff;
+}
+
+.luxury-overview-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Content Styles */
+.luxury-overview-content {
+    text-align: left;
+}
+
+.luxury-tag-pill {
+    display: inline-block;
+    background-color: #D4AF37;
+    color: white;
+    padding: 8px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    border-radius: 0;
+}
+
+.luxury-overview-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.luxury-overview-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #4a4a4a;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Image Styles */
+.luxury-overview-image {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.luxury-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.luxury-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent 0%, rgba(0,0,0,0.8) 100%);
+    padding: 30px 25px;
+}
+
+.luxury-overlay-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.luxury-overlay-text::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #D4AF37;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .luxury-overview-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .luxury-overview-image {
+        height: 400px;
+    }
+    
+    .luxury-overview-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .luxury-overview-section {
+        padding: 60px 20px;
+    }
+    
+    .luxury-overview-container {
+        gap: 40px;
+    }
+    
+    .luxury-overview-title {
+        font-size: 1.8rem;
+    }
+    
+    .luxury-overview-image {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .luxury-overview-title {
+        font-size: 1.6rem;
+    }
+    
+    .luxury-overview-description {
+        font-size: 0.95rem;
+    }
+    
+    .luxury-overlay-text {
+        font-size: 1rem;
+    }
+}
+
+.luxury-why-choose {
+    padding: 100px 40px;
+    background-color: #ffffff;
+}
+
+.luxury-why-choose-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.luxury-why-choose-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.luxury-features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.luxury-feature {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.luxury-feature-icon {
+    font-family: 'Material Symbols Outlined';
+    font-size: 48px;
+    color: #D4AF37;
+    display: block;
+    margin-bottom: 25px;
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 48;
+}
+
+.luxury-feature-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.luxury-feature-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .luxury-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .luxury-why-choose {
+        padding: 60px 20px;
+    }
+    
+    .luxury-why-choose-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .luxury-features-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .luxury-feature {
+        padding: 0 10px;
+    }
+    
+    .luxury-feature-icon {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .luxury-why-choose-title {
+        font-size: 1.8rem;
+    }
+    
+    .luxury-feature-title {
+        font-size: 1.2rem;
+    }
+    
+    .luxury-feature-description {
+        font-size: 0.9rem;
+    }
+}
+
+.luxury-packages-section {
+    padding: 80px 40px;
+    background-color: #ffffff;
+}
+
+.luxury-packages-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.luxury-packages-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.luxury-packages-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #4a4a4a;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.luxury-packages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* Package Card Styles */
+.luxury-package-card {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.luxury-package-card:hover {
+    border-color: #D4AF37;
+}
+
+.luxury-package-image {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.luxury-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.luxury-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent 0%, rgba(0,0,0,0.8) 100%);
+    padding: 25px 20px;
+    color: white;
+}
+
+.luxury-package-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.luxury-package-summary {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-bottom: 8px;
+    opacity: 0.9;
+    line-height: 1.3;
+}
+
+.luxury-package-price {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #D4AF37;
+}
+
+/* Icon-only Button Styles */
+.luxury-view-package-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #1a1a1a;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.luxury-view-package-btn:hover {
+    background-color: #D4AF37;
+    color: white;
+}
+
+.luxury-btn-icon {
+    font-family: 'Material Symbols Outlined';
+    font-size: 18px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .luxury-packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .luxury-packages-section {
+        padding: 60px 20px;
+    }
+    
+    .luxury-packages-title {
+        font-size: 1.8rem;
+    }
+    
+    .luxury-packages-description {
+        font-size: 0.9rem;
+        margin-bottom: 40px;
+        padding: 0 10px;
+    }
+    
+    .luxury-packages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 400px;
+    }
+    
+    .luxury-package-image {
+        height: 280px;
+    }
+    
+    .luxury-card-overlay {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .luxury-packages-title {
+        font-size: 1.6rem;
+    }
+    
+    .luxury-package-image {
+        height: 250px;
+    }
+    
+    .luxury-view-package-btn {
+        width: 35px;
+        height: 35px;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .luxury-btn-icon {
+        font-size: 16px;
+    }
+}
+
+.luxury-expect-grid-section {
+    padding: 80px 40px;
+    background-color: #ffffff;
+}
+
+.luxury-expect-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.luxury-expect-grid-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.luxury-expect-grid-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #4a4a4a;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.luxury-expect-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/* Expect Item Styles */
+.luxury-expect-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+    align-items: center;
+    border: none;
+    padding: 0;
+    background: #ffffff;
+}
+
+.luxury-expect-item:hover {
+    border-color: #D4AF37;
+}
+
+.luxury-expect-visual {
+    width: 100%;
+    height: 180px;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.luxury-expect-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.luxury-expect-details {
+    padding: 25px 25px 25px 0;
+}
+
+.luxury-expect-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.luxury-expect-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .luxury-expect-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .luxury-expect-item {
+        grid-template-columns: 180px 1fr;
+        gap: 25px;
+    }
+    
+    .luxury-expect-visual {
+        height: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .luxury-expect-grid-section {
+        padding: 60px 20px;
+    }
+    
+    .luxury-expect-grid-title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+    
+    .luxury-expect-item {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .luxury-expect-visual {
+        height: 200px;
+    }
+    
+    .luxury-expect-details {
+        padding: 25px;
+    }
+    
+    .luxury-expect-heading {
+        font-size: 1.2rem;
+    }
+    
+    .luxury-expect-text {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .luxury-expect-grid-title {
+        font-size: 1.6rem;
+    }
+    
+    .luxury-expect-visual {
+        height: 180px;
+    }
+    
+    .luxury-expect-details {
+        padding: 20px;
+    }
+    
+    .luxury-expect-heading {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .luxury-expect-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0,1');
+
+.luxury-faq-section {
+    padding: 80px 40px;
+    background-color: #ffffff;
+}
+
+.luxury-faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+/* Left Content Styles */
+.luxury-faq-content {
+    text-align: left;
+}
+
+.luxury-faq-tag {
+    display: inline-block;
+    background-color: #D4AF37;
+    color: white;
+    padding: 8px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    border-radius: 0;
+}
+
+.luxury-faq-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.luxury-faq-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.luxury-faq-cta-btn {
+    background-color: transparent;
+    color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    padding: 14px 28px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.luxury-faq-cta-btn:hover {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.luxury-btn-arrow {
+    font-family: 'Material Symbols Outlined';
+    font-size: 18px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    transition: transform 0.3s ease;
+}
+
+.luxury-faq-cta-btn:hover .luxury-btn-arrow {
+    transform: translateX(3px);
+}
+
+/* Right FAQ List Styles */
+.luxury-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.luxury-faq-item {
+    border: 1px solid #eaeaea;
+    background: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+.luxury-faq-item:hover {
+    border-color: #D4AF37;
+}
+
+.luxury-faq-question {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.luxury-faq-question:hover {
+    background-color: #fefefe;
+}
+
+.luxury-faq-question-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.4;
+    padding-right: 20px;
+}
+
+.luxury-faq-icon {
+    font-family: 'Material Symbols Outlined';
+    font-size: 20px;
+    color: #D4AF37;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.luxury-faq-item.active .luxury-faq-icon {
+    transform: rotate(45deg);
+}
+
+.luxury-faq-answer {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.luxury-faq-item.active .luxury-faq-answer {
+    padding: 0 25px 20px 25px;
+    max-height: 500px;
+}
+
+.luxury-faq-answer-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Question Modal Styles */
+.luxury-question-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.luxury-question-modal.active {
+    display: flex;
+}
+
+.luxury-question-modal-content {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 0;
+    position: relative;
+}
+
+.luxury-question-modal-header {
+    padding: 30px;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.luxury-question-modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.luxury-question-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+}
+
+.luxury-question-close-btn:hover {
+    color: #D4AF37;
+}
+
+.luxury-close-icon {
+    font-family: 'Material Symbols Outlined';
+    font-size: 24px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Form Styles */
+.luxury-question-form {
+    padding: 30px;
+}
+
+.luxury-form-group {
+    margin-bottom: 25px;
+}
+
+.luxury-form-label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.luxury-form-input,
+.luxury-form-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #eaeaea;
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    transition: border-color 0.3s ease;
+    border-radius: 0;
+}
+
+.luxury-form-input:focus,
+.luxury-form-textarea:focus {
+    outline: none;
+    border-color: #D4AF37;
+}
+
+.luxury-form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.luxury-form-submit-btn {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.luxury-form-submit-btn:hover {
+    background-color: #D4AF37;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .luxury-faq-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .luxury-faq-content {
+        text-align: center;
+    }
+    
+    .luxury-faq-cta-btn {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .luxury-faq-section {
+        padding: 60px 20px;
+    }
+    
+    .luxury-faq-title {
+        font-size: 2rem;
+    }
+    
+    .luxury-faq-question {
+        padding: 18px 20px;
+    }
+    
+    .luxury-faq-answer {
+        padding: 0 20px;
+    }
+    
+    .luxury-faq-item.active .luxury-faq-answer {
+        padding: 0 20px 18px 20px;
+    }
+    
+    .luxury-question-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .luxury-faq-title {
+        font-size: 1.8rem;
+    }
+    
+    .luxury-faq-description {
+        font-size: 0.9rem;
+    }
+    
+    .luxury-faq-cta-btn {
+        padding: 12px 24px;
+        font-size: 13px;
+    }
+    
+    .luxury-question-modal-header {
+        padding: 20px;
+    }
+    
+    .luxury-question-modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .luxury-question-form {
+        padding: 20px;
+    }
+    
+    .luxury-form-group {
+        margin-bottom: 20px;
+    }
+}
+
+.luxury-cta-section {
+    padding: 80px 40px;
+    background-color: #ffffff;
+}
+
+.luxury-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left Content Styles */
+.luxury-cta-content {
+    text-align: left;
+}
+
+.luxury-cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.luxury-cta-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 500px;
+}
+
+.luxury-cta-btn {
+    background-color: #D4AF37;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.luxury-cta-btn:hover {
+    background-color: #B8941F;
+    transform: translateY(-1px);
+}
+
+.luxury-cta-icon {
+    font-family: 'Material Symbols Outlined';
+    font-size: 20px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Right Image Styles */
+.luxury-cta-visual {
+    width: 100%;
+    height: 350px;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.luxury-cta-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Expert Modal Styles */
+.luxury-expert-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.luxury-expert-modal.active {
+    display: flex;
+}
+
+.luxury-expert-modal-content {
+    background: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 0;
+    position: relative;
+}
+
+.luxury-expert-modal-header {
+    padding: 30px;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 10;
+}
+
+.luxury-expert-modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.luxury-expert-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+}
+
+.luxury-expert-close-btn:hover {
+    color: #D4AF37;
+}
+
+.luxury-close-icon {
+    font-family: 'Material Symbols Outlined';
+    font-size: 24px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Expert Form Styles */
+.luxury-expert-form {
+    padding: 30px;
+}
+
+.luxury-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.luxury-form-group {
+    margin-bottom: 25px;
+}
+
+.luxury-form-label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.luxury-form-input,
+.luxury-form-select,
+.luxury-form-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #eaeaea;
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    transition: border-color 0.3s ease;
+    border-radius: 0;
+}
+
+.luxury-form-input:focus,
+.luxury-form-select:focus,
+.luxury-form-textarea:focus {
+    outline: none;
+    border-color: #D4AF37;
+}
+
+.luxury-form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.luxury-form-select {
+    cursor: pointer;
+}
+
+/* Flatpickr Custom Styling */
+.flatpickr-input {
+    cursor: pointer;
+    background-color: white;
+}
+
+.luxury-form-submit-btn {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.luxury-form-submit-btn:hover {
+    background-color: #D4AF37;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .luxury-cta-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .luxury-cta-content {
+        text-align: center;
+    }
+    
+    .luxury-cta-btn {
+        justify-content: center;
+    }
+    
+    .luxury-cta-visual {
+        height: 300px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .luxury-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .luxury-cta-section {
+        padding: 60px 20px;
+    }
+    
+    .luxury-cta-title {
+        font-size: 2rem;
+    }
+    
+    .luxury-cta-description {
+        font-size: 0.95rem;
+    }
+    
+    .luxury-cta-visual {
+        height: 250px;
+    }
+    
+    .luxury-expert-modal-header {
+        padding: 20px;
+    }
+    
+    .luxury-expert-modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .luxury-expert-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .luxury-cta-title {
+        font-size: 1.8rem;
+    }
+    
+    .luxury-cta-description {
+        font-size: 0.9rem;
+    }
+    
+    .luxury-cta-btn {
+        padding: 14px 28px;
+        font-size: 13px;
+    }
+    
+    .luxury-cta-visual {
+        height: 200px;
+    }
+    
+    .luxury-expert-modal-header {
+        padding: 15px;
+    }
+    
+    .luxury-expert-modal-title {
+        font-size: 1.3rem;
+    }
+    
+    .luxury-expert-form {
+        padding: 15px;
+    }
+    
+    .luxury-form-group {
+        margin-bottom: 20px;
+    }
+}
