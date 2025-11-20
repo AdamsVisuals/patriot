@@ -180,7 +180,7 @@
 }
 
 /* Premium Scroll Indicator */
-.scroll-indicator {
+.packages-scroll-indicator {
     position: absolute;
     bottom: 2.5rem;
     left: 50%;
@@ -189,7 +189,7 @@
     text-align: center;
 }
 
-.scroll-line {
+.packages-scroll-line {
     width: 1px;
     height: 55px;
     background: linear-gradient(to bottom, #D4AF37, rgba(212, 175, 55, 0.3), transparent);
@@ -197,7 +197,7 @@
     animation: scrollPulse 2.5s infinite;
 }
 
-.scroll-text {
+.packages-scroll-text {
     font-family: 'Poppins', sans-serif;
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.7);
@@ -311,7 +311,7 @@
         margin-bottom: 1.5rem;
     }
     
-    .scroll-indicator {
+    .packages-scroll-indicator {
         bottom: 2rem;
     }
 }
@@ -356,15 +356,15 @@
         gap: 0.5rem;
     }
     
-    .scroll-indicator {
+    .packages-scroll-indicator {
         bottom: 1.5rem;
     }
     
-    .scroll-line {
+    .packages-scroll-line {
         height: 45px;
     }
     
-    .scroll-text {
+    .packages-scroll-text {
         font-size: 0.7rem;
     }
 }
