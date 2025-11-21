@@ -877,6 +877,29 @@ body {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.collection-title {
+  position: relative;
+  display: inline-block;
+}
+
+.collection-title::after {
+  content: '';
+  display: block;
+  width: clamp(30px, 3vw, 50px);
+  height: 2px;
+  background: #d4af37;
+  margin-top: 8px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center;
+}
+
+.collection-title:hover::after,
+.collection-title:focus::after {
+  width: clamp(40px, 4vw, 60px);
+  background: #ffd700;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
 .collection-description {
   font-size: 0.85rem;
   line-height: 1.4;
@@ -1600,7 +1623,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
-  background-color: #f9f6ef;
+  background-color: #fafdff;
   position: relative;
 }
 
