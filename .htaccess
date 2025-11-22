@@ -7,7 +7,7 @@
     RewriteRule ^(.git|.env|composer\.json|composer\.lock|error_log) - [R=404,NC,L]
 
     # ----------------------------------------------------------------------
-    # FORCE HTTPS and NON-WWW (Production only, skip for localhost)
+    # FORCE HTTPS and NON-WWW (Production only)
     # ----------------------------------------------------------------------
     RewriteCond %{HTTP_HOST} !^localhost [NC]
     RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
@@ -22,7 +22,7 @@
     RewriteCond %{THE_REQUEST} /index(\.html)? [NC]
     RewriteRule ^(.*)index(\.html)?$ /$1 [R=301,L]
 
-    # Redirect .html URLs to clean version (e.g., /about.html → /about)
+    # Redirect .html URLs to clean version (/about.html → /about)
     RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
     RewriteRule ^ /%1 [R=301,L]
 
@@ -33,6 +33,14 @@
     RewriteCond %{REQUEST_FILENAME}\.html -f
     RewriteRule ^(.*)$ $1.html [L]
 </IfModule>
+
+# ----------------------------------------------------------------------
+# PROTECT EMAIL SENDER FILE (VERY IMPORTANT)
+# Replace send-email.php with your actual PHP file name
+# ----------------------------------------------------------------------
+<Files "contact-form.php">
+    Require all denied
+</Files>
 
 # ----------------------------------------------------------------------
 # CACHING: Leverage Browser Caching
@@ -63,7 +71,7 @@
 </IfModule>
 
 # ----------------------------------------------------------------------
-# GZIP COMPRESSION: Reduce file sizes for faster transfers
+# GZIP COMPRESSION
 # ----------------------------------------------------------------------
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/plain
@@ -81,7 +89,7 @@
 </IfModule>
 
 # ----------------------------------------------------------------------
-# SECURITY HEADERS: Protect your site from common vulnerabilities
+# SECURITY HEADERS
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
     Header always set X-Content-Type-Options "nosniff"
