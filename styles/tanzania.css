@@ -370,21 +370,23 @@
     }
 }
 
-.tanzania-destinations {
+/* Tanzania Circuits Section - Cards Layout */
+.tanzania-circuits {
     padding: 80px 2rem;
     background: #fff;
 }
 
-.destinations-container {
+.circuits-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
 }
 
-.destinations-title {
+.circuits-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.circuits-main-title {
     font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
     font-weight: 500;
@@ -393,100 +395,207 @@
     letter-spacing: 0.5px;
 }
 
-.destinations-intro {
+.circuits-intro-text {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     font-weight: 300;
     line-height: 1.7;
     color: #333;
-    margin-bottom: 3rem;
+    max-width: 700px;
+    margin: 0 auto;
     letter-spacing: 0.3px;
 }
 
-.destination-group {
-    margin-bottom: 2.5rem;
+.circuits-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
-.destination-group:last-child {
-    margin-bottom: 0;
+.circuit-card-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    position: relative;
+    height: 100%;
 }
 
-.group-title {
+.circuit-card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: none;
+}
+
+.card-visual {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.circuit-card-item:hover .card-visual img {
+    transform: scale(1.05);
+}
+
+.visual-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.card-details {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 200px);
+}
+
+.circuit-name {
     font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: #000;
     margin-bottom: 0.8rem;
     letter-spacing: 0.3px;
+    line-height: 1.3;
 }
 
-.group-description {
+.circuit-summary {
     font-family: 'Poppins', sans-serif;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 300;
-    line-height: 1.7;
+    line-height: 1.5;
     color: #666;
-    letter-spacing: 0.2px;
+    margin-bottom: 1rem;
+    flex-grow: 1;
 }
 
-.park-link {
+.circuit-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.feature-badge {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
     color: #D4AF37;
-    text-decoration: none;
-    font-weight: 400;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid transparent;
+    background: rgba(212, 175, 55, 0.1);
+    padding: 0.25rem 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.park-link:hover {
+.explore-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.link-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
     color: #000;
-    border-bottom-color: #D4AF37;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.destinations-image {
-    position: relative;
+.link-arrow {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #D4AF37;
+    transition: transform 0.3s ease;
 }
 
-.sharp-image {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    display: block;
+.circuit-card-item:hover .link-arrow {
+    transform: translateX(5px);
 }
 
 /* Responsive Design */
-@media (max-width: 968px) {
-    .destinations-container {
+@media (max-width: 1200px) {
+    .circuits-grid-layout {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .card-visual {
+        height: 220px;
+    }
+    
+    .circuit-name {
+        font-size: 1.3rem;
+    }
+    
+    .circuit-summary {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .tanzania-circuits {
+        padding: 60px 1.5rem;
+    }
+    
+    .circuits-main-title {
+        font-size: 1.8rem;
+    }
+    
+    .circuits-intro-text {
+        font-size: 1rem;
+    }
+    
+    .circuits-grid-layout {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 1.5rem;
     }
     
-    .destinations-image {
-        order: -1;
+    .card-visual {
+        height: 200px;
     }
     
-    .sharp-image {
-        height: 400px;
+    .card-details {
+        padding: 1.5rem;
+    }
+    
+    .circuit-name {
+        font-size: 1.4rem;
     }
 }
 
 @media (max-width: 480px) {
-    .tanzania-destinations {
-        padding: 60px 1.5rem;
+    .tanzania-circuits {
+        padding: 50px 1rem;
     }
     
-    .destinations-title {
-        font-size: 1.8rem;
+    .circuits-main-title {
+        font-size: 1.6rem;
     }
     
-    .group-title {
-        font-size: 1.1rem;
+    .card-details {
+        padding: 1.2rem;
     }
     
-    .sharp-image {
-        height: 300px;
+    .circuit-name {
+        font-size: 1.2rem;
     }
 }
 
