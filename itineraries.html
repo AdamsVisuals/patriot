@@ -103,1614 +103,979 @@
   </nav>
 </header>
 
-<section class="itineraries-hero">
+<!-- Hero Section -->
+<section class="safari-packages-hero">
     <div class="hero-content">
-        <nav class="breadcrumb">
+        <nav class="hero-breadcrumb">
             <a href="/" class="breadcrumb-link">Home</a>
-            <span class="breadcrumb-divider">/</span>
+            <span class="divider">/</span>
             <span class="breadcrumb-current">Safari Packages</span>
         </nav>
         
-        <h1 class="hero-title">Safari Packages</h1>
-        <p class="hero-subtitle">Curated journeys through Africa's most spectacular wilderness areas</p>
+        <h1 class="hero-title">East African Safari Packages</h1>
+        <p class="hero-subtitle">Discover the wild beauty of Africa with our expertly crafted safari experiences across Tanzania, Kenya, Uganda, Rwanda and Madagascar</p>
+        
+        <button class="btn btn-gold">
+            <span>Explore Packages</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
     </div>
 
-        <!-- Enhanced Scroll Indicator -->
-    <div class="packages-scroll-indicator">
-        <div class="packages-scroll-line"></div>
-        <div class="packages-scroll-text">Scroll to Explore</div>
+    <div class="hero-scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll to Explore</span>
     </div>
-</div>
 </section>
 
-<section class="itineraries-page">
-    <div class="page-container">
-        <!-- Results Header with Search and Filter Toggle -->
-        <div class="results-header">
-            <div class="header-content">
-                <h2 class="results-title">Safari Packages</h2>
-                <p class="description-main">Craft Your Perfect East African Adventure</p>
-                <p class="description-sub">Embark on an unforgettable journey through East Africa's most breathtaking landscapes and encounter majestic wildlife in their natural habitats. Our carefully curated safari experiences offer the perfect blend of adventure, luxury, and authentic cultural immersion.</p>
+<!-- Content Section -->
+<section class="content-section">
+    <div class="container">
+        <div class="content-container">
+            <div class="content-text">
+                <div class="content-pill">Premium Safari Experiences</div>
+                <h2 class="content-title">Craft Your Perfect East African Adventure</h2>
+                <p class="content-description">
+                    Embark on an unforgettable journey through East Africa's most breathtaking landscapes and encounter majestic wildlife in their natural habitats. Our carefully curated safari experiences offer the perfect blend of adventure, luxury, and authentic cultural immersion.
+                </p>
                 
-                <!-- Advanced Search Bar -->
-                <div class="search-container">
-                    <div class="search-box">
-                        <span class="material-symbols-outlined search-icon">search</span>
-                        <input type="text" id="searchInput" placeholder="Search packages by name, location, description, duration, or price...">
-                        <button class="clear-search" id="clearSearch" style="display: none;">
-                            <span class="material-symbols-outlined">close</span>
-                        </button>
+                <div class="content-features">
+                    <div class="feature-item">
+                        <span class="material-symbols-outlined feature-icon">check_circle</span>
+                        <span>Expert local guides with 10+ years experience</span>
                     </div>
-                    <div class="search-tips">
-                        <span class="material-symbols-outlined">lightbulb</span>
-                        Try searching for "gorilla", "beach", "luxury", "7 days", or "$2,000"
+                    <div class="feature-item">
+                        <span class="material-symbols-outlined feature-icon">check_circle</span>
+                        <span>Customizable itineraries for all travel styles</span>
                     </div>
-                </div>
-            </div>
-            <div class="results-header-actions">
-                <div class="results-count">
-                    <span id="resultsCount">Showing 8 of 8 results</span>
-                </div>
-                <button class="filter-toggle" id="filterToggle">
-                    <span class="material-symbols-outlined">tune</span>
-                    <span>Filters</span>
-                </button>
-            </div>
-        </div>
-
-        <!-- Filter Panel (initially hidden) -->
-        <div class="filter-panel" id="filterPanel">
-            <div class="filter-panel-header">
-                <h3 class="filter-panel-title">Filter Itineraries</h3>
-                <button class="filter-close" id="filterClose">
-                    <span class="material-symbols-outlined">close</span>
-                </button>
-            </div>
-            <div class="filter-panel-content">
-                <div class="filter-group">
-                    <h3 class="filter-title">Filter by Location</h3>
-                    <div class="filter-options">
-                        <label class="filter-option">
-                            <input type="checkbox" name="location" value="tanzania" checked>
-                            <span class="checkmark"></span>
-                            Tanzania
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" name="location" value="kenya" checked>
-                            <span class="checkmark"></span>
-                            Kenya
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" name="location" value="uganda" checked>
-                            <span class="checkmark"></span>
-                            Uganda
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" name="location" value="rwanda" checked>
-                            <span class="checkmark"></span>
-                            Rwanda
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" name="location" value="madagascar" checked>
-                            <span class="checkmark"></span>
-                            Madagascar
-                        </label>
+                    <div class="feature-item">
+                        <span class="material-symbols-outlined feature-icon">check_circle</span>
+                        <span>24/7 support throughout your journey</span>
                     </div>
                 </div>
-
-                <div class="filter-group">
-                    <h3 class="filter-title">Filter by Duration</h3>
-                    <div class="filter-options">
-                        <label class="filter-option">
-                            <input type="checkbox" name="duration" value="3-5" checked>
-                            <span class="checkmark"></span>
-                            3-5 Days
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" name="duration" value="6-8" checked>
-                            <span class="checkmark"></span>
-                            6-8 Days
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" name="duration" value="9-12" checked>
-                            <span class="checkmark"></span>
-                            9-12 Days
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" name="duration" value="13+" checked>
-                            <span class="checkmark"></span>
-                            13+ Days
-                        </label>
-                    </div>
-                </div>
-
-                <div class="filter-actions">
-                    <button class="apply-filters" id="applyFilters">Apply Filters</button>
-                    <button class="reset-filters" id="resetFilters">Reset All</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Itineraries Grid -->
-        <div class="itineraries-main">
-            <!-- Empty State Message (hidden by default) -->
-            <div class="empty-state" id="emptyState" style="display: none;">
-                <div class="empty-state-icon">
+                
+                <button class="btn">
+                    <span>Start Planning Your Safari</span>
                     <span class="material-symbols-outlined">travel_explore</span>
-                </div>
-                <h3 class="empty-state-title">No packages found</h3>
-                <p class="empty-state-description">We couldn't find any safari packages matching your search criteria. Try adjusting your search terms or filters.</p>
-                <div class="empty-state-actions">
-                    <button class="empty-state-btn" id="clearSearchAndFilters">Clear Search & Filters</button>
-                </div>
+                </button>
             </div>
-
-            <div class="itineraries-grid" id="itinerariesGrid">
-                <!-- Itinerary cards will be displayed here by JavaScript -->
+            
+            <div class="content-image">
+                <img src="images/harshil-gudka-pU-9BYqjhyo-unsplash.jpg" alt="Luxury Safari Experience in East Africa" loading="lazy">
             </div>
+        </div>
+    </div>
+</section>
 
-            <!-- Pagination -->
-            <div class="pagination-container" id="paginationContainer">
-                <div class="pagination">
-                    <button class="pagination-btn prev" id="prevBtn">Previous</button>
-                    <div class="pagination-numbers" id="paginationNumbers">
-                        <!-- Pagination numbers will be generated by JavaScript -->
+<!-- Country Cards Section -->
+<section class="country-cards-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-pill">Explore by Country</div>
+            <h2 class="section-title">East African Safari Destinations</h2>
+            <p class="section-subtitle">Each country offers unique wildlife experiences, landscapes, and cultural encounters that will create memories to last a lifetime</p>
+        </div>
+        
+        <div class="country-cards-grid">
+            <!-- Tanzania Card -->
+            <a href="./destinations/tanzania" class="country-card">
+                <div class="country-card-image">
+                    <img src="images/tanzania-wildlife.jpg" alt="Tanzania Wildlife Safaris" loading="lazy">
+                    <div class="country-card-overlay">
+                        <h3 class="country-card-name">Tanzania</h3>
                     </div>
-                    <button class="pagination-btn next" id="nextBtn">Next</button>
+                </div>
+                <div class="country-card-content">
+                    <p class="country-card-description">
+                        Home to the Serengeti, Ngorongoro Crater, and Mount Kilimanjaro. Experience the Great Migration and some of Africa's most iconic landscapes.
+                    </p>
+                    <div class="country-card-features">
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Great Wildebeest Migration</span>
+                        </div>
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Big Five Game Viewing</span>
+                        </div>
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Mount Kilimanjaro Treks</span>
+                        </div>
+                    </div>
+                    <div class="country-card-cta">
+                        <span>Explore Tanzania</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Kenya Card -->
+            <a href="./destinations/kenya" class="country-card">
+                <div class="country-card-image">
+                    <img src="images/kenya-wildlife.jpg" alt="Kenya Wildlife Safaris" loading="lazy">
+                    <div class="country-card-overlay">
+                        <h3 class="country-card-name">Kenya</h3>
+                    </div>
+                </div>
+                <div class="country-card-content">
+                    <p class="country-card-description">
+                        Discover the Maasai Mara, Amboseli, and Samburu reserves. Witness the Big Five and experience rich Maasai culture.
+                    </p>
+                    <div class="country-card-features">
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Maasai Mara National Reserve</span>
+                        </div>
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Amboseli Elephant Herds</span>
+                        </div>
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Cultural Maasai Experiences</span>
+                        </div>
+                    </div>
+                    <div class="country-card-cta">
+                        <span>Explore Kenya</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Uganda Card -->
+            <a href="./destinations/uganda" class="country-card">
+                <div class="country-card-image">
+                    <img src="images/uganda-wildlife.jpg" alt="Uganda Wildlife Safaris" loading="lazy">
+                    <div class="country-card-overlay">
+                        <h3 class="country-card-name">Uganda</h3>
+                    </div>
+                </div>
+                <div class="country-card-content">
+                    <p class="country-card-description">
+                        The Pearl of Africa offers gorilla trekking, chimpanzee encounters, and diverse landscapes from rainforests to savannahs.
+                    </p>
+                    <div class="country-card-features">
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Mountain Gorilla Trekking</span>
+                        </div>
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Source of the Nile</span>
+                        </div>
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Chimpanzee Habituation</span>
+                        </div>
+                    </div>
+                    <div class="country-card-cta">
+                        <span>Explore Uganda</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Rwanda Card -->
+            <a href="./destinations/rwanda" class="country-card">
+                <div class="country-card-image">
+                    <img src="images/rwanda-wildlife.jpg" alt="Rwanda Wildlife Safaris" loading="lazy">
+                    <div class="country-card-overlay">
+                        <h3 class="country-card-name">Rwanda</h3>
+                    </div>
+                </div>
+                <div class="country-card-content">
+                    <p class="country-card-description">
+                        Land of a thousand hills offering premium gorilla experiences, golden monkey tracking, and remarkable conservation stories.
+                    </p>
+                    <div class="country-card-features">
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Volcanoes National Park</span>
+                        </div>
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Golden Monkey Tracking</span>
+                        </div>
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Luxury Eco-Lodges</span>
+                        </div>
+                    </div>
+                    <div class="country-card-cta">
+                        <span>Explore Rwanda</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Madagascar Card -->
+            <a href="./destinations/madagascar" class="country-card">
+                <div class="country-card-image">
+                    <img src="images/madagascar-beach.jpg" alt="Madagascar Safari & Beach Getaway" loading="lazy">
+                    <div class="country-card-overlay">
+                        <h3 class="country-card-name">Madagascar</h3>
+                    </div>
+                </div>
+                <div class="country-card-content">
+                    <p class="country-card-description">
+                        Unique wildlife, pristine beaches, and diverse ecosystems. Discover lemurs, baobabs, and Indian Ocean paradise.
+                    </p>
+                    <div class="country-card-features">
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Lemur Encounters</span>
+                        </div>
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Pristine Beach Resorts</span>
+                        </div>
+                        <div class="country-feature">
+                            <span class="feature-dot"></span>
+                            <span>Unique Endemic Species</span>
+                        </div>
+                    </div>
+                    <div class="country-card-cta">
+                        <span>Explore Madagascar</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Itineraries Section -->
+<section class="featured-itineraries-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-pill">Popular Packages</div>
+            <h2 class="section-title">Featured Safari Itineraries</h2>
+            <p class="section-subtitle">Handpicked journeys that showcase the best of East African wildlife and landscapes</p>
+        </div>
+        
+        <div class="itineraries-filter-bar">
+            <div class="filter-results" id="filterResults">Showing 10 of 10 itineraries</div>
+            <div class="filter-actions">
+                <button class="filter-btn" id="filterToggle">
+                    <span class="material-symbols-outlined">tune</span>
+                    <span>Filter</span>
+                </button>
+                <button class="filter-btn" id="sortToggle">
+                    <span class="material-symbols-outlined">sort</span>
+                    <span>Sort</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Filter Dropdown -->
+        <div class="filter-dropdown" id="filterDropdown">
+            <div class="filter-group">
+                <h4>Filter by Country</h4>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="country" value="tanzania" checked>
+                        <span class="checkmark"></span>
+                        Tanzania
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="country" value="kenya" checked>
+                        <span class="checkmark"></span>
+                        Kenya
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="country" value="uganda" checked>
+                        <span class="checkmark"></span>
+                        Uganda
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="country" value="rwanda" checked>
+                        <span class="checkmark"></span>
+                        Rwanda
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="country" value="madagascar" checked>
+                        <span class="checkmark"></span>
+                        Madagascar
+                    </label>
                 </div>
             </div>
+            
+            <div class="filter-group">
+                <h4>Filter by Duration</h4>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="duration" value="3-5" checked>
+                        <span class="checkmark"></span>
+                        3-5 Days
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="duration" value="6-8" checked>
+                        <span class="checkmark"></span>
+                        6-8 Days
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="duration" value="9-12" checked>
+                        <span class="checkmark"></span>
+                        9-12 Days
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="duration" value="13+" checked>
+                        <span class="checkmark"></span>
+                        13+ Days
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-actions">
+                <button class="btn btn-gold" id="applyFilters">Apply Filters</button>
+                <button class="btn" id="resetFilters">Reset</button>
+            </div>
+        </div>
+
+        <!-- Sort Dropdown -->
+        <div class="sort-dropdown" id="sortDropdown">
+            <div class="sort-options">
+                <label class="sort-option">
+                    <input type="radio" name="sort" value="featured" checked>
+                    <span class="radio-mark"></span>
+                    Featured
+                </label>
+                <label class="sort-option">
+                    <input type="radio" name="sort" value="price-low">
+                    <span class="radio-mark"></span>
+                    Price: Low to High
+                </label>
+                <label class="sort-option">
+                    <input type="radio" name="sort" value="price-high">
+                    <span class="radio-mark"></span>
+                    Price: High to Low
+                </label>
+                <label class="sort-option">
+                    <input type="radio" name="sort" value="duration">
+                    <span class="radio-mark"></span>
+                    Duration
+                </label>
+                <label class="sort-option">
+                    <input type="radio" name="sort" value="popular">
+                    <span class="radio-mark"></span>
+                    Most Popular
+                </label>
+            </div>
+        </div>
+        
+        <div class="itineraries-grid" id="itinerariesGrid">
+            <!-- Itinerary cards will be populated by JavaScript -->
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <button class="btn" id="loadMoreBtn">
+                <span>Load More Packages</span>
+                <span class="material-symbols-outlined">expand_more</span>
+            </button>
         </div>
     </div>
 </section>
 
 <style>
-/* Search Container Styles */
-.search-container {
-    margin: 2rem auto 1rem;
-    max-width: 600px;
-    width: 100%;
+/* Filter & Sort Dropdown Styles */
+.filter-dropdown,
+.sort-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-medium);
+    padding: 25px;
+    z-index: 1000;
+    min-width: 280px;
+    margin-top: 10px;
+}
+
+.filter-dropdown.active,
+.sort-dropdown.active {
+    display: block;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    font-family: 'Inter', sans-serif;
+}
+
+.filter-options {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: relative;
+    gap: 12px;
 }
 
-.search-box {
-    position: relative;
+.filter-option {
     display: flex;
     align-items: center;
-    background: white;
-    border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 0.75rem 1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-    width: 100%;
-    overflow: hidden;
-}
-
-.search-box:focus-within {
-    border-color: transparent;
-    box-shadow: 0 4px 20px rgba(26, 26, 26, 0.15);
-}
-
-/* Animated Glow Border */
-.search-box::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #1a1a1a, #d4af37, #1a1a1a, #d4af37);
-    background-size: 400% 400%;
-    border-radius: 10px;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    animation: rotateGradient 3s ease-in-out infinite;
-}
-
-.search-box:focus-within::before {
-    opacity: 1;
-}
-
-@keyframes rotateGradient {
-    0%, 100% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-}
-
-.search-icon {
-    color: #666;
-    margin-right: 0.75rem;
-    font-size: 1.25rem;
-    transition: color 0.3s ease;
-}
-
-.search-box:focus-within .search-icon {
-    color: #d4af37;
-}
-
-#searchInput {
-    flex: 1;
-    border: none;
-    outline: none;
-    font-size: 0.95rem;
-    background: transparent;
-    color: #1a1a1a;
-    font-family: 'Inter', sans-serif;
-}
-
-#searchInput::placeholder {
-    color: #999;
-}
-
-.clear-search {
-    background: none;
-    border: none;
-    color: #666;
+    gap: 10px;
     cursor: pointer;
-    padding: 0.25rem;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.clear-search:hover {
-    background: rgba(0, 0, 0, 0.05);
-    color: #1a1a1a;
-}
-
-.search-tips {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.75rem;
-    font-size: 0.8rem;
-    color: #666;
-    font-family: 'Inter', sans-serif;
-}
-
-.search-tips .material-symbols-outlined {
     font-size: 0.9rem;
+    color: var(--text-dark);
+    transition: var(--transition);
 }
 
-/* Empty State Styles */
-.empty-state {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: #fafafa;
-    border-radius: 0;
-    margin: 2rem 0;
-    border: 1px solid rgba(0, 0, 0, 0.03);
+.filter-option:hover {
+    color: var(--primary-gold);
 }
 
-.empty-state-icon {
-    font-size: 4rem;
-    color: #ccc;
-    margin-bottom: 1.5rem;
+.filter-option input[type="checkbox"] {
+    display: none;
 }
 
-.empty-state-icon .material-symbols-outlined {
-    font-size: 4rem;
-}
-
-.empty-state-title {
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: #1a1a1a;
-    margin-bottom: 0.75rem;
-    font-family: 'Playfair Display', serif;
-}
-
-.empty-state-description {
-    color: #666;
-    max-width: 400px;
-    margin: 0 auto 2rem;
-    line-height: 1.6;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-}
-
-.empty-state-actions {
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-light);
+    border-radius: 3px;
     display: flex;
-    gap: 1rem;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    transition: var(--transition);
 }
 
-.empty-state-btn {
-    background: #1a1a1a;
+.filter-option input[type="checkbox"]:checked + .checkmark {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+}
+
+.filter-option input[type="checkbox"]:checked + .checkmark::after {
+    content: '✓';
     color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sort-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sort-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    position: relative;
-    overflow: hidden;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    transition: var(--transition);
 }
 
-.empty-state-btn::before {
+.sort-option:hover {
+    color: var(--primary-gold);
+}
+
+.sort-option input[type="radio"] {
+    display: none;
+}
+
+.radio-mark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.sort-option input[type="radio"]:checked + .radio-mark {
+    border-color: var(--primary-gold);
+}
+
+.sort-option input[type="radio"]:checked + .radio-mark::after {
     content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
-    transition: left 0.5s ease;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-gold);
+    border-radius: 50%;
 }
 
-.empty-state-btn:hover::before {
-    left: 100%;
+.filter-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.empty-state-btn:hover {
-    background: #333;
-    transform: translateY(-1px);
+.filter-actions .btn {
+    flex: 1;
+}
+
+.load-more-container {
+    text-align: center;
+    margin-top: 50px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .search-container {
-        margin: 1.5rem auto 1rem;
-        padding: 0 1rem;
+    .filter-dropdown,
+    .sort-dropdown {
+        left: 0;
+        right: 0;
+        min-width: auto;
     }
     
-    .search-box {
-        padding: 0.625rem 0.875rem;
-    }
-    
-    .search-tips {
-        font-size: 0.75rem;
-        text-align: center;
-    }
-    
-    .empty-state {
-        padding: 3rem 1.5rem;
-    }
-    
-    .empty-state-icon {
-        font-size: 3rem;
-    }
-    
-    .empty-state-title {
-        font-size: 1.25rem;
-    }
-    
-    .empty-state-actions {
+    .filter-actions {
         flex-direction: column;
-        align-items: center;
-    }
-    
-    .empty-state-btn {
-        width: 100%;
-        max-width: 200px;
     }
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Itinerary data - East African countries only
+    // Itinerary data
     const itineraries = [
         {
-            href: "./itineraries/tanzania/7-days-tanzania.html",
-            location: "tanzania",
-            duration: "6-8",
-            imageSrc: "images/harshil-gudka-pU-9BYqjhyo-unsplash.jpg",
-            imageAlt: "Classic Serengeti Migration",
-            locationTag: "TANZANIA",
-            durationText: "7 Days / 6 Nights",
-            name: "7 Day Tanzania Safari Highlights",
-            description: "Witness the Great Migration in Serengeti with expert guides and luxury accommodations.",
-            price: "From $2,635"
+            id: 1,
+            title: "Classic Serengeti Migration Safari",
+            description: "Witness the spectacular Great Migration in the Serengeti with expert guides and luxury tented camps.",
+            image: "images/serengeti-migration.jpg",
+            country: "tanzania",
+            location: "Serengeti National Park",
+            duration: "7 Days",
+            durationCategory: "6-8",
+            price: 2635,
+            featured: true,
+            popular: 95
         },
         {
-            href: "./itineraries/kenya/3-day-masaimara-express.html",
-            location: "kenya",
-            duration: "3-5",
-            imageSrc: "images/masai-mara-2.jpg",
-            imageAlt: "Maasai Mara Wildlife Safari",
-            locationTag: "KENYA",
-            durationText: "3 Days / 2 Nights",
-            name: "3 Days Masai Mara Express",
-            description: "Explore the famous Maasai Mara reserve with abundant wildlife and cultural experiences.",
-            price: "From $2,800"
+            id: 2,
+            title: "Premium Gorilla Trekking Experience",
+            description: "Unforgettable mountain gorilla encounters in Rwanda's Volcanoes National Park with luxury accommodations.",
+            image: "images/gorilla-trekking.jpg",
+            country: "rwanda",
+            location: "Volcanoes National Park",
+            duration: "4 Days",
+            durationCategory: "3-5",
+            price: 4800,
+            featured: true,
+            popular: 92
         },
         {
-            href: "./itineraries/tanzania/10-days-tanzania-beach.html",
-            location: "tanzania",
-            duration: "9-12",
-            imageSrc: "images/zanzibar-transparent-kayak-and-drone-with-pickup-included-4819014.jpg",
-            imageAlt: "Mountain Gorilla Trekking",
-            locationTag: "TANZANIA",
-            durationText: "10 Days / 9 Nights",
-            name: "10 Days Tanzania & Beach Getaway",
-            description: "Unforgettable gorilla trekking experience in Volcanoes National Park.",
-            price: "From $3,410"
+            id: 3,
+            title: "Maasai Mara Big Five Safari",
+            description: "Experience the best of Kenya's wildlife in the iconic Maasai Mara with luxury lodge accommodations.",
+            image: "images/maasai-mara-safari.jpg",
+            country: "kenya",
+            location: "Maasai Mara National Reserve",
+            duration: "6 Days",
+            durationCategory: "6-8",
+            price: 3200,
+            featured: true,
+            popular: 88
         },
         {
-            href: "./itineraries/kenya/4-days-nakuru.html",
-            location: "kenya",
-            duration: "3-5",
-            imageSrc: "images/nakuru-2.jpg",
-            imageAlt: "Ngorongoro Crater Explorer",
-            locationTag: "KENYA",
-            durationText: "4 Days / 3 Nights",
-            name: "4 Days Rift Valley Lakes & Masai Mara Safari",
-            description: "Explore the iconic wildlife of the Masai Mara with the serene beauty of the Rift Valley lakes.",
-            price: "From $3,550"
+            id: 4,
+            title: "Uganda Primates & Wildlife Expedition",
+            description: "Comprehensive Uganda safari featuring gorilla trekking, chimpanzees, and Big Five game viewing.",
+            image: "images/uganda-primates.jpg",
+            country: "uganda",
+            location: "Bwindi & Queen Elizabeth NP",
+            duration: "10 Days",
+            durationCategory: "9-12",
+            price: 5200,
+            featured: false,
+            popular: 85
         },
         {
-            href: "./itineraries/tanzania/14-day-luxury.html",
-            location: "tanzania",
-            duration: "13+",
-            imageSrc: "images/luxury-travel-2.jpg",
-            imageAlt: "14 Days Luxury Safari & Zanzibar Beach Escape",
-            locationTag: "TANZANIA",
-            durationText: "14 Days / 13 Nights",
-            name: "14 Days Luxury Safari & Zanzibar Beach Escape",
-            description: "Experience the ultimate Tanzanian adventure with luxury safaris and a beach escape in Zanzibar.",
-            price: "From $12,460"
+            id: 5,
+            title: "Madagascar Lemur & Beach Adventure",
+            description: "Discover Madagascar's unique wildlife including lemurs, followed by relaxation on pristine beaches.",
+            image: "images/madagascar-lemur.jpg",
+            country: "madagascar",
+            location: "Andasibe & Nosy Be",
+            duration: "12 Days",
+            durationCategory: "9-12",
+            price: 3800,
+            featured: true,
+            popular: 82
         },
         {
-            href: "./itineraries/kenya/9-day-amboseli.html",
-            location: "kenya",
-            duration: "9-12",
-            imageSrc: "images/amboseli-3.jpg",
-            imageAlt: "Amboseli & Masai Mara Safari",
-            locationTag: "KENYA",
-            durationText: "9 Days / 8 Nights",
-            name: "Amboseli & Masai Mara Safari",
-            description: "Explore Amboseli's elephant herds & Samburu's unique wildlife.",
-            price: "From $7,080"
+            id: 6,
+            title: "Tanzania Northern Circuit Luxury",
+            description: "Premium safari covering Serengeti, Ngorongoro Crater, and Tarangire with luxury accommodations.",
+            image: "images/tanzania-luxury.jpg",
+            country: "tanzania",
+            location: "Northern Tanzania",
+            duration: "9 Days",
+            durationCategory: "9-12",
+            price: 5800,
+            featured: true,
+            popular: 90
         },
         {
-            href: "./itineraries/kenya/8-day-samburu-safari.html",
-            location: "kenya",
-            duration: "6-8",
-            imageSrc: "images/masai-mara-3.jpg",
-            imageAlt: "8 Days Samburu & Masai Mara Safari",
-            locationTag: "KENYA",
-            durationText: "8 Days / 7 Nights",
-            name: "8 Days Samburu & Masai Mara Safari",
-            description: "Venture into Kenya's diverse and untamed landscapes including Samburu and the Masai Mara.",
-            price: "From $6,180",
+            id: 7,
+            title: "Kenya Rift Valley Lakes Explorer",
+            description: "Explore Kenya's stunning Rift Valley lakes including Nakuru, Naivasha, and Bogoria.",
+            image: "images/rift-valley-lakes.jpg",
+            country: "kenya",
+            location: "Rift Valley Region",
+            duration: "5 Days",
+            durationCategory: "3-5",
+            price: 1850,
+            featured: false,
+            popular: 78
         },
         {
-            href: "./itineraries/tanzania/12-day-luxury.html",
-            location: "tanzania",
-            duration: "9-12",
-            imageSrc: "images/luxury-travel.jpg",
-            imageAlt: "Zanzibar & Selous Combination",
-            locationTag: "TANZANIA",
-            durationText: "12 Days / 11 Nights",
-            name: "12 Days Luxury Safari & Zanzibar",
-            description: "Experience the best of Tanzania with luxury lodges and a beach stay in Zanzibar.",
-            price: "From $11,645"
+            id: 8,
+            title: "Rwanda Cultural & Gorilla Experience",
+            description: "Combine gorilla trekking with authentic cultural experiences in Rwanda's communities.",
+            image: "images/rwanda-cultural.jpg",
+            country: "rwanda",
+            location: "Volcanoes & Local Communities",
+            duration: "6 Days",
+            durationCategory: "6-8",
+            price: 4200,
+            featured: false,
+            popular: 80
         },
         {
-            href: "./itineraries/tanzania/10-day-zanzibar-safari.html",
-            location: "tanzania",
-            duration: "9-12",
-            imageSrc: "images/dmitry-limonov-tey68pExQKM-unsplash.jpg",
-            imageAlt: "Zanzibar Getaway",
-            locationTag: "TANZANIA",
-            durationText: "10 Days / 9 Nights",
-            name: "Zanzibar Getaway",
-            description: "Relax on Zanzibar's pristine beaches after an exciting safari adventure.",
-            price: "From $2,310"
+            id: 9,
+            title: "Uganda Murchison Falls Adventure",
+            description: "Explore Uganda's largest national park and witness the powerful Murchison Falls.",
+            image: "images/murchison-falls.jpg",
+            country: "uganda",
+            location: "Murchison Falls National Park",
+            duration: "4 Days",
+            durationCategory: "3-5",
+            price: 1600,
+            featured: false,
+            popular: 75
         },
         {
-            href: "./itineraries/kenya/10-day-samburu.html",
-            location: "kenya",
-            duration: "9-12",
-            imageSrc: "images/samburu-2.jpg",
-            imageAlt: "Kenya Luxury Safari",
-            locationTag: "KENYA",
-            durationText: "10 Days / 9 Nights",
-            name: "Samburu, Amboseli & Masai Mara Luxury Safari",
-            description: "Experience Kenya's top wildlife destinations in style with luxury accommodations.",
-            price: "From $7,500"
-        },
-        {
-            href: "./itineraries/tanzania/14-day-rivercrossing.html",
-            location: "tanzania",
-            duration: "13+",
-            imageSrc: "images/rivercrossing.jpg",
-            imageAlt: "Tanzania River Crossing Safari",
-            locationTag: "TANZANIA & KENYA",
-            durationText: "14 Days / 13 Nights",
-            name: "14 Day River Crossing Safari",
-            description: "Experience the thrill of river crossings in the Serengeti and Maasai Mara during the Great Migration.",
-            price: "From $8,682"
-        },
-        {
-            href: "./itineraries/kenya/12-day-samburu.html",
-            location: "kenya",
-            duration: "9-12",
-            imageSrc: "images/samburu-5.jpg",
-            imageAlt: "Samburu & Maasai Mara Explorer",
-            locationTag: "KENYA",
-            durationText: "12 Days / 11 Nights",
-            name: "Samburu & Maasai Mara Explorer",
-            description: "Discover Kenya's diverse wildlife and cultures in Samburu and Maasai Mara.",
-            price: "From $7,900"
-        },
-        {
-            href: "./itineraries/tanzania/12-day-rivercrossing.html",
-            location: "tanzania",
-            duration: "9-12",
-            imageSrc: "images/rivercrossing.jpg",
-            imageAlt: "Tanzania & Kenya River Crossing Safari",
-            locationTag: "TANZANIA & KENYA",
-            durationText: "12 Days / 11 Nights",
-            name: "Tanzania & Kenya River Crossing Safari",
-            description: "Witness the epic river crossings of the Great Migration across Tanzania and Kenya.",
-            price: "From $6,465"
-        },
-        {
-            href: "./itineraries/kenya/8-day-rivercrossing.html",
-            location: "kenya",
-            duration: "6-8",
-            imageSrc: "images/river-crossing-1.jpg",
-            imageAlt: "Tanzania & Kenya Migration Safari",
-            locationTag: "KENYA",
-            durationText: "8 Days / 7 Nights",
-            name: "Tanzania & Kenya Migration Safari",
-            description: "Experience the Great Migration in both Tanzania's Serengeti and Kenya's Maasai Mara.",
-            price: "From $4,344"
-        },
-        {
-            href: "./itineraries/kenya/15-day-samburu.html",
-            location: "kenya",
-            duration: "13+",
-            imageSrc: "images/samburu-4.jpg",
-            imageAlt: "Samburu, Amboseli, Lake Nakuru & Masai Mara Grand Tour",
-            locationTag: "KENYA",
-            durationText: "15 Days / 14 Nights",
-            name: "Samburu, Amboseli, Lake Nakuru & Masai Mara Grand Tour",
-            description: "Comprehensive tour of Kenya's top wildlife destinations with expert guides.",
-            price: "From $9,200"
-        },
-        {
-            href: "./itineraries/kenya/10-day-rivercrossing.html",
-            location: "kenya",
-            duration: "9-12",
-            imageSrc: "images/river-crossing-2.jpg",
-            imageAlt: "Tanzania & Kenya River Crossing Safari",
-            locationTag: "KENYA",
-            durationText: "10 Days / 9 Nights",
-            name: "10 Day Tanzania & Kenya River Crossing Safari",
-            description: "Witness the epic river crossings of the Great Migration across Tanzania and Kenya.",
-            price: "From $5,494"
-        },
-        {
-            href: "./itineraries/tanzania/5-day-marangu-route.html",
-            location: "tanzania",
-            duration: "6-8",
-            imageSrc: "images/kilimanjaro-2.jpg",
-            imageAlt: "Kilimanjaro Marangu Route",
-            locationTag: "TANZANIA",
-            durationText: "5 Days / 5 Nights",
-            name: "6 Day Kilimanjaro Marangu Route",
-            description: "Trek to the summit of Mount Kilimanjaro via the popular Marangu Route.",
-            price: "From $1,850"
-        },
-        {
-            href: "./itineraries/kenya/5-day-mtkenya-chegoria-route.html",
-            location: "kenya",
-            duration: "3-5",
-            imageSrc: "images/mount-kenya-1.jpg",
-            imageAlt: "Mount Kenya Climbing Safari",
-            locationTag: "KENYA",
-            durationText: "5 Days / 4 Nights",
-            name: "5 Day Mount Kenya Climbing Safari",
-            description: "Conquer Africa's second highest peak via the scenic Chogoria Route.",
-            price: "From $5,400"
-        },
-        {
-            href: "./itineraries/kenya/5-day-mtkenya-sirimon-route.html",
-            location: "kenya",
-            duration: "3-5",
-            imageSrc: "images/mount-kenya-2.jpg",
-            imageAlt: "Mount Kenya Sirimon Route",
-            locationTag: "KENYA",
-            durationText: "5 Days / 4 Nights",
-            name: "5 Day Mount Kenya Sirimon Route",
-            description: "Ascend Mount Kenya via the scenic Sirimon Route with expert guides.",
-            price: "From $4,800"
-        },
-        {
-            href: "./itineraries/uganda/8-day-rwenzori-climb.html",
-            location: "uganda",
-            duration: "6-8",
-            imageSrc: "images/rwenzori-2.jpg",
-            imageAlt: "Rwenzori Mountain Climb",
-            locationTag: "UGANDA",
-            durationText: "8 Days / 7 Nights",
-            name: "8 Day Rwenzori Mountain Climb",
-            description: "Climb the 'Mountains of the Moon' in Uganda's Rwenzori National Park.",
-            price: "From $5,900"
-        },
-        {
-            href: "./itineraries/tanzania/7-day-lemosho-route.html",
-            location: "tanzania",
-            duration: "9-12",
-            imageSrc: "images/kilimajaro.webp",
-            imageAlt: "Kilimanjaro Lemosho Route",
-            locationTag: "TANZANIA",
-            durationText: "9 Days / 8 Nights",
-            name: "9 Day Kilimanjaro Lemosho Route",
-            description: "Trek to the summit of Mount Kilimanjaro via the scenic Lemosho Route.",
-            price: "From $2,070"
-        },
-        {
-            href: "./itineraries/tanzania/9-day-machame-route.html",
-            location: "tanzania",
-            duration: "9-12",
-            imageSrc: "images/kilimanjaro-3 (1).jpg",
-            imageAlt: "Kilimanjaro Machame Route",
-            locationTag: "TANZANIA",
-            durationText: "9 Days / 8 Nights",
-            name: "9 Day Kilimanjaro Machame Route",
-            description: "Trek to the summit of Mount Kilimanjaro via the popular Machame Route.",
-            price: "From $2,015"
-        },
-        {
-            href: "./itineraries/tanzania/3-day-cultural.html",
-            location: "tanzania",
-            duration: "3-5",
-            imageSrc: "images/cultural-safari.webp",
-            imageAlt: "Tanzania Cultural Safari",
-            locationTag: "TANZANIA",
-            durationText: "3 Days / 2 Nights",
-            name: "3 Day Tanzania Cultural Safari",
-            description: "Immerse yourself in Tanzania's rich cultures with visits to local tribes and villages.",
-            price: "From $1,190"
-        },
-        {
-            href: "./itineraries/tanzania/9-day-cultural.html",
-            location: "tanzania",
-            duration: "9-12",
-            imageSrc: "images/cultural.jpg",
-            imageAlt: "Tanzania Extended Cultural Safari",
-            locationTag: "TANZANIA  ",
-            durationText: "9 Days / 8 Nights",
-            name: "9 Day Tanzania Extended Cultural Safari",
-            description: "Experience Tanzania's diverse cultures with extended visits to local tribes and communities.",
-            price: "From $3,750"
-        },
-        // Additional East African itineraries
-        {
-            href: "./itineraries/tanzania/10-day-cultural.html",
-            location: "tanzania",
-            duration: "9-12",
-            imageSrc: "images/Hadzabe-Tribe-scaled.jpg",
-            imageAlt: "Tanzania Cultural Immersion",
-            locationTag: "TANZANIA",
-            durationText: "10 Days / 9 Nights",
-            name: "10 Day Tanzania Cultural Immersion",
-            description: "Delve into the traditions of Tanzania's indigenous tribes and communities.",
-            price: "From $3,508"
-        },
-        {
-            href: "./itineraries/tanzania/14-day-cultural.html",
-            location: "tanzania",
-            duration: "13+",
-            imageSrc: "images/cultural-2.jpg",
-            imageAlt: "Tanzania Comprehensive Cultural Safari",
-            locationTag: "TANZANIA",
-            durationText: "14 Days / 13 Nights",
-            name: "14 Day Tanzania Comprehensive Cultural Safari",
-            description: "Explore Tanzania's rich cultural heritage with visits to multiple tribes and communities.",
-            price: "From $3,850"
-        },
-        {
-            href: "./itineraries/rwanda/5-day-rwanda-highlights.html",
-            location: "rwanda",
-            duration: "3-5",
-            imageSrc: "images/rwanda-gorilla.jpg",
-            imageAlt: "Rwanda Premium Safari Highlights",
-            locationTag: "RWANDA",
-            durationText: "5 Days / 4 Nights",
-            name: "5 Day Rwanda Premium Safari Highlights",
-            description: "Experience Rwanda's top wildlife and cultural highlights in comfort and style.",
-            price: "From $7,800"
-        },
-        {
-            href: "./itineraries/rwanda/7-day-rwanda-classic-safari.html",
-            location: "rwanda",
-            duration: "6-8",
-            imageSrc: "images/rwanda-2.jpg",
-            imageAlt: "Rwanda Classic Safari",
-            locationTag: "RWANDA",
-            durationText: "7 Days / 6 Nights",
-            name: "7 Day Rwanda Classic Safari",
-            description: "Explore Rwanda's stunning landscapes and diverse wildlife including gorillas and golden monkeys.",
-            price: "From $9,500"
-        },
-        {
-            href: "./itineraries/rwanda/9-day-rwanda-extended.html",
-            location: "rwanda",
-            duration: "9-12",
-            imageSrc: "images/rwanda.jpg",
-            imageAlt: "Rwanda Extended Safari",
-            locationTag: "RWANDA",
-            durationText: "9 Days / 8 Nights",
-            name: "9 Day Rwanda Extended Safari",
-            description: "Discover Rwanda's rich biodiversity and culture with an extended safari experience.",
-            price: "From $11,500"
-        },
-        {
-            href: "./itineraries/rwanda/11-day-rwanda-grand-safari.html",
-            location: "rwanda",
-            duration: "9-12",
-            imageSrc: "images/rwanda-3.avif",
-            imageAlt: "Rwanda Grand Safari",
-            locationTag: "RWANDA",
-            durationText: "11 Days / 10 Nights",
-            name: "11 Day Rwanda Grand Safari",
-            description: "Experience the best of Rwanda's wildlife and culture in this comprehensive grand safari.",
-            price: "From $13,500"
-        },
-        {
-            href: "./itineraries/madagascar/12-day-coastal.html",
-            location: "madagascar",
-            duration: "9-12",
-            imageSrc: "images/madagascar-coast-1.jpg",
-            imageAlt: "Madagascar Coastal Tour",
-            locationTag: "MADAGASCAR",
-            durationText: "12 Days / 11 Nights",
-            name: "12 Day Madagascar Coastal Tour",
-            description: "Discover Madagascar's stunning coastline and marine biodiversity.",
-            price: "From $4,500"
-        },
-        {
-            href: "./itineraries/uganda/5-day-murchison.html",
-            location: "uganda",
-            duration: "3-5",
-            imageSrc: "images/murchison-1.jpg",
-            imageAlt: "Murchison Falls National Park",
-            locationTag: "UGANDA",
-            durationText: "5 Days / 4 Nights",
-            name: "5 Day Murchison Falls Safari",
-            description: "Witness the powerful Murchison Falls and abundant wildlife in Uganda's largest park.",
-            price: "From $2,800"
-        },
-        {
-            href: "./itineraries/rwanda/4-day-cultural.html",
-            location: "rwanda",
-            duration: "3-5",
-            imageSrc: "images/rwanda-culture-1.jpg",
-            imageAlt: "Rwanda Cultural Tour",
-            locationTag: "RWANDA",
-            durationText: "4 Days / 3 Nights",
-            name: "4 Day Rwanda Cultural Experience",
-            description: "Immerse yourself in Rwanda's rich culture and history.",
-            price: "From $1,900"
-        },
-        {
-            href: "./itineraries/tanzania/6-day-lake-manyara.html",
-            location: "tanzania",
-            duration: "6-8",
-            imageSrc: "images/lake-manyara-1.jpg",
-            imageAlt: "Lake Manyara National Park",
-            locationTag: "TANZANIA",
-            durationText: "6 Days / 5 Nights",
-            name: "6 Day Lake Manyara & Tarangire",
-            description: "Explore tree-climbing lions and massive elephant herds in northern Tanzania.",
-            price: "From $3,200"
-        },
-        {
-            href: "./itineraries/kenya/6-day-aberdare.html",
-            location: "kenya",
-            duration: "6-8",
-            imageSrc: "images/aberdare-1.jpg",
-            imageAlt: "Aberdare National Park",
-            locationTag: "KENYA",
-            durationText: "6 Days / 5 Nights",
-            name: "6 Day Aberdare National Park",
-            description: "Experience Kenya's highland forests and unique wildlife in Aberdare National Park.",
-            price: "From $3,600"
+            id: 10,
+            title: "Madagascar Baobab & Wildlife Tour",
+            description: "Journey through Madagascar's unique landscapes featuring baobab avenues and endemic wildlife.",
+            image: "images/madagascar-baobab.jpg",
+            country: "madagascar",
+            location: "Western Madagascar",
+            duration: "8 Days",
+            durationCategory: "6-8",
+            price: 2900,
+            featured: true,
+            popular: 79
         }
     ];
 
-    // Global variables
-    let filteredItineraries = [...itineraries];
-    let currentPage = 1;
-    const cardsPerPage = 8;
-    let currentSearchTerm = '';
-
-    // DOM elements
+    // DOM Elements
     const itinerariesGrid = document.getElementById('itinerariesGrid');
-    const paginationNumbers = document.getElementById('paginationNumbers');
-    const prevButton = document.getElementById('prevBtn');
-    const nextButton = document.getElementById('nextBtn');
-    const resultsCount = document.getElementById('resultsCount');
+    const filterResults = document.getElementById('filterResults');
     const filterToggle = document.getElementById('filterToggle');
-    const filterPanel = document.getElementById('filterPanel');
-    const filterClose = document.getElementById('filterClose');
+    const sortToggle = document.getElementById('sortToggle');
+    const filterDropdown = document.getElementById('filterDropdown');
+    const sortDropdown = document.getElementById('sortDropdown');
     const applyFiltersBtn = document.getElementById('applyFilters');
     const resetFiltersBtn = document.getElementById('resetFilters');
-    const searchInput = document.getElementById('searchInput');
-    const clearSearch = document.getElementById('clearSearch');
-    const emptyState = document.getElementById('emptyState');
-    const paginationContainer = document.getElementById('paginationContainer');
-    const clearSearchAndFilters = document.getElementById('clearSearchAndFilters');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
 
-    // Initialize everything
-    function initializeApp() {
-        // Load saved state from localStorage
-        loadSavedState();
-        
-        renderCards();
-        renderPagination();
-        updateResultsCount();
+    // State variables
+    let filteredItineraries = [...itineraries];
+    let displayedCount = 6;
+    let currentSort = 'featured';
+    let activeFilters = {
+        countries: ['tanzania', 'kenya', 'uganda', 'rwanda', 'madagascar'],
+        durations: ['3-5', '6-8', '9-12', '13+']
+    };
+
+    // Initialize
+    function init() {
+        renderItineraries();
         setupEventListeners();
-        
-        // Scroll to top to ensure results are visible
-        scrollToResults();
-    }
-
-    // Load saved state from localStorage
-    function loadSavedState() {
-        const savedPage = localStorage.getItem('safariPackagesCurrentPage');
-        const savedFilters = localStorage.getItem('safariPackagesFilters');
-        const savedSearch = localStorage.getItem('safariPackagesSearch');
-        
-        if (savedPage) {
-            currentPage = parseInt(savedPage);
-        }
-        
-        if (savedFilters) {
-            try {
-                const filters = JSON.parse(savedFilters);
-                applySavedFilters(filters);
-            } catch (e) {
-                console.error('Error loading saved filters:', e);
-            }
-        }
-        
-        if (savedSearch) {
-            searchInput.value = savedSearch;
-            currentSearchTerm = savedSearch;
-            updateClearButton();
-            performSearch();
-        }
-    }
-
-    // Apply saved filters from localStorage
-    function applySavedFilters(filters) {
-        // Apply location filters
-        document.querySelectorAll('input[name="location"]').forEach(checkbox => {
-            checkbox.checked = filters.locations.includes(checkbox.value);
-        });
-        
-        // Apply duration filters
-        document.querySelectorAll('input[name="duration"]').forEach(checkbox => {
-            checkbox.checked = filters.durations.includes(checkbox.value);
-        });
-        
-        // Apply the filters
-        applyFilters();
-    }
-
-    // Save current state to localStorage
-    function saveState() {
-        // Save current page
-        localStorage.setItem('safariPackagesCurrentPage', currentPage.toString());
-        
-        // Save current filters
-        const locationCheckboxes = document.querySelectorAll('input[name="location"]:checked');
-        const durationCheckboxes = document.querySelectorAll('input[name="duration"]:checked');
-        
-        const filters = {
-            locations: Array.from(locationCheckboxes).map(cb => cb.value),
-            durations: Array.from(durationCheckboxes).map(cb => cb.value)
-        };
-        
-        localStorage.setItem('safariPackagesFilters', JSON.stringify(filters));
-        
-        // Save search term
-        localStorage.setItem('safariPackagesSearch', currentSearchTerm);
-    }
-
-    // Scroll to results section for better UX
-    function scrollToResults() {
-        const resultsSection = document.querySelector('.itineraries-page');
-        if (resultsSection) {
-            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        updateButtonStates();
     }
 
     // Setup event listeners
     function setupEventListeners() {
-        // Filter panel toggle
-        filterToggle.addEventListener('click', toggleFilterPanel);
-        filterClose.addEventListener('click', closeFilterPanel);
-        
-        // Filter actions
+        // Filter toggle
+        filterToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const wasActive = filterDropdown.classList.contains('active');
+            closeAllDropdowns();
+            if (!wasActive) {
+                filterDropdown.classList.add('active');
+                filterToggle.classList.add('active');
+            }
+        });
+
+        // Sort toggle
+        sortToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const wasActive = sortDropdown.classList.contains('active');
+            closeAllDropdowns();
+            if (!wasActive) {
+                sortDropdown.classList.add('active');
+                sortToggle.classList.add('active');
+            }
+        });
+
+        // Apply filters
         applyFiltersBtn.addEventListener('click', applyFilters);
+
+        // Reset filters
         resetFiltersBtn.addEventListener('click', resetFilters);
-        
-        // Pagination
-        prevButton.addEventListener('click', goToPrevPage);
-        nextButton.addEventListener('click', goToNextPage);
-        
-        // Search functionality
-        searchInput.addEventListener('input', handleSearch);
-        clearSearch.addEventListener('click', clearSearchTerm);
-        clearSearchAndFilters.addEventListener('click', clearAll);
-        
-        // Close filter panel when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!filterToggle.contains(event.target) && !filterPanel.contains(event.target)) {
-                closeFilterPanel();
-            }
-        });
-        
-        // Close on escape key
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && filterPanel.classList.contains('active')) {
-                closeFilterPanel();
-            }
-        });
-        
-        // Save state before page unload
-        window.addEventListener('beforeunload', saveState);
-    }
 
-    // Search functionality
-    function handleSearch(event) {
-        currentSearchTerm = event.target.value.trim().toLowerCase();
-        updateClearButton();
-        performSearch();
-    }
+        // Load more
+        loadMoreBtn.addEventListener('click', loadMore);
 
-    function performSearch() {
-        if (currentSearchTerm === '') {
-            // If no search term, just apply filters
-            applyFilters();
-            return;
-        }
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', closeAllDropdowns);
 
-        // Get selected filters
-        const locationCheckboxes = document.querySelectorAll('input[name="location"]:checked');
-        const durationCheckboxes = document.querySelectorAll('input[name="duration"]:checked');
-        
-        const selectedLocations = Array.from(locationCheckboxes).map(cb => cb.value);
-        const selectedDurations = Array.from(durationCheckboxes).map(cb => cb.value);
-
-        // Filter itineraries based on search and filters
-        filteredItineraries = itineraries.filter(itinerary => {
-            // Check location and duration filters
-            const locationMatch = selectedLocations.includes(itinerary.location);
-            const durationMatch = selectedDurations.includes(itinerary.duration);
-            
-            if (!locationMatch || !durationMatch) {
-                return false;
-            }
-            
-            // Search across multiple fields
-            const searchFields = [
-                itinerary.name,
-                itinerary.description,
-                itinerary.locationTag,
-                itinerary.durationText,
-                itinerary.price
-            ];
-            
-            return searchFields.some(field => 
-                field.toLowerCase().includes(currentSearchTerm)
-            );
+        // Sort options
+        document.querySelectorAll('input[name="sort"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                currentSort = e.target.value;
+                sortItineraries();
+                renderItineraries();
+                closeAllDropdowns();
+                updateButtonStates();
+            });
         });
 
-        // Reset to first page and render
-        currentPage = 1;
-        renderCards();
-        renderPagination();
-        updateResultsCount();
-        updateEmptyState();
-        
-        // Save state
-        saveState();
+        // Filter option changes
+        document.querySelectorAll('input[name="country"], input[name="duration"]').forEach(input => {
+            input.addEventListener('change', updateButtonStates);
+        });
     }
 
-    function updateClearButton() {
-        clearSearch.style.display = currentSearchTerm ? 'flex' : 'none';
+    // Close all dropdowns
+    function closeAllDropdowns() {
+        filterDropdown.classList.remove('active');
+        sortDropdown.classList.remove('active');
+        filterToggle.classList.remove('active');
+        sortToggle.classList.remove('active');
     }
 
-    function clearSearchTerm() {
-        searchInput.value = '';
-        currentSearchTerm = '';
-        updateClearButton();
-        performSearch();
-    }
-
-    function clearAll() {
-        clearSearchTerm();
-        resetFilters();
-    }
-
-    // Filter panel functions
-    function toggleFilterPanel() {
-        filterPanel.classList.toggle('active');
-        const buttonText = filterPanel.classList.contains('active') ? 'Hide Filters' : 'Filters';
-        filterToggle.querySelector('span:last-child').textContent = buttonText;
-    }
-
-    function closeFilterPanel() {
-        filterPanel.classList.remove('active');
-        filterToggle.querySelector('span:last-child').textContent = 'Filters';
-    }
-
-    // Filter functions
+    // Apply filters
     function applyFilters() {
-        // Get selected filters
-        const locationCheckboxes = document.querySelectorAll('input[name="location"]:checked');
+        const countryCheckboxes = document.querySelectorAll('input[name="country"]:checked');
         const durationCheckboxes = document.querySelectorAll('input[name="duration"]:checked');
         
-        const selectedLocations = Array.from(locationCheckboxes).map(cb => cb.value);
-        const selectedDurations = Array.from(durationCheckboxes).map(cb => cb.value);
+        activeFilters.countries = Array.from(countryCheckboxes).map(cb => cb.value);
+        activeFilters.durations = Array.from(durationCheckboxes).map(cb => cb.value);
 
-        // Filter itineraries
-        filteredItineraries = itineraries.filter(itinerary => {
-            const locationMatch = selectedLocations.includes(itinerary.location);
-            const durationMatch = selectedDurations.includes(itinerary.duration);
-            
-            // If there's a search term, also apply search filter
-            if (currentSearchTerm) {
-                const searchFields = [
-                    itinerary.name,
-                    itinerary.description,
-                    itinerary.locationTag,
-                    itinerary.durationText,
-                    itinerary.price
-                ];
-                
-                const searchMatch = searchFields.some(field => 
-                    field.toLowerCase().includes(currentSearchTerm)
-                );
-                
-                return locationMatch && durationMatch && searchMatch;
-            }
-            
-            return locationMatch && durationMatch;
-        });
-
-        // Reset to first page and render
-        currentPage = 1;
-        renderCards();
-        renderPagination();
-        updateResultsCount();
-        updateEmptyState();
-        closeFilterPanel();
-        
-        // Save state
-        saveState();
+        filterItineraries();
+        sortItineraries();
+        renderItineraries();
+        closeAllDropdowns();
+        updateButtonStates();
     }
 
+    // Reset filters
     function resetFilters() {
-        // Check all checkboxes
-        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-            checkbox.checked = true;
+        document.querySelectorAll('input[name="country"]').forEach(cb => cb.checked = true);
+        document.querySelectorAll('input[name="duration"]').forEach(cb => cb.checked = true);
+        document.querySelector('input[name="sort"][value="featured"]').checked = true;
+        
+        activeFilters.countries = ['tanzania', 'kenya', 'uganda', 'rwanda', 'madagascar'];
+        activeFilters.durations = ['3-5', '6-8', '9-12', '13+'];
+        currentSort = 'featured';
+        
+        filterItineraries();
+        sortItineraries();
+        renderItineraries();
+        closeAllDropdowns();
+        updateButtonStates();
+    }
+
+    // Update button states
+    function updateButtonStates() {
+        // Update filter button state
+        const totalCountries = document.querySelectorAll('input[name="country"]').length;
+        const totalDurations = document.querySelectorAll('input[name="duration"]').length;
+        const selectedCountries = document.querySelectorAll('input[name="country"]:checked').length;
+        const selectedDurations = document.querySelectorAll('input[name="duration"]:checked').length;
+        
+        const totalFilters = totalCountries + totalDurations;
+        const selectedFilters = selectedCountries + selectedDurations;
+        
+        if (selectedFilters < totalFilters) {
+            filterToggle.classList.add('active');
+            filterToggle.setAttribute('data-filter-count', totalFilters - selectedFilters);
+        } else {
+            filterToggle.classList.remove('active');
+            filterToggle.removeAttribute('data-filter-count');
+        }
+
+        // Update sort button state
+        const currentSortValue = document.querySelector('input[name="sort"]:checked').value;
+        if (currentSortValue !== 'featured') {
+            sortToggle.classList.add('active');
+        } else {
+            sortToggle.classList.remove('active');
+        }
+    }
+
+    // Filter itineraries
+    function filterItineraries() {
+        filteredItineraries = itineraries.filter(itinerary => {
+            const countryMatch = activeFilters.countries.includes(itinerary.country);
+            const durationMatch = activeFilters.durations.includes(itinerary.durationCategory);
+            return countryMatch && durationMatch;
         });
         
-        // Reset filtered itineraries
-        filteredItineraries = [...itineraries];
-        
-        // Reset to first page and render
-        currentPage = 1;
-        renderCards();
-        renderPagination();
         updateResultsCount();
-        updateEmptyState();
-        
-        // Save state
-        saveState();
     }
 
-    // Empty state management
-    function updateEmptyState() {
-        if (filteredItineraries.length === 0) {
-            emptyState.style.display = 'block';
-            itinerariesGrid.style.display = 'none';
-            paginationContainer.style.display = 'none';
-        } else {
-            emptyState.style.display = 'none';
-            itinerariesGrid.style.display = 'grid';
-            paginationContainer.style.display = 'block';
+    // Sort itineraries
+    function sortItineraries() {
+        switch(currentSort) {
+            case 'price-low':
+                filteredItineraries.sort((a, b) => a.price - b.price);
+                break;
+            case 'price-high':
+                filteredItineraries.sort((a, b) => b.price - a.price);
+                break;
+            case 'duration':
+                filteredItineraries.sort((a, b) => {
+                    const aDays = parseInt(a.duration);
+                    const bDays = parseInt(b.duration);
+                    return aDays - bDays;
+                });
+                break;
+            case 'popular':
+                filteredItineraries.sort((a, b) => b.popular - a.popular);
+                break;
+            case 'featured':
+            default:
+                filteredItineraries.sort((a, b) => {
+                    if (a.featured && !b.featured) return -1;
+                    if (!a.featured && b.featured) return 1;
+                    return b.popular - a.popular;
+                });
+                break;
         }
     }
 
-    // Card rendering
-    function renderCards() {
-        itinerariesGrid.innerHTML = '';
+    // Render itineraries
+    function renderItineraries() {
+        const itinerariesToShow = filteredItineraries.slice(0, displayedCount);
         
-        const startIndex = (currentPage - 1) * cardsPerPage;
-        const endIndex = Math.min(startIndex + cardsPerPage, filteredItineraries.length);
-        
-        for (let i = startIndex; i < endIndex; i++) {
-            const itinerary = filteredItineraries[i];
-            const card = createCard(itinerary);
-            itinerariesGrid.appendChild(card);
-        }
-        
-        updateEmptyState();
-    }
-
-    function createCard(itinerary) {
-        const card = document.createElement('a');
-        card.href = itinerary.href;
-        card.className = 'itinerary-card';
-        card.setAttribute('data-location', itinerary.location);
-        card.setAttribute('data-duration', itinerary.duration);
-        
-        card.innerHTML = `
-            <div class="itinerary-image">
-                <img src="${itinerary.imageSrc}" alt="${itinerary.imageAlt}" loading="lazy">
-            </div>
-            <div class="itinerary-content">
-                <div class="itinerary-meta">
-                    <span class="itinerary-location-tag">${itinerary.locationTag}</span>
-                    <span class="itinerary-duration">${itinerary.durationText}</span>
+        if (itinerariesToShow.length === 0) {
+            itinerariesGrid.innerHTML = `
+                <div class="no-results">
+                    <span class="material-symbols-outlined">search_off</span>
+                    <h3>No itineraries found</h3>
+                    <p>Try adjusting your filters to see more results.</p>
+                    <button class="btn btn-gold" onclick="resetFilters()" style="margin-top: 20px;">
+                        Reset Filters
+                    </button>
                 </div>
-                <h3 class="itinerary-name">${itinerary.name}</h3>
-                <p class="itinerary-description">${itinerary.description}</p>
-                <div class="itinerary-price">${itinerary.price}</div>
+            `;
+            loadMoreBtn.style.display = 'none';
+            return;
+        }
+
+        itinerariesGrid.innerHTML = itinerariesToShow.map(itinerary => `
+            <div class="itinerary-card" data-country="${itinerary.country}" data-duration="${itinerary.durationCategory}">
+                <div class="itinerary-card-image">
+                    <img src="${itinerary.image}" alt="${itinerary.title}" loading="lazy">
+                    <div class="itinerary-card-badge">${itinerary.country.charAt(0).toUpperCase() + itinerary.country.slice(1)}</div>
+                    ${itinerary.featured ? '<div class="featured-badge">Featured</div>' : ''}
+                </div>
+                <div class="itinerary-card-content">
+                    <div class="itinerary-card-meta">
+                        <span class="itinerary-card-location">${itinerary.location}</span>
+                        <span class="itinerary-card-duration">
+                            <span class="material-symbols-outlined">schedule</span>
+                            ${itinerary.duration}
+                        </span>
+                    </div>
+                    <h3 class="itinerary-card-title">${itinerary.title}</h3>
+                    <p class="itinerary-card-description">${itinerary.description}</p>
+                    <div class="itinerary-card-footer">
+                        <div class="itinerary-card-price">From $${itinerary.price.toLocaleString()}</div>
+                        <div class="itinerary-card-cta">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        `;
-        
-        return card;
+        `).join('');
+
+        // Show/hide load more button
+        loadMoreBtn.style.display = displayedCount < filteredItineraries.length ? 'block' : 'none';
+
+        // Add click handlers to cards
+        addCardClickHandlers();
     }
 
-    // Pagination functions
-    function renderPagination() {
-        paginationNumbers.innerHTML = '';
-        const totalPages = Math.ceil(filteredItineraries.length / cardsPerPage);
-        
-        if (totalPages <= 1) {
-            paginationContainer.style.display = 'none';
-            return;
-        }
-        
-        paginationContainer.style.display = 'block';
-        
-        // Always show first page
-        addPageNumber(1, totalPages);
-        
-        // Show pages around current page
-        const startPage = Math.max(2, currentPage - 1);
-        const endPage = Math.min(totalPages - 1, currentPage + 1);
-        
-        if (startPage > 2) {
-            addEllipsis();
-        }
-        
-        for (let i = startPage; i <= endPage; i++) {
-            addPageNumber(i, totalPages);
-        }
-        
-        if (endPage < totalPages - 1) {
-            addEllipsis();
-        }
-        
-        // Always show last page if there's more than one page
-        if (totalPages > 1) {
-            addPageNumber(totalPages, totalPages);
-        }
-        
-        updatePaginationButtons(totalPages);
-    }
-
-    function addPageNumber(pageNumber, totalPages) {
-        const button = document.createElement('button');
-        button.className = 'pagination-btn';
-        if (pageNumber === currentPage) {
-            button.classList.add('active');
-        }
-        button.textContent = pageNumber;
-        button.addEventListener('click', () => goToPage(pageNumber));
-        paginationNumbers.appendChild(button);
-    }
-
-    function addEllipsis() {
-        const ellipsis = document.createElement('span');
-        ellipsis.className = 'pagination-ellipsis';
-        ellipsis.textContent = '...';
-        paginationNumbers.appendChild(ellipsis);
-    }
-
-    function updatePaginationButtons(totalPages) {
-        prevButton.disabled = currentPage === 1;
-        nextButton.disabled = currentPage === totalPages || totalPages === 0;
-    }
-
-    function goToPage(pageNumber) {
-        const totalPages = Math.ceil(filteredItineraries.length / cardsPerPage);
-        if (pageNumber < 1 || pageNumber > totalPages || pageNumber === currentPage) {
-            return;
-        }
-        
-        currentPage = pageNumber;
-        renderCards();
-        renderPagination();
+    // Load more itineraries
+    function loadMore() {
+        displayedCount += 3;
+        renderItineraries();
         updateResultsCount();
         
-        // Save state
-        saveState();
-        
-        // Scroll to top for better UX
-        scrollToResults();
+        // Smooth scroll to new items
+        setTimeout(() => {
+            loadMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
     }
 
-    function goToPrevPage() {
-        goToPage(currentPage - 1);
-    }
-
-    function goToNextPage() {
-        goToPage(currentPage + 1);
-    }
-
+    // Update results count
     function updateResultsCount() {
-        const startIndex = (currentPage - 1) * cardsPerPage + 1;
-        const endIndex = Math.min(currentPage * cardsPerPage, filteredItineraries.length);
-        const totalCount = filteredItineraries.length;
+        const total = filteredItineraries.length;
+        const showing = Math.min(displayedCount, total);
+        filterResults.textContent = `Showing ${showing} of ${total} itineraries`;
         
-        if (totalCount === 0) {
-            resultsCount.textContent = 'No results found';
-        } else {
-            resultsCount.textContent = `Showing ${startIndex}-${endIndex} of ${totalCount} results`;
-            
-            // Add search term to results count if searching
-            if (currentSearchTerm) {
-                resultsCount.textContent += ` for "${currentSearchTerm}"`;
-            }
+        // Reset displayed count when filtering reduces results
+        if (displayedCount > total) {
+            displayedCount = Math.min(6, total);
         }
     }
 
-    // Initialize the app
-    initializeApp();
+    // Add click handlers to itinerary cards
+    function addCardClickHandlers() {
+        document.querySelectorAll('.itinerary-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const title = this.querySelector('.itinerary-card-title').textContent;
+                console.log('Navigating to itinerary:', title);
+                // Add your actual navigation logic here
+                // window.location.href = `/itineraries/${this.dataset.id}`;
+            });
+        });
+    }
+
+    // Initialize the application
+    init();
 });
 </script>
 
-<!-- Safari Planner CTA Section -->
-<section class="safari-planner-cta">
-    <div class="safari-planner-container">
-        <div class="safari-planner-content">
-            <h2>Didn't find what you're looking for?</h2>
-            <p>Use our safari planner to design your own custom safari experience tailored to your interests, preferences, and travel style.</p>
-            <button class="safari-planner-btn" id="openSafariPlanner">
-                <span class="btn-text">Plan Your Safari</span>
-                <span class="btn-loader" style="display: none;">
-                    <div class="spinner"></div>
-                    Planning...
-                </span>
-            </button>
-        </div>
-        <div class="safari-planner-image">
-            <img src="images/safari-cta-1.jpg" alt="Custom Safari Planning" loading="lazy">
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready for Your African Adventure?</h2>
+            <p class="cta-description">
+                Let's craft your perfect safari experience together. Contact our experts to start planning your unforgettable journey through East Africa's wild wonders.
+            </p>
+            <div class="cta-buttons">
+                <button class="btn btn-gold">
+                    <span>Start Planning</span>
+                    <span class="material-symbols-outlined">chat</span>
+                </button>
+                <button class="btn">
+                    <span>View All Packages</span>
+                    <span class="material-symbols-outlined">explore</span>
+                </button>
+            </div>
         </div>
     </div>
 </section>
-
-<!-- Safari Planner Modal -->
-<div class="safari-planner-modal" id="safariPlannerModal">
-    <div class="safari-planner-modal-content">
-        <div class="safari-planner-header">
-            <h2>Design Your Safari Experience</h2>
-            <button class="safari-planner-close" id="closeSafariPlanner">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-        </div>
-        
-        <div class="safari-planner-layout">
-            <!-- Form Section -->
-            <div class="safari-planner-form-section">
-                <form id="safariPlannerForm" class="safari-planner-form">
-                    <div class="form-progress">
-                        <div class="progress-steps">
-                            <div class="step-indicator active" data-step="1">
-                                <span class="step-number">1</span>
-                                <span class="step-label">Personal</span>
-                            </div>
-                            <div class="step-indicator" data-step="2">
-                                <span class="step-number">2</span>
-                                <span class="step-label">Preferences</span>
-                            </div>
-                            <div class="step-indicator" data-step="3">
-                                <span class="step-number">3</span>
-                                <span class="step-label">Destinations</span>
-                            </div>
-                            <div class="step-indicator" data-step="4">
-                                <span class="step-number">4</span>
-                                <span class="step-label">Final Details</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 1: Personal Information -->
-                    <div class="form-step active" data-step="1">
-                        <div class="step-header">
-                            <span class="material-symbols-outlined">person</span>
-                            <h3>Personal Information</h3>
-                        </div>
-                        
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="fullName">Full Name *</label>
-                                <input type="text" id="fullName" name="fullName" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="country">Country of Residence</label>
-                                <input type="text" id="country" name="country">
-                            </div>
-                        </div>
-                        
-                        <div class="form-step-actions">
-                            <button type="button" class="btn-next" data-next="2">
-                                Continue
-                                <span class="material-symbols-outlined">arrow_forward</span>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 2: Safari Preferences -->
-                    <div class="form-step" data-step="2">
-                        <div class="step-header">
-                            <span class="material-symbols-outlined">date_range</span>
-                            <h3>Safari Preferences</h3>
-                        </div>
-                        
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="travelDates">Preferred Travel Dates *</label>
-                                <input type="text" id="travelDates" name="travelDates" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="duration">Trip Duration *</label>
-                                <select id="duration" name="duration" required>
-                                    <option value="">Select duration</option>
-                                    <option value="3-5">3-5 Days</option>
-                                    <option value="6-8">6-8 Days</option>
-                                    <option value="9-12">9-12 Days</option>
-                                    <option value="13+">13+ Days</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="travelers">Number of Travelers *</label>
-                                <select id="travelers" name="travelers" required>
-                                    <option value="">Select number</option>
-                                    <option value="1">1 Person</option>
-                                    <option value="2">2 People</option>
-                                    <option value="3-4">3-4 People</option>
-                                    <option value="5-6">5-6 People</option>
-                                    <option value="7+">7+ People</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="accommodation">Accommodation Preference</label>
-                                <select id="accommodation" name="accommodation">
-                                    <option value="">Select preference</option>
-                                    <option value="mid-range">Mid-Range</option>
-                                    <option value="luxury">Luxury</option>
-                                    <option value="high-end">High-End</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div class="form-step-actions">
-                            <button type="button" class="btn-prev" data-prev="1">
-                                <span class="material-symbols-outlined">arrow_back</span>
-                                Back
-                            </button>
-                            <button type="button" class="btn-next" data-next="3">
-                                Continue
-                                <span class="material-symbols-outlined">arrow_forward</span>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 3: Destinations & Interests -->
-                    <div class="form-step" data-step="3">
-                        <div class="step-header">
-                            <span class="material-symbols-outlined">explore</span>
-                            <h3>Destinations & Interests</h3>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="section-label">Preferred Destinations</label>
-                            <div class="checkbox-grid">
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="destinations[]" value="masai-mara">
-                                    <span class="checkmark"></span>
-                                    Masai Mara, Kenya
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="destinations[]" value="serengeti">
-                                    <span class="checkmark"></span>
-                                    Serengeti, Tanzania
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="destinations[]" value="samburu">
-                                    <span class="checkmark"></span>
-                                    Samburu, Kenya
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="destinations[]" value="amboseli">
-                                    <span class="checkmark"></span>
-                                    Amboseli, Kenya
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="destinations[]" value="ngorongoro">
-                                    <span class="checkmark"></span>
-                                    Ngorongoro Crater
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="destinations[]" value="lake-nakuru">
-                                    <span class="checkmark"></span>
-                                    Lake Nakuru
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="destinations[]" value="lake-naivasha">
-                                    <span class="checkmark"></span>
-                                    Lake Naivasha
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="destinations[]" value="zanzibar">
-                                    <span class="checkmark"></span>
-                                    Zanzibar Beach
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="section-label">Special Interests</label>
-                            <div class="checkbox-grid">
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="interests[]" value="big-five">
-                                    <span class="checkmark"></span>
-                                    Big Five Safari
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="interests[]" value="migration">
-                                    <span class="checkmark"></span>
-                                    Great Migration
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="interests[]" value="birding">
-                                    <span class="checkmark"></span>
-                                    Bird Watching
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="interests[]" value="photography">
-                                    <span class="checkmark"></span>
-                                    Photography
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="interests[]" value="cultural">
-                                    <span class="checkmark"></span>
-                                    Cultural Experiences
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="interests[]" value="beach">
-                                    <span class="checkmark"></span>
-                                    Beach Extension
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="interests[]" value="honeymoon">
-                                    <span class="checkmark"></span>
-                                    Honeymoon
-                                </label>
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="interests[]" value="family">
-                                    <span class="checkmark"></span>
-                                    Family Safari
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <div class="form-step-actions">
-                            <button type="button" class="btn-prev" data-prev="2">
-                                <span class="material-symbols-outlined">arrow_back</span>
-                                Back
-                            </button>
-                            <button type="button" class="btn-next" data-next="4">
-                                Continue
-                                <span class="material-symbols-outlined">arrow_forward</span>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 4: Final Details -->
-                    <div class="form-step" data-step="4">
-                        <div class="step-header">
-                            <span class="material-symbols-outlined">receipt_long</span>
-                            <h3>Final Details</h3>
-                        </div>
-                        
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="budget">Approximate Budget (per person)</label>
-                                <select id="budget" name="budget">
-                                    <option value="">Select budget range</option>
-                                    <option value="1000-2000">$1,000 - $2,000</option>
-                                    <option value="2001-4000">$2,001 - $4,000</option>
-                                    <option value="4001-7000">$4,001 - $7,000</option>
-                                    <option value="7001-10000">$7,001 - $10,000</option>
-                                    <option value="10000+">$10,000+</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group full-width">
-                                <label for="comments">Additional Comments & Special Requests</label>
-                                <textarea id="comments" name="comments" rows="4" placeholder="Tell us about your dream safari experience..."></textarea>
-                            </div>
-                        </div>
-                        
-                        <div class="form-step-actions">
-                            <button type="button" class="btn-prev" data-prev="3">
-                                <span class="material-symbols-outlined">arrow_back</span>
-                                Back
-                            </button>
-                            <button type="submit" class="safari-planner-submit">
-                                <span class="submit-text">Submit Safari Plan</span>
-                                <span class="submit-loader">
-                                    <span class="material-symbols-outlined">progress_activity</span>
-                                    Sending...
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            
-            <!-- Image Section -->
-            <div class="safari-planner-image-section">
-                <div class="image-container">
-                    <img src="images/safari-cta-3.jpg" alt="Professional Safari Experience" loading="lazy">
-                    <div class="image-overlay">
-                        <div class="overlay-content">
-                            <h3>Craft Your Perfect Safari</h3>
-                            <p>Tell us your preferences and we'll create a bespoke itinerary tailored to your vision of the perfect African adventure.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Toast Notification -->
-<div class="safari-toast" id="safariToast"></div>
 
 <button class="luxury-back-to-top" aria-label="Back to top">
   <div class="button-fill"></div>
