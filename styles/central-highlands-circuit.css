@@ -1,0 +1,1887 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-dark: #1a1a1a;
+    --primary-gold: #d4af37;
+    --primary-gold-light: #e8c866;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --text-white: #ffffff;
+    --bg-light: #f8f8f8;
+    --bg-white: #ffffff;
+    --border-light: #e0e0e0;
+    --shadow-light: 0 2px 20px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 4px 30px rgba(0, 0, 0, 0.12);
+    --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.3);
+    --transition: all 0.3s ease;
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--primary-dark);
+    color: var(--text-white);
+    border: none;
+    border-radius: 0px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gold);
+}
+
+.btn-gold {
+    font-family: 'poppins', sans-serif;
+    background: var(--primary-gold);
+    color: #fafdff;
+    border-radius: 0px;
+}
+
+.btn-gold:hover {
+    background: var(--primary-gold-light);
+}
+
+.text-pill {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--primary-gold);
+    color: var(--primary-dark);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+/* ===== TANZANIA HERO SECTION ===== */
+.tanzania-northern-hero {
+    height: 100vh;
+    min-height: 700px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../images/mt-kenya-4.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.tanzania-hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.tanzania-hero-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.tanzania-hero-breadcrumb a {
+    color: var(--primary-gold);
+    transition: var(--transition);
+}
+
+.tanzania-hero-breadcrumb a:hover {
+    color: var(--primary-gold-light);
+}
+
+.tanzania-hero-breadcrumb .tanzania-divider {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tanzania-hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tanzania-hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.tanzania-hero-scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.tanzania-scroll-line {
+    width: 1px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.tanzania-scroll-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: var(--primary-gold);
+    animation: tanzaniaScrollLine 2s infinite ease-in-out;
+}
+
+@keyframes tanzaniaScrollLine {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+/* ===== TANZANIA CONTENT SECTION ===== */
+.tanzania-content-section {
+    padding: 100px 0;
+    background: var(--bg-white);
+}
+
+.tanzania-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tanzania-content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.tanzania-content-text {
+    padding-right: 40px;
+}
+
+.tanzania-content-pill {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--primary-gold);
+    color: #fafdff;
+    border-radius: 0px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.tanzania-content-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.tanzania-content-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.tanzania-content-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 2.5rem;
+}
+
+.tanzania-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.tanzania-feature-icon {
+    color: var(--primary-gold);
+    font-size: 1.2rem;
+}
+
+.tanzania-content-image {
+    position: relative;
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: none;
+    height: 600px;
+}
+
+.tanzania-content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tanzania-image-overlay-text.tanzania-premium {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5rem 2rem 2rem;
+    color: white;
+    z-index: 2;
+}
+
+.tanzania-image-overlay-text.tanzania-premium::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120%;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(0, 0, 0, 0.85) 10%,
+        rgba(0, 0, 0, 0.7) 20%,
+        rgba(0, 0, 0, 0.4) 50%,
+        transparent 100%
+    );
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+.tanzania-image-overlay-text.tanzania-premium h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+    text-shadow: none;
+    letter-spacing: 0.5px;
+    position: relative;
+    line-height: 1.2;
+}
+
+.tanzania-image-overlay-text.tanzania-premium h3::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #D4AF37, #E6C158, #D4AF37);
+    border-radius: 2px;
+    transition: all 0.4s ease;
+}
+
+.tanzania-image-overlay-text.tanzania-premium p {
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.tanzania-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tanzania-btn-gold {
+    background: var(--primary-gold);
+    color: #000;
+}
+
+.tanzania-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== MOBILE RESPONSIVE STYLES ===== */
+
+/* Tablet Styles (768px and below) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .tanzania-hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tanzania-hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .tanzania-content-section {
+        padding: 60px 0;
+    }
+    
+    .tanzania-content-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .tanzania-content-text {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .tanzania-content-title {
+        font-size: 2rem;
+    }
+    
+    .tanzania-content-description {
+        font-size: 1rem;
+    }
+    
+    .tanzania-content-features {
+        align-items: center;
+    }
+    
+    .tanzania-content-image {
+        height: 400px;
+        /* Removed order: -1 to keep image below text */
+    }
+    
+    .tanzania-image-overlay-text.tanzania-premium {
+        padding: 2rem 1.5rem 1.5rem;
+    }
+    
+    .tanzania-image-overlay-text.tanzania-premium h3 {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Mobile Styles (480px and below) */
+@media screen and (max-width: 480px) {
+    .tanzania-northern-hero {
+        height: 80vh;
+        min-height: 500px;
+    }
+    
+    .tanzania-hero-title {
+        font-size: 2rem;
+    }
+    
+    .tanzania-hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .tanzania-hero-breadcrumb {
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .tanzania-content-section {
+        padding: 40px 0;
+    }
+    
+    .tanzania-content-title {
+        font-size: 1.75rem;
+    }
+    
+    .tanzania-content-pill {
+        font-size: 0.75rem;
+        padding: 6px 16px;
+    }
+    
+    .tanzania-content-image {
+        height: 300px;
+        /* Image remains in its natural order (below text) */
+    }
+    
+    .tanzania-image-overlay-text.tanzania-premium {
+        padding: 1.5rem 1rem 1rem;
+    }
+    
+    .tanzania-image-overlay-text.tanzania-premium h3 {
+        font-size: 1.3rem;
+    }
+    
+    .tanzania-image-overlay-text.tanzania-premium p {
+        font-size: 0.9rem;
+    }
+    
+    .tanzania-feature-item {
+        font-size: 0.9rem;
+    }
+    
+    .tanzania-btn {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+    
+    .tanzania-hero-scroll-indicator {
+        font-size: 0.7rem;
+    }
+    
+    .tanzania-scroll-line {
+        height: 40px;
+    }
+}
+
+/* Small Mobile Styles (360px and below) */
+@media screen and (max-width: 360px) {
+    .tanzania-hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .tanzania-content-title {
+        font-size: 1.5rem;
+    }
+    
+    .tanzania-content-image {
+        height: 250px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.7rem;
+    }
+    
+    .tanzania-content-features {
+        gap: 10px;
+    }
+}
+
+/* Large Desktop Styles (1200px and above) */
+@media screen and (min-width: 1200px) {
+    .tanzania-container {
+        padding: 0;
+    }
+}
+
+/* Tablet Landscape Styles (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .tanzania-hero-title {
+        font-size: 3rem;
+    }
+    
+    .tanzania-content-title {
+        font-size: 2.2rem;
+    }
+    
+    .tanzania-content-image {
+        height: 500px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .btn:hover::before {
+        left: -100%;
+    }
+    
+    .tanzania-btn:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* High-resolution displays */
+@media screen and (min-width: 1400px) {
+    .tanzania-container {
+        max-width: 1300px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .tanzania-northern-hero {
+        background: none !important;
+        color: black !important;
+        height: auto;
+    }
+    
+    .tanzania-hero-scroll-indicator {
+        display: none;
+    }
+    
+    .btn::before {
+        display: none;
+    }
+}
+
+/* Northern Circuit Packages Section Styles */
+.northern-circuit-section {
+    padding: 80px 2rem;
+    background: #fff;
+}
+
+.northern-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.northern-section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.northern-section-pill {
+    display: inline-block;
+    background: var(--primary-gold);
+    color: #fafdff;
+    padding: 10px 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+}
+
+.northern-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+    letter-spacing: 1.5px;
+}
+
+.northern-section-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Search Styles */
+.northern-search-container {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.northern-search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0 16px;
+    transition: all 0.3s ease;
+}
+
+.northern-search-box:focus-within {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.northern-search-icon {
+    color: #666;
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+
+.northern-search-input {
+    flex: 1;
+    padding: 16px 0;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    background: transparent;
+}
+
+.northern-search-input::placeholder {
+    color: #999;
+}
+
+.northern-search-clear {
+    color: #666;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 4px;
+    margin-left: 8px;
+    transition: color 0.3s ease;
+    display: none;
+}
+
+.northern-search-clear:hover {
+    color: #333;
+}
+
+.northern-search-clear.visible {
+    display: block;
+}
+
+/* Results Info */
+.northern-results-info {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Grid Layout */
+.northern-circuit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.northern-circuit-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    position: relative;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+}
+
+.northern-circuit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: none;
+}
+
+.northern-card-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.northern-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.northern-circuit-card:hover .northern-card-image img {
+    transform: scale(1.05);
+}
+
+.northern-card-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.northern-card-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.northern-card-summary {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.northern-card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.northern-duration {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.northern-duration .material-symbols-outlined {
+    font-size: 1.1rem;
+    color: var(--primary-gold);
+}
+
+.northern-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.price-from {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.price-amount {
+    font-family: 'poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-gold);
+}
+
+.price-per-person {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.northern-card-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--primary-gold);
+}
+
+.northern-link-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.northern-link-arrow {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #D4AF37;
+    transition: transform 0.3s ease;
+}
+
+.northern-circuit-card:hover .northern-link-arrow {
+    transform: translateX(5px);
+}
+
+/* No Results Styles */
+.northern-no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+    display: none;
+}
+
+.northern-no-results-icon {
+    font-size: 4rem;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+}
+
+.northern-no-results h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.northern-no-results p {
+    font-family: 'Poppins', sans-serif;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.northern-no-results-suggestion {
+    font-size: 0.9rem !important;
+    color: #999 !important;
+    margin-bottom: 2rem !important;
+}
+
+.northern-clear-search {
+    background: var(--primary-gold);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.northern-clear-search:hover {
+    background: var(--primary-gold-light);
+    transform: translateY(-2px);
+}
+
+/* Pagination Styles */
+.northern-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.northern-pagination-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.northern-pagination-btn:hover:not(:disabled) {
+    border-color: var(--primary-gold);
+    color: var(--primary-gold);
+}
+
+.northern-pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.northern-pagination-pages {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.northern-pagination-page {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.northern-pagination-page:hover {
+    border-color: var(--primary-gold);
+    color: var(--primary-gold);
+}
+
+.northern-pagination-page.active {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+    color: #fff;
+}
+
+.northern-pagination-ellipsis {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .northern-circuit-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .northern-card-content {
+        padding: 1.5rem;
+    }
+    
+    .northern-card-name {
+        font-size: 1.3rem;
+    }
+    
+    .price-amount {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .northern-circuit-section {
+        padding: 60px 1.5rem;
+    }
+    
+    .northern-section-title {
+        font-size: 1.8rem;
+    }
+    
+    .northern-section-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .northern-circuit-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto 2rem auto;
+    }
+    
+    .northern-card-image {
+        height: 220px;
+    }
+    
+    .northern-card-name {
+        font-size: 1.4rem;
+    }
+    
+    .northern-card-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .northern-price {
+        align-items: flex-start;
+    }
+    
+    .northern-pagination {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .northern-pagination-btn {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+    }
+    
+    .northern-pagination-page {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .northern-circuit-section {
+        padding: 50px 1rem;
+    }
+    
+    .northern-section-title {
+        font-size: 1.6rem;
+    }
+    
+    .northern-search-container {
+        margin-bottom: 1.5rem;
+    }
+    
+    .northern-search-input {
+        padding: 12px 0;
+        font-size: 0.9rem;
+    }
+    
+    .northern-card-content {
+        padding: 1.2rem;
+    }
+    
+    .northern-card-name {
+        font-size: 1.3rem;
+    }
+    
+    .northern-card-summary {
+        font-size: 0.9rem;
+    }
+    
+    .price-amount {
+        font-size: 1.1rem;
+    }
+    
+    .northern-no-results {
+        padding: 3rem 1rem;
+    }
+    
+    .northern-no-results-icon {
+        font-size: 3rem;
+    }
+    
+    .northern-no-results h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* CTA Section Styles */
+.northern-cta-section {
+    padding: 100px 2rem;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.northern-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.northern-cta-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.northern-cta-text {
+    padding-right: 2rem;
+}
+
+.northern-cta-pill {
+    display: inline-block;
+    background: var(--primary-gold);
+    color: #fafdff;
+    padding: 8px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+    border-radius: 0px;
+}
+
+.northern-cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+.northern-cta-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 2.5rem;
+}
+
+.northern-cta-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.northern-cta-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 400;
+}
+
+.northern-cta-icon {
+    color: var(--primary-gold);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.northern-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.northern-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.northern-cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.northern-cta-btn:hover::before {
+    left: 100%;
+}
+
+.northern-cta-primary {
+    background: var(--primary-gold);
+    color: #fafdff;
+}
+
+.northern-cta-primary:hover {
+    background: var(--primary-gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.northern-cta-secondary {
+    background: transparent;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.northern-cta-secondary:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.northern-cta-image {
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: none;
+    height: 500px;
+}
+
+.northern-cta-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.northern-cta-image:hover img {
+    transform: scale(1.05);
+}
+
+.northern-cta-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(212, 175, 55, 0.1) 0%,
+        rgba(0, 0, 0, 0.4) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+    padding: 2.5rem;
+}
+
+.northern-cta-overlay-content {
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.northern-cta-overlay-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.northern-cta-overlay-content p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.northern-cta-overlay-line {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #D4AF37, #E6C158, #D4AF37);
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .northern-cta-section {
+        padding: 80px 2rem;
+    }
+    
+    .northern-cta-content {
+        gap: 3rem;
+    }
+    
+    .northern-cta-title {
+        font-size: 2.4rem;
+    }
+    
+    .northern-cta-image {
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .northern-cta-section {
+        padding: 60px 1.5rem;
+    }
+    
+    .northern-cta-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .northern-cta-text {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .northern-cta-title {
+        font-size: 2rem;
+    }
+    
+    .northern-cta-description {
+        font-size: 1rem;
+    }
+    
+    .northern-cta-buttons {
+        justify-content: center;
+    }
+    
+    .northern-cta-image {
+        height: 350px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .northern-cta-overlay-content {
+        text-align: center;
+    }
+    
+    .northern-cta-overlay-line {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .northern-cta-section {
+        padding: 50px 1rem;
+    }
+    
+    .northern-cta-title {
+        font-size: 1.8rem;
+    }
+    
+    .northern-cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .northern-cta-btn {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .northern-cta-image {
+        height: 300px;
+    }
+    
+    .northern-cta-overlay-content {
+        padding: 2rem;
+    }
+    
+    .northern-cta-overlay-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .northern-cta-overlay-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation for CTA section */
+@keyframes northernCtaFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.northern-cta-content {
+    animation: northernCtaFadeIn 0.8s ease-out;
+}
+
+/* Contact Modal Styles */
+.northern-contact-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+.northern-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.northern-modal-content {
+    position: relative;
+    background: #fff;
+    margin: 2rem auto;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: northernModalSlideIn 0.3s ease-out;
+}
+
+@keyframes northernModalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.northern-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.northern-modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+}
+
+.northern-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.northern-modal-close:hover {
+    background: #f5f5f5;
+    color: #000;
+}
+
+.northern-contact-form {
+    padding: 1rem 2rem 2rem;
+}
+
+.northern-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.northern-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.northern-form-label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.northern-form-input,
+.northern-form-select,
+.northern-form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.northern-form-input:focus,
+.northern-form-select:focus,
+.northern-form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.northern-form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.northern-checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.northern-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.northern-checkbox {
+    display: none;
+}
+
+.northern-checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.northern-checkbox:checked + .northern-checkbox-custom {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+}
+
+.northern-checkbox:checked + .northern-checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.northern-form-error {
+    color: #dc2626;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.northern-form-error.show {
+    display: block;
+}
+
+.northern-form-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.northern-submit-btn {
+    background: var(--primary-gold);
+    color: #fafdff;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.northern-submit-btn:hover:not(:disabled) {
+    background: var(--primary-gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.northern-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.northern-submit-spinner {
+    animation: northernSpin 1s linear infinite;
+}
+
+@keyframes northernSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.northern-form-note {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+/* Toast Notification Styles */
+.northern-toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10001;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.northern-toast {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-left: 4px solid #10b981;
+    animation: northernToastSlideIn 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.northern-toast.success {
+    border-left-color: #10b981;
+}
+
+.northern-toast.error {
+    border-left-color: #dc2626;
+}
+
+.northern-toast.warning {
+    border-left-color: #f59e0b;
+}
+
+.northern-toast-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.northern-toast.success .northern-toast-icon {
+    color: #10b981;
+}
+
+.northern-toast.error .northern-toast-icon {
+    color: #dc2626;
+}
+
+.northern-toast.warning .northern-toast-icon {
+    color: #f59e0b;
+}
+
+.northern-toast-content {
+    flex: 1;
+}
+
+.northern-toast-title {
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+.northern-toast-message {
+    color: #666;
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.northern-toast-close {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.northern-toast-close:hover {
+    background: #f5f5f5;
+    color: #666;
+}
+
+@keyframes northernToastSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes northernToastSlideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.northern-toast.hiding {
+    animation: northernToastSlideOut 0.3s ease-in forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .northern-modal-content {
+        margin: 1rem;
+        max-height: 95vh;
+    }
+    
+    .northern-modal-header {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+    
+    .northern-modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .northern-contact-form {
+        padding: 1rem 1.5rem 1.5rem;
+    }
+    
+    .northern-form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .northern-checkbox-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .northern-toast-container {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .northern-modal-content {
+        margin: 0.5rem;
+        border-radius: 8px;
+    }
+    
+    .northern-modal-header {
+        padding: 1rem 1rem 0.75rem;
+    }
+    
+    .northern-contact-form {
+        padding: 0.75rem 1rem 1rem;
+    }
+    
+    .northern-submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
