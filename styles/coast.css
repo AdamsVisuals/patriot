@@ -406,6 +406,225 @@ img {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* ===== MOBILE RESPONSIVE STYLES ===== */
+
+/* Tablet Styles (768px and below) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .tanzania-hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tanzania-hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .tanzania-content-section {
+        padding: 60px 0;
+    }
+    
+    .tanzania-content-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .tanzania-content-text {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .tanzania-content-title {
+        font-size: 2rem;
+    }
+    
+    .tanzania-content-description {
+        font-size: 1rem;
+    }
+    
+    .tanzania-content-features {
+        align-items: center;
+    }
+    
+    .tanzania-content-image {
+        height: 400px;
+        /* Removed order: -1 to keep image below text */
+    }
+    
+    .tanzania-image-overlay-text.tanzania-premium {
+        padding: 2rem 1.5rem 1.5rem;
+    }
+    
+    .tanzania-image-overlay-text.tanzania-premium h3 {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Mobile Styles (480px and below) */
+@media screen and (max-width: 480px) {
+    .tanzania-northern-hero {
+        height: 80vh;
+        min-height: 500px;
+    }
+    
+    .tanzania-hero-title {
+        font-size: 2rem;
+    }
+    
+    .tanzania-hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .tanzania-hero-breadcrumb {
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .tanzania-content-section {
+        padding: 40px 0;
+    }
+    
+    .tanzania-content-title {
+        font-size: 1.75rem;
+    }
+    
+    .tanzania-content-pill {
+        font-size: 0.75rem;
+        padding: 6px 16px;
+    }
+    
+    .tanzania-content-image {
+        height: 300px;
+        /* Image remains in its natural order (below text) */
+    }
+    
+    .tanzania-image-overlay-text.tanzania-premium {
+        padding: 1.5rem 1rem 1rem;
+    }
+    
+    .tanzania-image-overlay-text.tanzania-premium h3 {
+        font-size: 1.3rem;
+    }
+    
+    .tanzania-image-overlay-text.tanzania-premium p {
+        font-size: 0.9rem;
+    }
+    
+    .tanzania-feature-item {
+        font-size: 0.9rem;
+    }
+    
+    .tanzania-btn {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+    
+    .tanzania-hero-scroll-indicator {
+        font-size: 0.7rem;
+    }
+    
+    .tanzania-scroll-line {
+        height: 40px;
+    }
+}
+
+/* Small Mobile Styles (360px and below) */
+@media screen and (max-width: 360px) {
+    .tanzania-hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .tanzania-content-title {
+        font-size: 1.5rem;
+    }
+    
+    .tanzania-content-image {
+        height: 250px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.7rem;
+    }
+    
+    .tanzania-content-features {
+        gap: 10px;
+    }
+}
+
+/* Large Desktop Styles (1200px and above) */
+@media screen and (min-width: 1200px) {
+    .tanzania-container {
+        padding: 0;
+    }
+}
+
+/* Tablet Landscape Styles (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .tanzania-hero-title {
+        font-size: 3rem;
+    }
+    
+    .tanzania-content-title {
+        font-size: 2.2rem;
+    }
+    
+    .tanzania-content-image {
+        height: 500px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .btn:hover::before {
+        left: -100%;
+    }
+    
+    .tanzania-btn:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* High-resolution displays */
+@media screen and (min-width: 1400px) {
+    .tanzania-container {
+        max-width: 1300px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .tanzania-northern-hero {
+        background: none !important;
+        color: black !important;
+        height: auto;
+    }
+    
+    .tanzania-hero-scroll-indicator {
+        display: none;
+    }
+    
+    .btn::before {
+        display: none;
+    }
+}
+
 /* Northern Circuit Packages Section Styles */
 .northern-circuit-section {
     padding: 80px 2rem;
