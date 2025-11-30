@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Migration Safaris - Patriot Tours & Safaris Ltd</title>
+    <meta name="description" content="Patriot Tours & Safaris Ltd is a leading tour operator specializing in customized tours and safaris. Explore our wide range of travel services and packages.">
+    <meta name="keywords" content="Tour Operator, Safaris, Customized Tours, Travel Services, Travel Packages, Patriot Tours & Safaris Ltd">
+    <meta name="author" content="Patriot Tours & Safaris Ltd">
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=clear_all" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/great-migration.css">
+</head>
+<body>
+<header class="patriot-header">
+  <div class="patriot-header-container">
+    <button class="patriot-menu-toggle" id="patriot-menu-toggle">
+      <span class="material-symbols-outlined">sort</span>
+    </button>
+    
+    <div class="patriot-logo-container" onclick="window.location.href='/'" style="cursor:pointer;">
+      <img src="../images/p-logo-2.png" alt="Patriot Tours and Safaris" class="patriot-logo">
+    </div>
+    
+    <div class="patriot-header-actions">
+      <div class="patriot-search-toggle" id="patriot-search-toggle">
+        <span class="material-symbols-outlined">search</span>
+      </div>
+      <div class="patriot-language-switcher">
+        <span class="material-symbols-outlined">language</span>
+        <select class="patriot-language-select">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  <div class="patriot-search-expandable" id="patriot-search-expandable">
+    <input type="text" placeholder="Search destinations..." class="patriot-search-input">
+    <button class="patriot-search-close" id="patriot-search-close">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  
+  <nav class="patriot-navigation" id="patriot-navigation">
+    <button class="patriot-menu-close" id="patriot-menu-close">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <ul class="patriot-nav-list">
+      <li class="patriot-nav-item">
+        <a href="#">Destinations</a>
+        <ul class="patriot-dropdown">
+          <li><a href=".././destinations/tanzania.html">Tanzania</a></li>
+          <li><a href=".././destinations/kenya.html">Kenya</a></li>
+          <li><a href=".././destinations/rwanda.html">Rwanda</a></li>
+          <li><a href=".././destinations/uganda.html">Uganda</a></li>
+          <li><a href=".././destinations/madagascar.html">Madagascar</a></li>
+        </ul>
+      </li>
+      <li><a href="../itineraries.html">Itineraries</a></li>
+      <li class="patriot-nav-item">
+        <a href="#">Specials</a>
+        <ul class="patriot-dropdown">
+          <li><a href="family-safaris.html">Family Safaris</a></li>
+          <li><a href="honeymoon.html">HoneyMoon</a></li>
+          <li><a href="great-migration.html">Great Migration Safaris</a></li>
+        </ul>
+      </li>
+      <li><a href="../treks.html">Treks</a></li>
+      <li><a href="../beach.html">Beach Safaris</a></li>
+      <li><a href="../cultural.html">Cultural Safaris</a></li>
+      <li><a href="../about">About Us</a></li>
+      <li><a href="../contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="luxury-tour-hero">
+    <div class="luxury-hero-content">
+        <nav class="luxury-breadcrumb">
+            <a href="#" class="luxury-crumb">Home</a>
+            <span class="luxury-divider">/</span>
+            <a href="#" class="luxury-crumb">Collections</a>
+            <span class="luxury-divider">/</span>
+            <a href="#" class="luxury-crumb luxury-crumb-active">Great Migration Safaris</a>
+        </nav>
+        
+        <h1 class="luxury-tour-title">Great Migration Safaris</h1>
+        <p class="luxury-tour-description">Witness nature's greatest spectacle across the Serengeti and Maasai Mara</p>
+        
+        <div class="luxury-action-buttons">
+            <button class="luxury-btn luxury-btn-primary">View Migration Packages</button>
+            <button class="luxury-btn luxury-btn-secondary">Book Your Migration Trip</button>
+        </div>
+    </div>
+</section>
+
+<section class="luxury-overview-section">
+    <div class="luxury-overview-container">
+        <div class="luxury-overview-content">
+            <div class="luxury-tag-pill">Great Migration</div>
+            <h2 class="luxury-overview-title">Overview of the Great Migration Experience</h2>
+            <p class="luxury-overview-description">
+                Experience the world's most spectacular wildlife event as millions of wildebeest, zebra, and gazelle 
+                journey across the vast plains of East Africa. Our Great Migration safaris offer front-row seats to 
+                nature's greatest drama, from dramatic river crossings to predator-prey interactions in the heart 
+                of the Serengeti and Maasai Mara ecosystems.
+            </p>
+            <p class="luxury-overview-description">
+                Our expert guides track the migration patterns year-round, ensuring optimal viewing opportunities 
+                with luxurious accommodations and private vehicles for the ultimate wildlife spectacle.
+            </p>
+        </div>
+        
+        <div class="luxury-overview-image">
+            <img src="../images/migration-5.jpg" 
+                 alt="Great Migration river crossing in Serengeti" 
+                 class="luxury-image">
+            <div class="luxury-image-overlay">
+                <span class="luxury-overlay-text">Tracking the Migration Since 2019</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="luxury-why-choose">
+    <div class="luxury-why-choose-container">
+        <h2 class="luxury-why-choose-title">Why Choose Great Migration Safaris</h2>
+        <div class="luxury-features-grid">
+            <div class="luxury-feature">
+                <span class="luxury-feature-icon">groups</span>
+                <h3 class="luxury-feature-title">Expert Migration Tracking</h3>
+                <p class="luxury-feature-description">Our guides use real-time tracking and years of experience to position you for the best migration viewing opportunities.</p>
+            </div>
+            
+            <div class="luxury-feature">
+                <span class="luxury-feature-icon">visibility</span>
+                <h3 class="luxury-feature-title">Prime Viewing Locations</h3>
+                <p class="luxury-feature-description">Strategic camp placements and mobile safari options to follow the herds throughout their annual cycle.</p>
+            </div>
+            
+            <div class="luxury-feature">
+                <span class="luxury-feature-icon">moved_location</span>
+                <h3 class="luxury-feature-title">Aerial Perspectives</h3>
+                <p class="luxury-feature-description">Optional hot air balloon safaris offering breathtaking aerial views of the massive herds moving across the plains.</p>
+            </div>
+            
+            <div class="luxury-feature">
+                <span class="luxury-feature-icon">schedule</span>
+                <h3 class="luxury-feature-title">Seasonal Expertise</h3>
+                <p class="luxury-feature-description">Detailed knowledge of migration patterns throughout the year to plan your safari during peak movement periods.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="luxury-packages-section">
+    <div class="luxury-packages-container">
+        <h2 class="luxury-packages-title">Featured Great Migration Packages</h2>
+        <p class="luxury-packages-description">Expertly curated safaris timed for optimal migration viewing in Tanzania and Kenya's most iconic wildlife destinations.</p>
+        
+        <div class="luxury-packages-grid">
+            <!-- Package 1 -->
+            <a href="../itineraries/kenya/8-day-rivercrossing.html" class="luxury-package-card">
+                <div class="luxury-package-image">
+                    <img src="../images/mara-river-crossing.jpg" 
+                         alt="Serengeti River Crossing Safari" 
+                         class="luxury-card-image">
+                    <div class="luxury-card-overlay">
+                        <h3 class="luxury-package-name">Serengeti River Crossing</h3>
+                        <p class="luxury-package-summary">8-day safari focusing on dramatic Mara River crossings</p>
+                        <div class="luxury-package-price">From $4,344</div>
+                    </div>
+                    <span class="luxury-view-package-btn">
+                        <span class="luxury-btn-icon">arrow_forward</span>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Package 2 -->
+            <a href="../itineraries/kenya/10-day-rivercrossing.html" class="luxury-package-card">
+                <div class="luxury-package-image">
+                    <img src="../images/migration-1.jpg" 
+                         alt="Calving Season Migration" 
+                         class="luxury-card-image">
+                    <div class="luxury-card-overlay">
+                        <h3 class="luxury-package-name">Extended Mara River And Serengeti River Crossing Safari</h3>
+                        <p class="luxury-package-summary">10-day Serengeti & Masai Mara Focus</p>
+                        <div class="luxury-package-price">From $5,494</div>
+                    </div>
+                    <span class="luxury-view-package-btn">
+                        <span class="luxury-btn-icon">arrow_forward</span>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Package 3 -->
+            <a href="../itineraries/tanzania/12-day-rivercrossing.html" class="luxury-package-card">
+                <div class="luxury-package-image">
+                    <img src="../images/migration-4.jpg" 
+                         alt="Maasai Mara Great Migration" 
+                         class="luxury-card-image">
+                    <div class="luxury-card-overlay">
+                        <h3 class="luxury-package-name">Serengeti & Maasai Mara Migration Focus</h3>
+                        <p class="luxury-package-summary">12 - day Tanzania Kenya migration spectacle</p>
+                        <div class="luxury-package-price">From $6,465</div>
+                    </div>
+                    <span class="luxury-view-package-btn">
+                        <span class="luxury-btn-icon">arrow_forward</span>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Package 4 -->
+            <a href="../itineraries/tanzania/14-day-rivercrossing.html" class="luxury-package-card">
+                <div class="luxury-package-image">
+                    <img src="../images/migration-2.jpg" 
+                         alt="Following the Migration Herds" 
+                         class="luxury-card-image">
+                    <div class="luxury-card-overlay">
+                        <h3 class="luxury-package-name">Following the Herds</h3>
+                        <p class="luxury-package-summary">14-day comprehensive migration journey</p>
+                        <div class="luxury-package-price">From $8,682</div>
+                    </div>
+                    <span class="luxury-view-package-btn">
+                        <span class="luxury-btn-icon">arrow_forward</span>
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="luxury-expect-grid-section">
+    <div class="luxury-expect-grid-container">
+        <h2 class="luxury-expect-grid-title">What to Expect on Migration Safari</h2>
+        <p class="luxury-expect-grid-description">Unforgettable experiences and dramatic wildlife encounters during the Great Migration.</p>
+        
+        <div class="luxury-expect-grid">
+            <!-- Card 1 -->
+            <div class="luxury-expect-item">
+                <div class="luxury-expect-visual">
+                    <img src="../images/migration-2.jpg" 
+                         alt="Dramatic River Crossings" 
+                         class="luxury-expect-picture">
+                </div>
+                <div class="luxury-expect-details">
+                    <h3 class="luxury-expect-heading">Dramatic River Crossings</h3>
+                    <p class="luxury-expect-text">
+                        Witness the most dramatic moments of the migration as thousands of wildebeest 
+                        and zebra brave crocodile-infested rivers. Our expert guides position you at 
+                        prime crossing points for this breathtaking natural spectacle.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="luxury-expect-item">
+                <div class="luxury-expect-visual">
+                    <img src="../images/mara-migration.jpg" 
+                         alt="Predator Action" 
+                         class="luxury-expect-picture">
+                </div>
+                <div class="luxury-expect-details">
+                    <h3 class="luxury-expect-heading">Predator Action</h3>
+                    <p class="luxury-expect-text">
+                        Experience intense predator-prey interactions as lions, cheetahs, and hyenas 
+                        follow the herds. Our guides know where to find the most active predator 
+                        territories during migration season.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="luxury-expect-item">
+                <div class="luxury-expect-visual">
+                    <img src="../images/migration-1.jpg" 
+                         alt="Vast Moving Herds" 
+                         class="luxury-expect-picture">
+                </div>
+                <div class="luxury-expect-details">
+                    <h3 class="luxury-expect-heading">Vast Moving Herds</h3>
+                    <p class="luxury-expect-text">
+                        Marvel at the sheer scale of over 1.5 million wildebeest and hundreds of 
+                        thousands of zebra and gazelle moving as one massive herd across the endless 
+                        plains of the Serengeti and Maasai Mara.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="luxury-expect-item">
+                <div class="luxury-expect-visual">
+                    <img src="../images/balloon-safari.jpg" 
+                         alt="Aerial Migration Views" 
+                         class="luxury-expect-picture">
+                </div>
+                <div class="luxury-expect-details">
+                    <h3 class="luxury-expect-heading">Aerial Migration Views</h3>
+                    <p class="luxury-expect-text">
+                        Optional hot air balloon safaris provide breathtaking aerial perspectives 
+                        of the migration, allowing you to appreciate the massive scale of this 
+                        natural wonder from above as the sun rises over the African plains.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Include Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<button class="luxury-back-to-top" aria-label="Back to top">
+  <div class="button-fill"></div>
+  <span class="button-icon">
+    <i class="fas fa-chevron-up"></i>
+  </span>
+</button>
+
+<footer class="luxury-footer">
+  <div class="footer-container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="logo-container">
+          <img src="../images/p-logo-2.png" alt="Patriot Tours & Safaris Ltd" class="footer-logo">
+        </div>
+        <p class="brand-description">
+          Crafting extraordinary African safari experiences with unparalleled luxury and expertise since 2019.
+        </p>
+        <div class="social-links">
+          <a href="https://facebook.com/patriotsafaris" class="social-link" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/wildlife_safaris_?utm_source=ig_web_button_share_sheet&igsh=MTJ3cHRuZHBubzNkYw==" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com/@patriotsafaris" class="social-link" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="link-group">
+          <h4 class="link-group-title">Explore</h4>
+          <ul class="link-list">
+            <li><a href="../destinations/tanzania.html" class="footer-link">Tanzania</a></li>
+            <li><a href="../destinations/kenya.html" class="footer-link">Kenya</a></li>
+            <li><a href="../destinations/uganda.html" class="footer-link">Uganda</a></li>
+            <li><a href="../destinations/rwanda.html" class="footer-link">Rwanda</a></li>
+            <li><a href="../destinations/madagascar.html" class="footer-link">Madagascar</a></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h4 class="link-group-title">Company</h4>
+          <ul class="link-list">
+            <li><a href="../about" class="footer-link">About Us</a></li>
+            <li><a href="../contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h4 class="link-group-title">Support</h4>
+          <ul class="link-list">
+            <li><a href="../terms" class="footer-link">Terms & Conditions</a></li>
+            <li><a href="../privacy" class="footer-link">Privacy Policy</a></li>
+            <li><a href="../insurance" class="footer-link">Travel Insurance</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-certifications">
+      <div class="certification-badges">
+        <div class="badge-item">
+          <img src="../images/TripAdvisor_Logo.svg.png" alt="TripAdvisor Excellence" class="badge-image">
+        </div>
+        <div class="badge-item">
+          <img src="../images/pngfind.com-moutains-png-6933353.png" alt="Mountain Tourism" class="badge-image">
+        </div>
+        <div class="badge-item">
+          <img src="../images/astalogonew_9.png" alt="ASTA Member" class="badge-image">
+        </div>
+        <div class="badge-item">
+          <img src="../images/ATTA-Logo-with-Icon.png" alt="ATTA Member" class="badge-image">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-credits">
+        <p class="copyright">
+          &copy; <span id="current-year"></span> Patriot Tours & Safaris Ltd. All rights reserved.
+        </p>
+        <p class="developer-credit">
+          Crafted with excellence by <a href="https://adamsplusx.com" target="_blank" class="developer-link">AdamsPlusX</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+<script src="modal-handler.js"></script>
+<script src="collections.js"></script>
+<script src="../scripts.js"></script>
+</body>
+</html>
