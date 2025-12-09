@@ -188,3 +188,227 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// Safari Planning Modal - Vanilla JavaScript
+
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Elements
+    const safariBtn = document.getElementById('safari-planning-btn');
+    const safariModal = document.getElementById('safari-modal');
+    const modalClose = document.getElementById('modal-close');
+    const modalBackdrop = document.querySelector('.modal-backdrop');
+    const safariForm = document.getElementById('safari-form');
+    const formSubmit = document.getElementById('form-submit');
+    const formSpinner = document.getElementById('form-spinner');
+    const formMessages = document.getElementById('form-messages');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+    const errorText = document.getElementById('error-text');
+    const messageCloseButtons = document.querySelectorAll('.message-close');
+    
+    // Open Modal
+    safariBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal();
+    });
+    
+    // Close Modal (multiple ways)
+    modalClose.addEventListener('click', closeModal);
+    modalBackdrop.addEventListener('click', closeModal);
+    
+    // Close message buttons
+    messageCloseButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            closeMessages();
+            if (this.closest('.success')) {
+                closeModal();
+            }
+        });
+    });
+    
+    // Escape key to close modal
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !safariModal.classList.contains('hidden')) {
+            closeModal();
+        }
+    });
+    
+    // Form Submission
+    safariForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        submitForm();
+    });
+    
+    // Open Modal Function
+    function openModal() {
+        safariModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        
+        // Trigger animation
+        setTimeout(() => {
+            safariModal.style.opacity = '1';
+        }, 10);
+    }
+    
+    // Close Modal Function
+    function closeModal() {
+        safariModal.style.opacity = '0';
+        
+        setTimeout(() => {
+            safariModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            resetForm();
+        }, 300);
+    }
+    
+    // Close Messages Function
+    function closeMessages() {
+        formMessages.classList.add('hidden');
+        successMessage.classList.add('hidden');
+        errorMessage.classList.add('hidden');
+    }
+    
+    // Reset Form Function
+    function resetForm() {
+        safariForm.reset();
+        closeMessages();
+    }
+    
+    // Form Submission Function
+    function submitForm() {
+        // Validate form
+        if (!validateForm()) {
+            showError('Please fill in all required fields correctly.');
+            return;
+        }
+        
+        // Show loading state
+        formSubmit.disabled = true;
+        formSpinner.classList.remove('hidden');
+        
+        // Prepare form data
+        const formData = new FormData(safariForm);
+        const formObject = {};
+        
+        for (let [key, value] of formData.entries()) {
+            formObject[key] = value;
+        }
+        
+        // Send AJAX request
+        fetch('send_safari_request.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formObject)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Hide loading state
+            formSubmit.disabled = false;
+            formSpinner.classList.add('hidden');
+            
+            if (data.success) {
+                showSuccess();
+            } else {
+                showError(data.message || 'There was an error submitting your request.');
+            }
+        })
+        .catch(error => {
+            // Hide loading state
+            formSubmit.disabled = false;
+            formSpinner.classList.add('hidden');
+            
+            showError('Network error. Please check your connection and try again.');
+            console.error('Error:', error);
+        });
+    }
+    
+    // Form Validation Function
+    function validateForm() {
+        const requiredFields = safariForm.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.style.borderColor = '#f44336';
+                
+                field.addEventListener('input', function() {
+                    this.style.borderColor = '#d0d0d0';
+                }, { once: true });
+            }
+        });
+        
+        // Email validation
+        const emailField = document.getElementById('email');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (emailField.value && !emailRegex.test(emailField.value)) {
+            isValid = false;
+            emailField.style.borderColor = '#f44336';
+            showError('Please enter a valid email address.');
+            
+            emailField.addEventListener('input', function() {
+                this.style.borderColor = '#d0d0d0';
+            }, { once: true });
+        }
+        
+        return isValid;
+    }
+    
+    // Show Success Message
+    function showSuccess() {
+        formMessages.classList.remove('hidden');
+        successMessage.classList.remove('hidden');
+        
+        // Scroll to top of modal
+        document.querySelector('.modal-content').scrollTop = 0;
+    }
+    
+    // Show Error Message
+    function showError(message) {
+        formMessages.classList.remove('hidden');
+        errorMessage.classList.remove('hidden');
+        errorText.textContent = message;
+        
+        // Scroll to top of modal
+        document.querySelector('.modal-content').scrollTop = 0;
+    }
+    
+    // Phone input formatting (optional enhancement)
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.length > 0) {
+                if (!value.startsWith('+')) {
+                    value = '+' + value;
+                }
+                
+                // Format as +X (XXX) XXX-XXXX
+                if (value.length > 3) {
+                    value = value.replace(/(\+\d{1,3})(\d{3})(\d{3})(\d{4}).*/, '$1 ($2) $3-$4');
+                }
+            }
+            
+            e.target.value = value;
+        });
+    }
+    
+    // Date input formatting (optional enhancement)
+    const dateInput = document.getElementById('travel-dates');
+    if (dateInput) {
+        dateInput.addEventListener('focus', function() {
+            this.type = 'text';
+            this.addEventListener('blur', function() {
+                this.type = 'text';
+            });
+        });
+        
+        // Simple date format guidance
+        dateInput.setAttribute('title', 'Format: MM/DD/YYYY - MM/DD/YYYY');
+    }
+});

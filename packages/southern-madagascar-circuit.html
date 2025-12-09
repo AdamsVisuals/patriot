@@ -152,10 +152,174 @@
                     </div>
                 </div>
                 
-                <button class="tanzania-btn">
-                    <span>Plan Your Southern Madagascar Safari</span>
-                    <span class="material-symbols-outlined">travel_explore</span>
-                </button>
+<!-- Original button with added ID -->
+<button class="tanzania-btn" id="safari-planning-btn">
+    <span>Plan Your Southern Madagascar Safari</span>
+    <span class="material-symbols-outlined">travel_explore</span>
+</button>
+
+<!-- Modal container -->
+<div id="safari-modal" class="safari-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
+        <div class="modal-content">
+            <!-- Close button -->
+            <button class="modal-close" id="modal-close">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            
+            <div class="modal-layout">
+                <!-- Left side - Form -->
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>Plan Your Luxury Safari</h2>
+                        <p class="subtitle">Personalized East African Safari Experience</p>
+                    </div>
+                    
+                    <form id="safari-form" class="luxury-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="full-name">Full Name *</label>
+                                <input type="text" id="full-name" name="full_name" required placeholder="John Smith">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="country-interest">Country of Interest *</label>
+                                <select id="country-interest" name="country_interest" required>
+                                    <option value="">Select a country</option>
+                                    <option value="Tanzania">Tanzania</option>
+                                    <option value="Kenya">Kenya</option>
+                                    <option value="Uganda">Uganda</option>
+                                    <option value="Rwanda">Rwanda</option>
+                                    <option value="Madagascar">Madagascar</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="safari-circuit">Safari Circuit *</label>
+                                <select id="safari-circuit" name="safari_circuit" required>
+                                    <option value="">Select a circuit</option>
+                                    <option value="Northern Circuit">Northern Circuit</option>
+                                    <option value="Southern Circuit">Southern Circuit</option>
+                                    <option value="Western Circuit">Western Circuit</option>
+                                    <option value="Masai Mara">Masai Mara (Kenya)</option>
+                                    <option value="Serengeti">Serengeti Ecosystem</option>
+                                    <option value="Gorilla Trekking">Gorilla Trekking (Uganda/Rwanda)</option>
+                                    <option value="Coastal Circuit">Coastal & Island Circuit</option>
+                                    <option value="Other">Other/Combination</option>
+                                </select>
+                            </div>
+                            <div class="form-row-inner">
+                                <div class="form-group">
+                                    <label for="travel-dates">Travel Dates *</label>
+                                    <input type="text" id="travel-dates" name="travel_dates" required placeholder="MM/DD/YYYY - MM/DD/YYYY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="people-count">Number of People *</label>
+                                    <select id="people-count" name="people_count" required>
+                                        <option value="">Select</option>
+                                        <option value="1">1 Person</option>
+                                        <option value="2">2 People</option>
+                                        <option value="3-4">3-4 People</option>
+                                        <option value="5-6">5-6 People</option>
+                                        <option value="7+">7+ People</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget Range (USD) *</label>
+                            <select id="budget" name="budget" required>
+                                <option value="">Select budget range</option>
+                                <option value="Under 5,000">Under $5,000</option>
+                                <option value="5,000-10,000">$5,000 - $10,000</option>
+                                <option value="10,000-20,000">$10,000 - $20,000</option>
+                                <option value="20,000-30,000">$20,000 - $30,000</option>
+                                <option value="30,000+">$30,000+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Special Requests & Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your dream safari, any specific interests (wildlife photography, luxury lodges, cultural experiences) or special requirements..."></textarea>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <button type="submit" class="submit-btn" id="form-submit">
+                                <span class="btn-text">Submit Safari Request</span>
+                                <span class="spinner hidden" id="form-spinner"></span>
+                            </button>
+                            <p class="form-note">Our safari experts will contact you within 24 hours</p>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Right side - Image Panel -->
+                <div class="image-panel">
+                    <div class="image-overlay">
+                        <div class="panel-content">
+                            <h3>East Africa's Premier<br>Safari Destinations</h3>
+                            <div class="destination-list">
+                                <div class="destination-item">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                    <span>Tanzania's Northern Circuit</span>
+                                </div>
+                                <div class="destination-item">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                    <span>Kenya's Masai Mara</span>
+                                </div>
+                                <div class="destination-item">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                    <span>Uganda's Gorilla Forests</span>
+                                </div>
+                                <div class="destination-item">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                    <span>Rwanda's Volcanoes Park</span>
+                                </div>
+                                <div class="destination-item">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                    <span>Madagascar's Unique Wildlife</span>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <p>Experience luxury lodges, private guides, and exclusive wildlife encounters</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Success/Error Messages -->
+            <div id="form-messages" class="hidden">
+                <div id="success-message" class="message success hidden">
+                    <span class="material-symbols-outlined">check_circle</span>
+                    <h3>Safari Request Submitted Successfully!</h3>
+                    <p>Our luxury travel specialists will contact you within 24 hours to craft your perfect safari itinerary.</p>
+                    <button class="message-close">Close</button>
+                </div>
+                <div id="error-message" class="message error hidden">
+                    <span class="material-symbols-outlined">error</span>
+                    <h3>Submission Error</h3>
+                    <p id="error-text">There was a problem submitting your request. Please try again or contact us directly.</p>
+                    <button class="message-close">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             </div>
             
             <div class="tanzania-content-image tanzania-premium">
@@ -426,56 +590,6 @@ const northernPackages = [
         duration: "15 Days / 14 Nights",
         price: 4500,
         link: "../itineraries/madagascar/15-day-great-south-east-safari.html"
-    },
-    {
-        id: 2,
-        name: "7-Day Southern Explorer",
-        summary: "Discover Spiny Forest and Berenty's famous ring-tailed lemurs.",
-        image: "../images/south-madagascar-1.jpg",
-        alt: "Southern Explorer",
-        duration: "7 Days / 6 Nights",
-        price: 2250,
-        link: "../itineraries/madagascar/7-day-southern-explorer.html"
-    },
-    {
-        id: 3,
-        name: "9-Day Complete Southern Circuit",
-        summary: "Comprehensive southern Madagascar tour including all major attractions.",
-        image: "../images/south-madagascar.jpg",
-        alt: "Complete Southern Circuit",
-        duration: "9 Days / 8 Nights",
-        price: 2950,
-        link: "../itineraries/madagascar/9-day-complete-southern.html"
-    },
-    {
-        id: 4,
-        name: "4-Day Berenty Lemur Special",
-        summary: "Short and focused safari on ring-tailed lemurs and Spiny Forest.",
-        image: "../images/south-madagascar-5.jpg",
-        alt: "Berenty Lemur Special",
-        duration: "4 Days / 3 Nights",
-        price: 1150,
-        link: "../itineraries/madagascar/4-day-berenty-special.html"
-    },
-    {
-        id: 5,
-        name: "8-Day Desert & Coastal Experience",
-        summary: "Combine Spiny Forest exploration with Ifaty's coastal beauty.",
-        image: "../images/south-madagascar-3.jpg",
-        alt: "Desert & Coastal Experience",
-        duration: "8 Days / 7 Nights",
-        price: 2650,
-        link: "../itineraries/madagascar/8-day-desert-coastal.html"
-    },
-    {
-        id: 6,
-        name: "11-Day Ultimate Southern Madagascar",
-        summary: "Extended safari covering all major southern Madagascar attractions.",
-        image: "../images/south-madagascar-5.jpg",
-        alt: "Ultimate Southern Madagascar",
-        duration: "11 Days / 10 Nights",
-        price: 3650,
-        link: "../itineraries/madagascar/11-day-ultimate-southern.html"
     },
 ];
 

@@ -483,6 +483,12 @@
     flex-grow: 1;
 }
 
+.circuit-summary em {
+    color: #1A3E1A; /* Forest Green */
+    font-style: normal;
+    font-weight: 600;
+}
+
 .circuit-features {
     display: flex;
     flex-wrap: wrap;
