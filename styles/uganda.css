@@ -1802,3 +1802,217 @@
         font-size: 1.2rem;
     }
 }
+
+/* Rwanda Parks Showcase Section */
+.rwanda-parks-showcase {
+    padding: 80px 2rem;
+    background: #fff;
+}
+
+.parks-showcase-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.parks-showcase-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.parks-main-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.parks-intro-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto;
+    letter-spacing: 0.3px;
+}
+
+.parks-display-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.park-display-card {
+    background: white;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    position: relative;
+    height: 100%;
+}
+
+.park-display-card:hover {
+    transform: translateY(-3px);
+    box-shadow: none;
+}
+
+.park-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.park-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.park-display-card:hover .park-image-container img {
+    transform: scale(1.05);
+}
+
+.image-overlay-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.park-info-content {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 200px);
+}
+
+.park-name-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+}
+
+.park-description-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.park-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.park-tag {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: #D4AF37;
+    background: rgba(212, 175, 55, 0.1);
+    padding: 0.25rem 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.park-type-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.type-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .parks-display-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .park-image-container {
+        height: 220px;
+    }
+    
+    .park-name-title {
+        font-size: 1.3rem;
+    }
+    
+    .park-description-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .rwanda-parks-showcase {
+        padding: 60px 1.5rem;
+    }
+    
+    .parks-main-heading {
+        font-size: 1.8rem;
+    }
+    
+    .parks-intro-description {
+        font-size: 1rem;
+    }
+    
+    .parks-display-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .park-image-container {
+        height: 200px;
+    }
+    
+    .park-info-content {
+        padding: 1.5rem;
+    }
+    
+    .park-name-title {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rwanda-parks-showcase {
+        padding: 50px 1rem;
+    }
+    
+    .parks-main-heading {
+        font-size: 1.6rem;
+    }
+    
+    .park-info-content {
+        padding: 1.2rem;
+    }
+    
+    .park-name-title {
+        font-size: 1.2rem;
+    }
+}
