@@ -169,7 +169,7 @@ try {
     // Also send confirmation to client (optional)
     $confirmationMail = new PHPMailer(true);
     $confirmationMail->isSMTP();
-    $confirmationMail->Host = 'smtp.hsotinger.com';
+    $confirmationMail->Host = 'smtp.hostinger.com';
     $confirmationMail->SMTPAuth = true;
     $confirmationMail->Username = 'info@patriot-tours.com';
     $confirmationMail->Password = '##Patriot!2025';
