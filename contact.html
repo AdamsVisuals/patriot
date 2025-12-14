@@ -39,9 +39,10 @@
 <body>
 <header class="patriot-header">
   <div class="patriot-header-container">
-    <button class="patriot-menu-toggle" id="patriot-menu-toggle">
-      <span class="material-symbols-outlined">sort</span>
-    </button>
+<!-- Add this to your header/where you want the menu toggle button -->
+<button class="wilderness-menu-toggle" id="wilderness-menu-toggle" onclick="openWildernessNav()">
+  <span class="material-symbols-outlined">sort</span>
+</button>
     
     <div class="patriot-logo-container" onclick="window.location.href='/'" style="cursor:pointer;">
       <img src="images/p-logo-2.png" alt="Patriot Tours and Safaris" class="patriot-logo">
@@ -69,38 +70,218 @@
     </button>
   </div>
   
-  <nav class="patriot-navigation" id="patriot-navigation">
-    <button class="patriot-menu-close" id="patriot-menu-close">
-      <span class="material-symbols-outlined">close</span>
-    </button>
-    <ul class="patriot-nav-list">
-      <li class="patriot-nav-item">
-        <a href="#">Destinations</a>
-        <ul class="patriot-dropdown">
-          <li><a href="destinations/tanzania">Tanzania</a></li>
-          <li><a href="destinations/kenya">Kenya</a></li>
-          <li><a href="destinations/rwanda">Rwanda</a></li>
-          <li><a href="destinations/uganda">Uganda</a></li>
-          <li><a href="destinations/madagascar">Madagascar</a></li>
-        </ul>
-      </li>
-      <li><a href="itineraries.html">Itineraries</a></li>
-      <li class="patriot-nav-item">
-        <a href="#">Specials</a>
-        <ul class="patriot-dropdown">
-          <li><a href="./collections/family-safaris.html">Family Safaris</a></li>
-          <li><a href="./collections/honeymoon.html">HoneyMoon</a></li>
-          <li><a href="./collections/great-migration.html">Great Migration Safaris</a></li>
-          <li><a href="./collections/combined-safaris.html">Combined Safaris</a></li>
-        </ul>
-      </li>
-      <li><a href="treks.html">Treks</a></li>
-      <li><a href="beach.html">Beach Safaris</a></li>
-      <li><a href="cultural.html">Cultural Safaris</a></li>
-      <li><a href="about">About Us</a></li>
-      <li><a href="contact">Contact</a></li>
-    </ul>
-  </nav>
+<nav class="wilderness-nav" id="wilderness-nav">
+  <button class="wilderness-nav-close" id="wilderness-nav-close">
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  
+  <div class="wilderness-nav-grid">
+    <!-- Left Column - Main Navigation -->
+    <div class="wilderness-nav-column">
+      <ul class="wilderness-nav-list">
+        <!-- Destinations with dropdown -->
+        <li class="wilderness-nav-item has-dropdown" data-dropdown="destinations">
+          <div class="wilderness-nav-link-container">
+            <a href="#" class="wilderness-nav-link">
+              <span class="wilderness-link-text">Destinations</span>
+              <!-- Desktop arrow -->
+              <span class="wilderness-arrow-desktop">→</span>
+            </a>
+            <!-- Mobile dropdown toggle -->
+            <button class="wilderness-dropdown-toggle mobile-only">
+              <span class="material-symbols-outlined">expand_more</span>
+            </button>
+          </div>
+          <div class="wilderness-dropdown-indicator"></div>
+        </li>
+        
+        <!-- Simple link -->
+        <li class="wilderness-nav-item">
+          <a href="itineraries.html" class="wilderness-nav-link">
+            <span class="wilderness-link-text">Itineraries</span>
+          </a>
+        </li>
+        
+        <!-- Specials with dropdown -->
+        <li class="wilderness-nav-item has-dropdown" data-dropdown="specials">
+          <div class="wilderness-nav-link-container">
+            <a href="#" class="wilderness-nav-link">
+              <span class="wilderness-link-text">Specials</span>
+              <!-- Desktop arrow -->
+              <span class="wilderness-arrow-desktop">→</span>
+            </a>
+            <!-- Mobile dropdown toggle -->
+            <button class="wilderness-dropdown-toggle mobile-only">
+              <span class="material-symbols-outlined">expand_more</span>
+            </button>
+          </div>
+          <div class="wilderness-dropdown-indicator"></div>
+        </li>
+        
+        <!-- Simple links -->
+        <li class="wilderness-nav-item">
+          <a href="treks.html" class="wilderness-nav-link">
+            <span class="wilderness-link-text">Treks</span>
+          </a>
+        </li>
+        
+        <li class="wilderness-nav-item">
+          <a href="beach.html" class="wilderness-nav-link">
+            <span class="wilderness-link-text">Beach Safaris</span>
+          </a>
+        </li>
+        
+        <li class="wilderness-nav-item">
+          <a href="cultural.html" class="wilderness-nav-link">
+            <span class="wilderness-link-text">Cultural Safaris</span>
+          </a>
+        </li>
+        
+        <li class="wilderness-nav-item">
+          <a href="about" class="wilderness-nav-link">
+            <span class="wilderness-link-text">About Us</span>
+          </a>
+        </li>
+        
+        <li class="wilderness-nav-item">
+          <a href="contact" class="wilderness-nav-link">
+            <span class="wilderness-link-text">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Right Column - Content Panel (Desktop only) -->
+    <div class="wilderness-content-panel desktop-only">
+      <div class="wilderness-content-wrapper">
+        <!-- Default content -->
+        <div class="wilderness-default-content active">
+          <h3 class="wilderness-panel-title">Premium Safari Experiences</h3>
+          <p class="wilderness-panel-subtitle">Select a category to explore our exclusive offerings</p>
+        </div>
+        
+        <!-- Destinations Dropdown Content -->
+        <div class="wilderness-dropdown-content" data-for-dropdown="destinations">
+          <div class="wilderness-dropdown-header">
+            <h3 class="wilderness-dropdown-title">Destinations</h3>
+            <p class="wilderness-dropdown-description">Explore our premier African destinations</p>
+          </div>
+          <div class="wilderness-content-scrollable">
+            <ul class="wilderness-dropdown-list">
+              <li class="wilderness-dropdown-item">
+                <a href="destinations/tanzania" class="wilderness-dropdown-link">
+                  <span class="wilderness-dropdown-number">01</span>
+                  <div class="wilderness-dropdown-text">
+                    <h4>Tanzania</h4>
+                    <p>Serengeti, Ngorongoro & Zanzibar</p>
+                  </div>
+                  <span class="wilderness-dropdown-arrow">→</span>
+                </a>
+              </li>
+              <li class="wilderness-dropdown-item">
+                <a href="destinations/kenya" class="wilderness-dropdown-link">
+                  <span class="wilderness-dropdown-number">02</span>
+                  <div class="wilderness-dropdown-text">
+                    <h4>Kenya</h4>
+                    <p>Maasai Mara & Amboseli</p>
+                  </div>
+                  <span class="wilderness-dropdown-arrow">→</span>
+                </a>
+              </li>
+              <li class="wilderness-dropdown-item">
+                <a href="destinations/rwanda" class="wilderness-dropdown-link">
+                  <span class="wilderness-dropdown-number">03</span>
+                  <div class="wilderness-dropdown-text">
+                    <h4>Rwanda</h4>
+                    <p>Mountain Gorilla Trekking</p>
+                  </div>
+                  <span class="wilderness-dropdown-arrow">→</span>
+                </a>
+              </li>
+              <li class="wilderness-dropdown-item">
+                <a href="destinations/uganda" class="wilderness-dropdown-link">
+                  <span class="wilderness-dropdown-number">04</span>
+                  <div class="wilderness-dropdown-text">
+                    <h4>Uganda</h4>
+                    <p>Primate Safaris & Nile River</p>
+                  </div>
+                  <span class="wilderness-dropdown-arrow">→</span>
+                </a>
+              </li>
+              <li class="wilderness-dropdown-item">
+                <a href="destinations/madagascar" class="wilderness-dropdown-link">
+                  <span class="wilderness-dropdown-number">05</span>
+                  <div class="wilderness-dropdown-text">
+                    <h4>Madagascar</h4>
+                    <p>Unique Wildlife & Rainforests</p>
+                  </div>
+                  <span class="wilderness-dropdown-arrow">→</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Specials Dropdown Content -->
+        <div class="wilderness-dropdown-content" data-for-dropdown="specials">
+          <div class="wilderness-dropdown-header">
+            <h3 class="wilderness-dropdown-title">Special Collections</h3>
+            <p class="wilderness-dropdown-description">Curated experiences for extraordinary moments</p>
+          </div>
+          <div class="wilderness-content-scrollable">
+            <ul class="wilderness-dropdown-list">
+              <li class="wilderness-dropdown-item">
+                <a href="./collections/family-safaris.html" class="wilderness-dropdown-link">
+                  <span class="wilderness-dropdown-number">01</span>
+                  <div class="wilderness-dropdown-text">
+                    <h4>Family Safaris</h4>
+                    <p>Kid-friendly adventures & activities</p>
+                  </div>
+                  <span class="wilderness-dropdown-arrow">→</span>
+                </a>
+              </li>
+              <li class="wilderness-dropdown-item">
+                <a href="./collections/honeymoon.html" class="wilderness-dropdown-link">
+                  <span class="wilderness-dropdown-number">02</span>
+                  <div class="wilderness-dropdown-text">
+                    <h4>Honeymoon</h4>
+                    <p>Romantic escapes & private retreats</p>
+                  </div>
+                  <span class="wilderness-dropdown-arrow">→</span>
+                </a>
+              </li>
+              <li class="wilderness-dropdown-item">
+                <a href="./collections/great-migration.html" class="wilderness-dropdown-link">
+                  <span class="wilderness-dropdown-number">03</span>
+                  <div class="wilderness-dropdown-text">
+                    <h4>Great Migration Safaris</h4>
+                    <p>Witness nature's greatest spectacle</p>
+                  </div>
+                  <span class="wilderness-dropdown-arrow">→</span>
+                </a>
+              </li>
+              <li class="wilderness-dropdown-item">
+                <a href="./collections/combined-safaris.html" class="wilderness-dropdown-link">
+                  <span class="wilderness-dropdown-number">04</span>
+                  <div class="wilderness-dropdown-text">
+                    <h4>Combined Safaris</h4>
+                    <p>Multi-country African adventures</p>
+                  </div>
+                  <span class="wilderness-dropdown-arrow">→</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile Dropdown Content Container -->
+  <div class="wilderness-mobile-dropdown mobile-only">
+    <!-- Mobile dropdown content will be inserted here dynamically -->
+  </div>
+</nav>
 </header>
 
 <section class="about-hero">
