@@ -457,6 +457,7 @@ body {
 
 .wilderness-panel-title {
   color: var(--wilderness-white);
+  font-family: dm-serif-display, serif;
   font-size: 56px;
   font-weight: 400;
   text-transform: uppercase;
@@ -467,7 +468,7 @@ body {
 
 .wilderness-panel-subtitle {
   color: var(--wilderness-dark-sand);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   opacity: 0.75;
   max-width: 400px;
