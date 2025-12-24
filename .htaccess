@@ -53,74 +53,21 @@ ErrorDocument 504 /500.html
 
 
 # --------------------------------------------------------------
-# SECURITY: RESTRICT PHP FILE EXECUTION
+# ALLOW send_email.php FROM PUBLIC
 # --------------------------------------------------------------
-
-# 1. FIRST - DENY ACCESS TO ALL PHP FILES BY DEFAULT
-<FilesMatch "\.php$">
-    Deny from all
-</FilesMatch>
-
-# 2. THEN - EXPLICITLY ALLOW SPECIFIC PHP FILES
-# Allow email-related PHP files
-<Files "process_booking.php">
-    Allow from all
+<Files "send_email.php">
     Require all granted
 </Files>
-
-<Files "safari-planner.php">
-    Allow from all
-    Require all granted
-</Files>
-
-<Files "contact.php">
-    Allow from all
-    Require all granted
-</Files>
-
-<Files "send_safari_request.php">
-    Allow from all
-    Require all granted
-</Files>
-
-<Files "process-form.php">
-    Allow from all
-    Require all granted
-</Files>
-
-<Files "contact-form.php">
-    Allow from all
-    Require all granted
-</Files>
-
-# 3. DENY DANGEROUS PHP FILES (Additional protection)
-<FilesMatch "^(config|database|settings|setup|install|admin|wp-config|\.config)\.php$">
-    Order Deny,Allow
-    Deny from all
-</FilesMatch>
-
-# 4. BLOCK COMMON VULNERABLE PATTERNS
-RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
-RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
-RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
-RewriteRule ^(.*)$ - [F,L]
 
 
 # --------------------------------------------------------------
-# CACHING - Exclude PHP files from caching
+# CACHING
 # --------------------------------------------------------------
 <IfModule mod_expires.c>
     ExpiresActive On
 
     # HTML: No cache
     ExpiresByType text/html "access plus 0 seconds"
-    
-    # PHP files: No cache (dynamic content)
-    <FilesMatch "\.php$">
-        ExpiresActive Off
-        Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
-        Header set Pragma "no-cache"
-    </FilesMatch>
 
     # CSS & JS
     ExpiresByType text/css "access plus 1 month"
@@ -142,31 +89,21 @@ RewriteRule ^(.*)$ - [F,L]
 
 
 # --------------------------------------------------------------
-# GZIP COMPRESSION - Exclude PHP files
+# GZIP COMPRESSION
 # --------------------------------------------------------------
 <IfModule mod_deflate.c>
-    # Don't compress PHP files (they're usually small and dynamic)
-    SetEnvIfNoCase Request_URI \.php$ no-gzip dont-vary
-    
     AddOutputFilterByType DEFLATE text/plain text/html text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
 
 
 # --------------------------------------------------------------
-# SECURITY HEADERS - Additional protection for PHP
+# SECURITY HEADERS
 # --------------------------------------------------------------
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"
     Header set Referrer-Policy "strict-origin-when-cross-origin"
     Header set X-XSS-Protection "1; mode=block"
     Header set X-Frame-Options "SAMEORIGIN"
-    
-    # Additional security for PHP files
-    <FilesMatch "\.php$">
-        Header set X-Content-Type-Options "nosniff"
-        Header set X-Frame-Options "DENY"
-        Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
-    </FilesMatch>
 </IfModule>
 
 
@@ -175,40 +112,8 @@ RewriteRule ^(.*)$ - [F,L]
 # --------------------------------------------------------------
 Options -Indexes
 
-# Prevent directory listing for specific folders
-<IfModule mod_autoindex.c>
-    IndexIgnore *
-</IfModule>
-
-# Block access to sensitive directories
-RewriteRule ^(includes|inc|lib|system|private|config|sql)/ - [F,L,NC]
-
 
 # --------------------------------------------------------------
 # CHARACTER ENCODING
 # --------------------------------------------------------------
 AddDefaultCharset UTF-8
-
-# --------------------------------------------------------------
-# ADDITIONAL PHP SECURITY MEASURES
-# --------------------------------------------------------------
-
-# Disable PHP execution in uploads directory (if exists)
-<IfModule mod_php.c>
-    php_flag engine off
-</IfModule>
-<FilesMatch "\.php$">
-    SetHandler None
-</FilesMatch>
-
-# Prevent access to backup files
-<FilesMatch "\.(bak|backup|old|orig|original|save|sav|copy|tmp|temp|swp)$">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
-
-# Block access to hidden files (starting with .)
-<FilesMatch "^\.">
-    Order allow,deny
-    Deny from all
-</FilesMatch>

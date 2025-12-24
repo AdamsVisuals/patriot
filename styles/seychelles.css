@@ -1,0 +1,625 @@
+/* Seychelles Coming Soon Hero - Different Class Names, Same Design */
+.island-coming-hero {
+    height: 100vh;
+    min-height: 700px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../images/seychelles-1.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.island-hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.island-hero-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.island-breadcrumb-link {
+    color: #d4af37;
+    transition: all 0.3s ease;
+}
+
+.island-breadcrumb-link:hover {
+    color: #e8c866;
+}
+
+.island-hero-breadcrumb .island-divider {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.island-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.island-hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.island-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.island-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.island-btn:hover::before {
+    left: 100%;
+}
+
+.island-btn:hover {
+    background: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+}
+
+.island-btn-gold {
+    background: #d4af37;
+    color: #000000;
+}
+
+.island-btn-gold:hover {
+    background: #e8c866;
+}
+
+.island-hero-scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.island-scroll-line {
+    width: 1px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.island-scroll-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: #d4af37;
+    animation: islandScrollLine 2s infinite ease-in-out;
+}
+
+@keyframes islandScrollLine {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .island-hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .island-hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .island-coming-hero {
+        height: 80vh;
+        min-height: 500px;
+    }
+    
+    .island-hero-title {
+        font-size: 2rem;
+    }
+    
+    .island-hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .island-hero-breadcrumb {
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .island-btn {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+    
+    .island-hero-scroll-indicator {
+        font-size: 0.7rem;
+    }
+    
+    .island-scroll-line {
+        height: 40px;
+    }
+}
+
+/* Split Screen Modal Styles */
+.split-modal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    min-height: 550px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Left Side: Image Section */
+.modal-left {
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.modal-left:hover .modal-image {
+    transform: scale(1.02);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.7) 30%,
+        rgba(0, 0, 0, 0.4) 70%,
+        transparent 100%
+    );
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+}
+
+.overlay-content {
+    position: relative;
+    z-index: 2;
+}
+
+.overlay-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+.overlay-divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #d4af37, #e6c158, #d4af37);
+    margin-bottom: 1.5rem;
+    border-radius: 2px;
+}
+
+.overlay-tip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    background: rgba(212, 175, 55, 0.2);
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 3px solid #d4af37;
+}
+
+.overlay-tip .material-symbols-outlined {
+    color: #d4af37;
+    font-size: 1.2rem;
+}
+
+/* Right Side: Form Section */
+.modal-right {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-right-content {
+    flex: 1;
+    padding: 2.5rem;
+    position: relative;
+    overflow-y: auto;
+}
+
+.modal-right .island-modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: 10;
+}
+
+.modal-right-header {
+    margin-bottom: 2rem;
+    padding-right: 40px; /* Space for close button */
+}
+
+.modal-badge {
+    display: inline-block;
+    background: #000000;
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.badge-text {
+    background: linear-gradient(90deg, #d4af37, #e6c158);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.modal-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}
+
+/* Form Elements */
+.island-form-body {
+    padding: 1rem 0;
+}
+
+.island-form-input {
+    padding: 14px 16px;
+    font-size: 1rem;
+    border: 2px solid #e8e8e8;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.island-form-input:focus {
+    background: #ffffff;
+    border-color: #d4af37;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+}
+
+.incentive-highlight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: #fff8e1;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 2px solid #ffecb3;
+}
+
+.incentive-icon .material-symbols-outlined {
+    color: #d4af37;
+    font-size: 1.8rem;
+}
+
+.incentive-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #333333;
+}
+
+.highlight {
+    color: #d4af37;
+    font-weight: 700;
+}
+
+.form-note {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    color: #999999;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Success Message Styling */
+.success-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.success-badge {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.success-badge .material-symbols-outlined {
+    color: white;
+    font-size: 2rem;
+}
+
+.success-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.success-subtitle {
+    font-family: 'Poppins', sans-serif;
+    color: #666666;
+    font-size: 1rem;
+}
+
+.success-confirmation {
+    text-align: center;
+}
+
+.confirmation-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.success-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.success-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.success-benefits li:last-child {
+    border-bottom: none;
+}
+
+.success-benefits .material-symbols-outlined {
+    color: #d4af37;
+    font-size: 1.2rem;
+}
+
+.success-incentive-card {
+    background: linear-gradient(135deg, #fff8e1, #fff3cd);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 2px solid #ffecb3;
+}
+
+.incentive-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.incentive-header .material-symbols-outlined {
+    color: #d4af37;
+    font-size: 1.5rem;
+}
+
+.incentive-header h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+}
+
+.incentive-note {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    color: #666666;
+    margin-top: 0.5rem;
+}
+
+.success-next-steps {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.next-step-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: #000000;
+    color: white;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.next-step-link:hover {
+    background: #333333;
+    transform: translateY(-2px);
+}
+
+.island-btn-outline {
+    background: transparent;
+    color: #000000;
+    border: 2px solid #e0e0e0;
+}
+
+.island-btn-outline:hover {
+    background: #f5f5f5;
+    border-color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .split-modal {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        min-height: auto;
+    }
+    
+    .modal-left {
+        height: 250px;
+    }
+    
+    .modal-right-content {
+        padding: 2rem;
+    }
+    
+    .image-overlay {
+        padding: 1.5rem;
+    }
+    
+    .overlay-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .split-modal {
+        margin: 1rem;
+        max-width: calc(100% - 2rem);
+    }
+    
+    .modal-right-content {
+        padding: 1.5rem;
+    }
+    
+    .overlay-title {
+        font-size: 1.5rem;
+    }
+    
+    .island-modal-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animation for modal entrance */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.split-modal {
+    animation: fadeInScale 0.3s ease-out;
+}
