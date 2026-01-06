@@ -532,6 +532,46 @@
 <!-- Leaflet JavaScript -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var map = L.map('leafletMap').setView([-6.3690, 34.8888], 6);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Northern Circuit - #e74c3c
+    L.circle([-2.3333, 34.8333], {color: '#e74c3c', fillColor: '#e74c3c', fillOpacity: 0.5, radius: 50000}).addTo(map).bindPopup('Serengeti National Park - Northern Circuit');
+    L.circle([-3.1861, 35.5181], {color: '#e74c3c', fillColor: '#e74c3c', fillOpacity: 0.5, radius: 20000}).addTo(map).bindPopup('Ngorongoro Conservation Area - Northern Circuit');
+    L.circle([-3.8186, 36.0097], {color: '#e74c3c', fillColor: '#e74c3c', fillOpacity: 0.5, radius: 30000}).addTo(map).bindPopup('Tarangire National Park - Northern Circuit');
+    L.circle([-3.5, 35.8], {color: '#e74c3c', fillColor: '#e74c3c', fillOpacity: 0.5, radius: 20000}).addTo(map).bindPopup('Lake Manyara National Park - Northern Circuit');
+
+    // Southern Parks - #3498db
+    L.circle([-7.5, 34.8], {color: '#3498db', fillColor: '#3498db', fillOpacity: 0.5, radius: 50000}).addTo(map).bindPopup('Ruaha National Park - Southern Parks');
+    L.circle([-9, 37.5], {color: '#3498db', fillColor: '#3498db', fillOpacity: 0.5, radius: 80000}).addTo(map).bindPopup('Nyerere National Park - Southern Parks');
+    L.circle([-7.4, 36.9], {color: '#3498db', fillColor: '#3498db', fillOpacity: 0.5, radius: 40000}).addTo(map).bindPopup('Mikumi National Park - Southern Parks');
+
+    // Western Tanzania - #9b59b6
+    L.circle([-6.2, 29.8], {color: '#9b59b6', fillColor: '#9b59b6', fillOpacity: 0.5, radius: 30000}).addTo(map).bindPopup('Mahale Mountains National Park - Western Tanzania');
+    L.circle([-4.7, 29.6], {color: '#9b59b6', fillColor: '#9b59b6', fillOpacity: 0.5, radius: 20000}).addTo(map).bindPopup('Gombe Stream National Park - Western Tanzania');
+    L.circle([-6.8, 31.2], {color: '#9b59b6', fillColor: '#9b59b6', fillOpacity: 0.5, radius: 50000}).addTo(map).bindPopup('Katavi National Park - Western Tanzania');
+
+    // Coast & Islands - #27ae60
+    L.circle([-6.2, 39.2], {color: '#27ae60', fillColor: '#27ae60', fillOpacity: 0.5, radius: 30000}).addTo(map).bindPopup('Zanzibar Archipelago - Coast & Islands');
+
+    // Add controls
+    document.querySelector('.zoom-in').addEventListener('click', function() {
+        map.zoomIn();
+    });
+    document.querySelector('.zoom-out').addEventListener('click', function() {
+        map.zoomOut();
+    });
+    document.querySelector('.reset-view').addEventListener('click', function() {
+        map.setView([-6.3690, 34.8888], 6);
+    });
+});
+</script>
+
 <section class="parallax-cta">
     <div class="parallax-image"></div>
     <div class="parallax-content">
