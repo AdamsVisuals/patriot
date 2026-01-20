@@ -1,0 +1,1505 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tanzania-hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), 
+                url('../../images/African-wild-dog-1024x683.jpg') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    transform: translateY(8%); /* Pulls content lower for perfect centering */
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 2rem; /* Increased spacing */
+    justify-content: center;
+}
+
+.breadcrumb-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.breadcrumb-link:hover {
+    color: #D4AF37;
+}
+
+.breadcrumb-divider {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.breadcrumb-current {
+    color: #D4AF37;
+    font-weight: 400;
+}
+
+/* Hero Content */
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem; /* Slightly smaller for better balance */
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 2.5rem; /* Increased spacing */
+    opacity: 0.9;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+/* Hero Tag */
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #D4AF37;
+    border-radius: 25px;
+    padding: 0.8rem 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background: transparent;
+    color: white;
+    margin-bottom: 3rem; /* Increased spacing */
+    text-transform: uppercase;
+}
+
+.divider {
+    margin: 0 1rem;
+    color: #D4AF37;
+    font-weight: 300;
+}
+
+/* CTA Button */
+.hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.cta-primary {
+    padding: 1.2rem 2.5rem;
+    border: 1px solid #D4AF37;
+    background: #D4AF37;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.cta-primary:hover::before {
+    left: 100%;
+}
+
+.cta-primary:hover {
+    background: #E6C158;
+    border-color: #E6C158;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem; /* Moved lower */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, #D4AF37, transparent);
+    animation: scrollBounce 2s infinite;
+}
+
+@keyframes scrollBounce {
+    0%, 100% { 
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateY(15px);
+        opacity: 0.5;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        transform: translateY(10%); /* Less offset on mobile */
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-tag {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.75rem;
+    }
+    
+    .cta-primary {
+        width: 220px;
+        padding: 1rem 2rem;
+    }
+    
+    .breadcrumb {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        transform: translateY(5%); /* Minimal offset on small mobile */
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .tanzania-hero {
+        padding: 0 1.5rem;
+    }
+    
+    .hero-tag {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .divider {
+        display: none;
+    }
+}
+
+.safari-itinerary-tabs {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    color: #1a1a1a;
+}
+
+/* Tab Navigation - Premium Chip Design */
+.safari-tab-nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 60px;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 50px;
+    border: 1px solid #e9ecef;
+}
+
+.safari-tab-chip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 32px;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.safari-tab-chip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(26, 26, 26, 0.05), transparent);
+    transition: left 0.6s;
+}
+
+.safari-tab-chip:hover::before {
+    left: 100%;
+}
+
+.safari-tab-chip:hover {
+    color: #1a1a1a;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.safari-tab-chip.safari-tab-active {
+    background: #ffffff;
+    color: #1a1a1a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.safari-tab-chip .material-symbols-outlined {
+    font-size: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.safari-tab-chip.safari-tab-active .material-symbols-outlined {
+    opacity: 1;
+}
+
+/* Tab Content - COMPLETELY REMOVED container */
+.safari-tab-content {
+    background: transparent;
+}
+
+.safari-tab-pane {
+    display: none;
+    animation: safari-fadeInUp 0.5s ease-out;
+}
+
+.safari-tab-pane.safari-tab-active {
+    display: block;
+}
+
+@keyframes safari-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* REMOVED .safari-content-wrapper entirely - no container */
+
+/* Overview Tab */
+#safari-overview h2 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+#safari-overview p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 25px;
+    max-width: 800px;
+}
+
+/* Itinerary Tab */
+#safari-itinerary h2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 50px;
+    letter-spacing: -0.02em;
+}
+
+/* Timeline Design */
+.safari-timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.safari-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #e9ecef, #adb5bd, #e9ecef);
+}
+
+.safari-timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.safari-timeline-marker {
+    position: absolute;
+    left: -40px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 2px #1a1a1a;
+    z-index: 2;
+}
+
+.safari-timeline-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.safari-timeline-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+/* Accommodation Sections */
+/* Accommodation Sections */
+.safari-accommodation-section {
+    margin-top: 30px;
+}
+
+.safari-accommodation-section h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.safari-accommodation-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.safari-accommodation-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #fff;
+}
+
+.safari-card-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.safari-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.safari-accommodation-card:hover .safari-card-image img {
+    transform: scale(1.05);
+}
+
+/* Progressive black blur overlay */
+.safari-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, 
+        rgba(0, 0, 0, 0.9) 0%, 
+        rgba(0, 0, 0, 0.7) 30%, 
+        rgba(0, 0, 0, 0.5) 60%, 
+        rgba(0, 0, 0, 0.3) 80%, 
+        transparent 100%);
+    padding: 24px;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.safari-card-overlay h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.safari-card-overlay p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .safari-accommodation-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* Inclusions & Exclusions Tab */
+#safari-inclusions h2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 50px;
+    letter-spacing: -0.02em;
+}
+
+.safari-inclusions-exclusions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.safari-inclusions, .safari-exclusions {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.safari-inclusions h3, .safari-exclusions h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.safari-inclusions h3 .material-symbols-outlined {
+    color: #00c853;
+}
+
+.safari-exclusions h3 .material-symbols-outlined {
+    color: #ff4444;
+}
+
+.safari-inclusions ul, .safari-exclusions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.safari-inclusions li, .safari-exclusions li {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 24px;
+}
+
+.safari-inclusions li:last-child, .safari-exclusions li:last-child {
+    border-bottom: none;
+}
+
+.safari-inclusions li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00c853;
+    font-weight: 600;
+}
+
+.safari-exclusions li::before {
+    content: '×';
+    position: absolute;
+    left: 0;
+    color: #ff4444;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .safari-itinerary-tabs {
+        padding: 40px 30px;
+    }
+    
+    .safari-accommodation-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .safari-inclusions-exclusions-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .safari-itinerary-tabs {
+        padding: 30px 20px;
+    }
+    
+    .safari-tab-nav {
+        flex-direction: column;
+        border-radius: 20px;
+        gap: 8px;
+    }
+    
+    .safari-tab-chip {
+        justify-content: center;
+    }
+    
+    #safari-overview h2,
+    #safari-itinerary h2,
+    #safari-inclusions h2 {
+        font-size: 32px;
+    }
+    
+    .safari-timeline {
+        padding-left: 30px;
+    }
+    
+    .safari-timeline::before {
+        left: 15px;
+    }
+    
+    .safari-timeline-marker {
+        left: -30px;
+    }
+    
+    .safari-inclusions, .safari-exclusions {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .safari-itinerary-tabs {
+        padding: 20px 15px;
+    }
+    
+    #safari-overview h2,
+    #safari-itinerary h2,
+    #safari-inclusions h2 {
+        font-size: 28px;
+    }
+    
+    .safari-timeline-content h3 {
+        font-size: 20px;
+    }
+    
+    .safari-inclusions, .safari-exclusions {
+        padding: 20px;
+    }
+}
+
+/* Focus States for Accessibility */
+.safari-tab-chip:focus-visible {
+    outline: 2px solid #1a1a1a;
+    outline-offset: 2px;
+}
+
+.safari-accommodation-card:focus-visible {
+    outline: 2px solid #1a1a1a;
+    outline-offset: 4px;
+}
+
+/* Prices Section */
+.safari-prices-section {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.safari-prices-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.safari-prices-header h2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.safari-prices-header p {
+    font-size: 17px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Season Tabs */
+.safari-season-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.safari-season-tab {
+    padding: 16px 32px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.safari-season-tab:hover {
+    background: #e9ecef;
+    color: #1a1a1a;
+}
+
+.safari-season-tab.active {
+    background: #1a1a1a;
+    color: #ffffff;
+    border-color: #1a1a1a;
+}
+
+/* Prices Table */
+.safari-prices-table-container {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.safari-prices-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.safari-prices-table th {
+    background: #f8f9fa;
+    padding: 24px 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1a1a1a;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.safari-prices-table th:first-child {
+    padding-left: 32px;
+}
+
+.safari-prices-table th:last-child {
+    padding-right: 32px;
+}
+
+.safari-prices-table td {
+    padding: 20px;
+    border-bottom: 1px solid #f8f9fa;
+    font-size: 15px;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.safari-prices-table td:first-child {
+    padding-left: 32px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.safari-prices-table td:last-child {
+    padding-right: 32px;
+}
+
+.safari-prices-table tr:last-child td {
+    border-bottom: none;
+}
+
+.safari-prices-table tr:hover td {
+    background: #f8f9fa;
+}
+
+/* Price styling */
+.safari-prices-table td:nth-child(2) { /* Budget */
+    color: #f5576c;
+    font-weight: 500;
+}
+
+.safari-prices-table td:nth-child(3) { /* Luxury */
+    color: #4facfe;
+    font-weight: 500;
+}
+
+.safari-prices-table td:nth-child(4) { /* High End */
+    color: #43e97b;
+    font-weight: 500;
+}
+
+/* Season Prices */
+.safari-season-prices {
+    display: none;
+}
+
+.safari-season-prices.active {
+    display: table-row;
+}
+
+/* Season Notes */
+.safari-season-notes {
+    text-align: center;
+}
+
+.safari-season-note {
+    display: none;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 4px solid #1a1a1a;
+}
+
+.safari-season-note.active {
+    display: block;
+}
+
+.safari-season-note strong {
+    color: #1a1a1a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .safari-prices-section {
+        padding: 40px 20px;
+    }
+    
+    .safari-prices-header h2 {
+        font-size: 32px;
+    }
+    
+    .safari-season-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .safari-season-tab {
+        width: 200px;
+    }
+    
+    .safari-prices-table-container {
+        overflow-x: auto;
+    }
+    
+    .safari-prices-table {
+        min-width: 600px;
+    }
+    
+    .safari-prices-table th,
+    .safari-prices-table td {
+        padding: 16px 12px;
+    }
+    
+    .safari-prices-table th:first-child,
+    .safari-prices-table td:first-child {
+        padding-left: 20px;
+    }
+    
+    .safari-prices-table th:last-child,
+    .safari-prices-table td:last-child {
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .safari-prices-section {
+        padding: 30px 15px;
+    }
+    
+    .safari-prices-header h2 {
+        font-size: 28px;
+    }
+    
+    .safari-prices-header p {
+        font-size: 15px;
+    }
+}
+
+/* CTA Section */
+.safari-cta-section {
+    padding: 80px 40px;
+    background: #ffffff;
+    color: #1a1a1a;
+    position: relative;
+}
+
+.safari-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.safari-cta-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+}
+
+.safari-cta-subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.safari-cta-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.safari-cta-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.safari-cta-feature .material-symbols-outlined {
+    font-size: 20px;
+    color: #667eea;
+}
+
+.safari-cta-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.safari-cta-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.safari-cta-primary {
+    font-family: 'poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #1a1a1a;
+    color: white;
+}
+
+.safari-cta-primary:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(26, 26, 26, 0.3);
+}
+
+.safari-cta-secondary {
+    font-family: 'poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: transparent;
+    color: #1a1a1a;
+    border: 2px solid #e9ecef;
+}
+
+.safari-cta-secondary:hover {
+    background: #f8f9fa;
+    border-color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+/* CTA Image Styling */
+.safari-cta-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.safari-cta-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.safari-cta-image:hover .safari-cta-img {
+    transform: scale(1.05);
+}
+
+.safari-cta-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.1), transparent);
+    pointer-events: none;
+}
+
+/* Booking Modal */
+.safari-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.safari-modal-overlay.active {
+    display: flex;
+}
+
+.safari-modal-container {
+    width: 100%;
+    max-width: 1000px;
+    height: 90vh;
+    max-height: 800px;
+    background: white;
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    animation: safari-modal-appear 0.3s ease;
+}
+
+@keyframes safari-modal-appear {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.safari-modal-left {
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.safari-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f8f9fa;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 10;
+}
+
+.safari-modal-close:hover {
+    background: #e9ecef;
+}
+
+.safari-modal-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.safari-modal-content h2 span {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    color: #D4AF37;
+}
+
+.safari-modal-subtitle {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+/* Form Styles */
+.safari-booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.safari-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.safari-form-group label {
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+.safari-form-group input,
+.safari-form-group select,
+.safari-form-group textarea {
+    padding: 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.safari-form-group input:focus,
+.safari-form-group select:focus,
+.safari-form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.safari-form-group input:invalid:not(:focus) {
+    border-color: #ff6b6b;
+}
+
+.safari-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.safari-form-submit {
+    margin-top: 20px;
+}
+
+.safari-submit-btn {
+    width: 100%;
+    padding: 20px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.safari-submit-btn:hover:not(:disabled) {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.safari-submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.safari-btn-text {
+    display: block;
+}
+
+.safari-btn-loading {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.safari-submit-btn.loading .safari-btn-text {
+    display: none;
+}
+
+.safari-submit-btn.loading .safari-btn-loading {
+    display: flex;
+}
+
+.safari-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: safari-spin 1s linear infinite;
+}
+
+@keyframes safari-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Modal Right Side with Image */
+.safari-modal-right {
+    position: relative;
+    overflow: hidden;
+}
+
+.safari-modal-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.safari-modal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.safari-modal-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.safari-modal-image-content {
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.safari-modal-image-content h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.safari-includes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.safari-includes-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    position: relative;
+    padding-left: 24px;
+}
+
+.safari-includes-list li:last-child {
+    border-bottom: none;
+}
+
+.safari-includes-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .safari-cta-section {
+        padding: 60px 20px;
+    }
+    
+    .safari-cta-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .safari-cta-content h2 {
+        font-size: 36px;
+    }
+    
+    .safari-cta-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .safari-cta-buttons {
+        justify-content: center;
+    }
+    
+    .safari-cta-image {
+        height: 300px;
+        order: -1;
+    }
+    
+    .safari-modal-container {
+        grid-template-columns: 1fr;
+        height: 95vh;
+        max-height: none;
+    }
+    
+    .safari-modal-right {
+        display: none;
+    }
+    
+    .safari-form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .safari-cta-content h2 {
+        font-size: 28px;
+    }
+    
+    .safari-modal-left {
+        padding: 30px 20px;
+    }
+    
+    .safari-modal-content h2 {
+        font-size: 24px;
+    }
+    
+    .safari-cta-buttons {
+        flex-direction: column;
+    }
+    
+    .safari-cta-btn {
+        justify-content: center;
+    }
+}
+
+/* Toast Notifications */
+.safari-toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.safari-toast {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-left: 4px solid #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transform: translateX(400px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 400px;
+}
+
+.safari-toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.safari-toast.hide {
+    transform: translateX(400px);
+    opacity: 0;
+}
+
+.safari-toast.success {
+    border-left-color: #00c853;
+}
+
+.safari-toast.error {
+    border-left-color: #ff4444;
+}
+
+.safari-toast.warning {
+    border-left-color: #ff9800;
+}
+
+.safari-toast.info {
+    border-left-color: #2196f3;
+}
+
+.safari-toast-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.safari-toast.success .safari-toast-icon {
+    color: #00c853;
+}
+
+.safari-toast.error .safari-toast-icon {
+    color: #ff4444;
+}
+
+.safari-toast.warning .safari-toast-icon {
+    color: #ff9800;
+}
+
+.safari-toast.info .safari-toast-icon {
+    color: #2196f3;
+}
+
+.safari-toast-content {
+    flex: 1;
+}
+
+.safari-toast-title {
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.safari-toast-message {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.safari-toast-close {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.safari-toast-close:hover {
+    background: #f8f9fa;
+    color: #666;
+}
+
+/* Checkbox Group */
+.safari-checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.safari-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.safari-checkbox:hover {
+    color: #1a1a1a;
+}
+
+.safari-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #1a1a1a;
+}
+
+/* Responsive adjustments for toasts */
+@media (max-width: 768px) {
+    .safari-toast-container {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+    
+    .safari-toast {
+        max-width: none;
+    }
+    
+    .safari-checkbox-group {
+        grid-template-columns: 1fr;
+    }
+}
